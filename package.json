@@ -2,17 +2,16 @@
   "name": "basicui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "rollup -c",
+    "prepublishOnly": "npm build"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,8 @@
   "homepage": "https://github.com/ioak-dev/basicui#readme",
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
@@ -38,8 +39,13 @@
     "@types/react": "^18.0.26",
     "babel-loader": "^8.3.0",
     "css-loader": "^6.7.3",
+    "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",

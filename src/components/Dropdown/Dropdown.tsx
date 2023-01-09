@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dropdown.css";
+import "./dropdown.css";
 
 export interface DropdownProps {
     type: string;

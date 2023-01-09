@@ -1,4 +1,5 @@
-import "./button.css";
+/// <reference types="react" />
+import "./dropdown.css";
 export interface DropdownProps {
     type: string;
 }
