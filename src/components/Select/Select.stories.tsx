@@ -16,8 +16,11 @@ export default {
 const Template: Story<SelectProps> = (args: SelectProps) => <Select {...args} />;
 
 // Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = { type: "default", initialValue: "", options: ["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "], placeholder: 'Default drop down'};
+export const SingleSelect = Template.bind({});
+SingleSelect.args = { initialValues: ["Dolor sit"], options: ["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "], placeholder: 'Default drop down'};
+
+export const MultiSelect = Template.bind({});
+MultiSelect.args = { multiple: true, initialValues: ["Lorem ipsum"], options: ["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "], placeholder: 'Default drop down'};
 
 export const Autocomplete = Template.bind({});
-Autocomplete.args = { type: "autocomplete", options: ["Lorem ipsum", "Dolor sit"], placeholder: 'Autocomplete drop down' };
+Autocomplete.args = { options: ["Lorem ipsum", "Dolor sit"], placeholder: 'Autocomplete drop down' };

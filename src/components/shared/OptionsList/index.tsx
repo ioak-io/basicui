@@ -4,7 +4,7 @@ import "./style.css";
 
 export interface OptionsListProps {
     referenceElement: any;
-    value: string;
+    values: string[];
     options: string[];
     handleChange: any;
     handleClose: any;
@@ -21,6 +21,11 @@ const OptionsList = (props: OptionsListProps) => {
         // if (props.popperElement.current) {
         //     props.popperElement.current.addEventListener('keydown', keydownEventHandler);
         // }
+        return () => {
+            if (props.referenceElement.current) {
+                props.referenceElement.current.removeEventListener('keydown', keydownEventHandler);
+            }
+        };
     }, [props.referenceElement]);
 
     const keydownEventHandler = (event: any) => {
@@ -71,13 +76,13 @@ const OptionsList = (props: OptionsListProps) => {
     }
 
     return <div>
-        <ul role="listbox" className="basicui-select__ul">
+        <ul role="listbox" className="basicui-select__ul basicui-popup">
             {
                 props.options?.map((option, index) => (
                     <li key={index} role="option" className="basicui-select__ul__li">
                         <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option)}>
                             <div className="basicui-select__ul__li__indicator">
-                                {option === props.value && <div><svg
+                                {props.values.includes(option) && <div><svg
                                     height="16"
                                     viewBox="0 0 16 16"
                                     version="1.1"

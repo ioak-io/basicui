@@ -7,31 +7,28 @@ import "./style.css";
 import OptionsList from "../shared/OptionsList";
 
 export interface SelectProps {
-    type: string;
     options: string[];
-    initialValue?: string;
+    initialValues?: string[];
     placeholder?: string;
     handleChange?: any;
-    //   onClick?: (
-    //     event: React.MouseEvent<HTMLSelectElement, MouseEvent>
-    //   ) => void;
+    multiple?: boolean;
 };
 
 /**
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Select = (props: SelectProps) => {
-    const [value, setValue] = useState("");
+    const [values, setValues] = useState<string[]>([]);
     const [isVisible, setIsVisible] = useState(false);
     const referenceElement: React.MutableRefObject<any> = useRef(null);
     const popperElement: React.MutableRefObject<any> = useRef(null);
 
 
     useEffect(() => {
-        if (value === "" && props.initialValue && props.initialValue !== "") {
-            setValue(props.initialValue);
+        if (values.length === 0 && props.initialValues && props.initialValues.length > 0) {
+            setValues(props.initialValues);
         }
-    }, [props.initialValue]);
+    }, [props.initialValues]);
 
     useEffect(() => {
         // listen for clicks and close select on body
@@ -49,7 +46,7 @@ const Select = (props: SelectProps) => {
                     {
                         name: 'offset',
                         options: {
-                            offset: [0, 4],
+                            offset: [0, 6],
                         },
                     }
                 ],
@@ -69,9 +66,23 @@ const Select = (props: SelectProps) => {
     }
 
     const handleChange = (index: number, option: string) => {
-        if (props.handleChange) { props.handleChange(index, option) };
-        setValue(option);
-        setIsVisible(false);
+        let _values = [...values];
+        if (!props.multiple && _values.includes(option)) {
+            _values = [];
+        } else if (!props.multiple && !_values.includes(option)) {
+            _values = [option];
+        } else if (_values.includes(option)) {
+            _values = _values.filter(item => item !== option);
+        } else {
+            _values = [..._values, option];
+        }
+
+        setValues(_values);
+        if (props.handleChange) { props.handleChange(_values) };
+
+        if (!props.multiple) {
+            setIsVisible(false);
+        }
     }
 
     return (
@@ -80,12 +91,12 @@ const Select = (props: SelectProps) => {
                 " "
             )}
         >
-            <button type="button" ref={referenceElement} onClick={handleSelectClick}>
-                {value || props.placeholder || "-"}
+            <button className="basicui-input basicui-select__button" type="button" ref={referenceElement} onClick={handleSelectClick}>
+                {values.join(', ') || props.placeholder || "-"}
             </button>
 
             <div ref={popperElement} className="basicui-select__popper">
-                {isVisible && <OptionsList value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
+                {isVisible && <OptionsList values={values} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
             </div>
         </div>
     );

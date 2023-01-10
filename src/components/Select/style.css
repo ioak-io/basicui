@@ -2,6 +2,12 @@
     position: relative;
 }
 
+.basicui-select__button {
+    width: 100%;
+    text-align: left;
+    /* justify-content: flex-start; */
+}
+
 .basicui-select__popper {
     width: 100%;
 }
