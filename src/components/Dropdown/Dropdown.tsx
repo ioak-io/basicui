@@ -9,6 +9,9 @@ import PopupArea from "./PopupArea";
 export interface DropdownProps {
     type: string;
     options: string[];
+    initialValue?: string;
+    placeholder?: string;
+    handleChange?: any;
     //   onClick?: (
     //     event: React.MouseEvent<HTMLDropdownElement, MouseEvent>
     //   ) => void;
@@ -18,11 +21,17 @@ export interface DropdownProps {
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Dropdown = (props: DropdownProps) => {
+    const [value, setValue] = useState("");
     const [isVisible, setIsVisible] = useState(false);
     const referenceElement: React.MutableRefObject<any> = useRef(null);
     const popperElement: React.MutableRefObject<any> = useRef(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const currentIndexRef = useRef(0);
+
+
+    useEffect(() => {
+        if (value === "" && props.initialValue && props.initialValue !== "") {
+            setValue(props.initialValue);
+        }
+    }, [props.initialValue]);
 
     useEffect(() => {
         // listen for clicks and close dropdown on body
@@ -46,59 +55,10 @@ const Dropdown = (props: DropdownProps) => {
                 ],
             });
         }
-        referenceElement.current.addEventListener('keydown', keydownEventHandler);
     }, [referenceElement, popperElement]);
 
-    const keydownEventHandler = (event: any) => {
-        console.log("****", event.key);
-        switch (event.key) {
-            case 'ArrowDown':
-                event.preventDefault();
-                navigateDown();
-                break;
-            case 'ArrowUp':
-                event.preventDefault();
-                navigateUp();
-                break;
-            case 'Enter':
-                // if (this._isActivated) {
-                event.preventDefault();
-                console.log("handleChange(this._currentIndex)");
-                // }
-                break;
-            case 'Tab':
-                // if (this._isActivated) {
-                event.preventDefault();
-                console.log("_deactivate()");
-                // }
-                break;
-            default:
-                break;
-        }
-    };
-
-    const navigateUp = () => {
-        let _current = 0;
-        if (currentIndexRef.current !== 0) {
-            _current = currentIndexRef.current - 1;
-        } else {
-            _current = props.options.length - 1
-        }
-        currentIndexRef.current = _current;
-        setCurrentIndex(_current);
-    }
-
-    const navigateDown = () => {
-        let _current = 0;
-        if (currentIndexRef.current < props.options.length - 1) {
-            _current = currentIndexRef.current + 1
-        }
-        currentIndexRef.current = _current;
-        setCurrentIndex(_current);
-    }
-
     const handleDocumentClick = (event: any) => {
-        if (referenceElement.current?.contains(event.target)) {
+        if (referenceElement.current?.contains(event.target) || popperElement.current?.contains(event.target)) {
             return;
         }
         setIsVisible(false);
@@ -108,6 +68,12 @@ const Dropdown = (props: DropdownProps) => {
         setIsVisible(!isVisible);
     }
 
+    const handleChange = (index: number, option: string) => {
+        if (props.handleChange) { props.handleChange(index, option) };
+        setValue(option);
+        setIsVisible(false);
+    }
+
     return (
         <div
             className={["basicui-dropdown"].join(
@@ -115,11 +81,11 @@ const Dropdown = (props: DropdownProps) => {
             )}
         >
             <button type="button" ref={referenceElement} onClick={handleDropdownClick}>
-                Reference element
+                {value || props.placeholder || "-"}
             </button>
 
-            <div ref={popperElement}>
-                {isVisible && <PopupArea options={props.options} referenceElement={referenceElement} />}
+            <div ref={popperElement} className="basicui-dropdown__popper">
+                {isVisible && <PopupArea value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} />}
             </div>
         </div>
     );
