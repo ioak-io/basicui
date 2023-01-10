@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import "./popup-area.css";
+import "./PopupArea.css";
 
 export interface PopupAreaProps {
     referenceElement: any;

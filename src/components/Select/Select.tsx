@@ -3,7 +3,7 @@ import { createPopper } from '@popperjs/core';
 import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
 import flip from '@popperjs/core/lib/modifiers/flip.js';
 
-import "./select.css";
+import "./Select.css";
 import PopupArea from "./PopupArea";
 
 export interface SelectProps {
