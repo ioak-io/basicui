@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
-import Select, { SelectProps } from "./Select";
+import Select, { SelectProps } from ".";
 
 export default {
   title: "Components/Select",

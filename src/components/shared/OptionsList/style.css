@@ -39,6 +39,10 @@
     width: 16px;
 }
 
+.basicui-select__ul__li__indicator div {
+    display: flex;
+}
+
 .basicui-select__ul__li__link--active {
     background-color: #00000010;
 }
