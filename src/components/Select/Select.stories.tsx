@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
-import Dropdown, { DropdownProps } from "./Dropdown";
+import Select, { SelectProps } from "./Select";
 
 export default {
-  title: "Components/Dropdown",
-  component: Dropdown,
+  title: "Components/Select",
+  component: Select,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<DropdownProps> = (args: DropdownProps) => <Dropdown {...args} />;
+const Template: Story<SelectProps> = (args: SelectProps) => <Select {...args} />;
 
 
 let valueDefault = ""

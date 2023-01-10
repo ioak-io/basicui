@@ -1,0 +1,7 @@
+.basicui-select {
+    position: relative;
+}
+
+.basicui-select__popper {
+    width: 100%;
+}

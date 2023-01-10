@@ -1,15 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import { createPopper } from '@popperjs/core';
-import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
-import flip from '@popperjs/core/lib/modifiers/flip.js';
 
-import "./dropdown.css";
+import "./popup-area.css";
 
 export interface PopupAreaProps {
     referenceElement: any;
     value: string;
     options: string[];
     handleChange: any;
+    handleClose: any;
 };
 
 const PopupArea = (props: PopupAreaProps) => {
@@ -26,26 +24,22 @@ const PopupArea = (props: PopupAreaProps) => {
     }, [props.referenceElement]);
 
     const keydownEventHandler = (event: any) => {
+        event.preventDefault();
         switch (event.key) {
             case 'ArrowDown':
-                event.preventDefault();
                 navigateDown();
                 break;
             case 'ArrowUp':
-                event.preventDefault();
                 navigateUp();
                 break;
             case 'Enter':
-                // if (this._isActivated) {
-                event.preventDefault();
                 props.handleChange(currentIndexRef.current, props.options[currentIndexRef.current]);
-                // }
                 break;
             case 'Tab':
-                // if (this._isActivated) {
-                event.preventDefault();
                 console.log("_deactivate()");
-                // }
+                break;
+            case 'Escape':
+                props.handleClose();
                 break;
             default:
                 break;
@@ -77,12 +71,12 @@ const PopupArea = (props: PopupAreaProps) => {
     }
 
     return <div>
-        <ul role="listbox" className="basicui-dropdown__ul">
+        <ul role="listbox" className="basicui-select__ul">
             {
                 props.options?.map((option, index) => (
-                    <li key={index} role="option" className="basicui-dropdown__ul__li">
-                        <button className={`basicui-dropdown__ul__li__link ${currentIndex === index ? 'basicui-dropdown__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option)}>
-                            <div className="basicui-dropdown__ul__li__indicator">
+                    <li key={index} role="option" className="basicui-select__ul__li">
+                        <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option)}>
+                            <div className="basicui-select__ul__li__indicator">
                                 {option === props.value && <div><svg
                                     height="16"
                                     viewBox="0 0 16 16"
@@ -96,7 +90,7 @@ const PopupArea = (props: PopupAreaProps) => {
                                     ></path>
                                 </svg></div>}
                             </div>
-                            <div className="basicui-dropdown__ul__li__text">
+                            <div className="basicui-select__ul__li__text">
                                 {option}
                             </div>
                         </button>

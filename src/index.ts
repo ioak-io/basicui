@@ -1,3 +1,3 @@
-import Dropdown from "./components/Dropdown";
+import Select from "./components/Select";
 
-export { Dropdown };
+export { Select };

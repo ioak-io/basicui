@@ -3,24 +3,24 @@ import { createPopper } from '@popperjs/core';
 import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
 import flip from '@popperjs/core/lib/modifiers/flip.js';
 
-import "./dropdown.css";
+import "./select.css";
 import PopupArea from "./PopupArea";
 
-export interface DropdownProps {
+export interface SelectProps {
     type: string;
     options: string[];
     initialValue?: string;
     placeholder?: string;
     handleChange?: any;
     //   onClick?: (
-    //     event: React.MouseEvent<HTMLDropdownElement, MouseEvent>
+    //     event: React.MouseEvent<HTMLSelectElement, MouseEvent>
     //   ) => void;
 };
 
 /**
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
-const Dropdown = (props: DropdownProps) => {
+const Select = (props: SelectProps) => {
     const [value, setValue] = useState("");
     const [isVisible, setIsVisible] = useState(false);
     const referenceElement: React.MutableRefObject<any> = useRef(null);
@@ -34,7 +34,7 @@ const Dropdown = (props: DropdownProps) => {
     }, [props.initialValue]);
 
     useEffect(() => {
-        // listen for clicks and close dropdown on body
+        // listen for clicks and close select on body
         document.addEventListener("mousedown", handleDocumentClick);
         return () => {
             document.removeEventListener("mousedown", handleDocumentClick);
@@ -64,7 +64,7 @@ const Dropdown = (props: DropdownProps) => {
         setIsVisible(false);
     }
 
-    const handleDropdownClick = (event: any) => {
+    const handleSelectClick = (event: any) => {
         setIsVisible(!isVisible);
     }
 
@@ -76,19 +76,19 @@ const Dropdown = (props: DropdownProps) => {
 
     return (
         <div
-            className={["basicui-dropdown"].join(
+            className={["basicui-select"].join(
                 " "
             )}
         >
-            <button type="button" ref={referenceElement} onClick={handleDropdownClick}>
+            <button type="button" ref={referenceElement} onClick={handleSelectClick}>
                 {value || props.placeholder || "-"}
             </button>
 
-            <div ref={popperElement} className="basicui-dropdown__popper">
-                {isVisible && <PopupArea value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} />}
+            <div ref={popperElement} className="basicui-select__popper">
+                {isVisible && <PopupArea value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
             </div>
         </div>
     );
 };
 
-export default Dropdown;
+export default Select;
