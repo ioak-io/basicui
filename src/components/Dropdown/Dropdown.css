@@ -35,6 +35,10 @@
     column-gap: 10px;
 }
 
+.basicui-dropdown__ul__li__link--active {
+    background-color: #00000020;
+}
+
 .basicui-dropdown__ul__li__link:hover {
     background-color: #00000010;
 }
