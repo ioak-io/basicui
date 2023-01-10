@@ -1,3 +1,5 @@
 import Select from "./components/Select";
 
-export { Select };
+import * as SelectPropsConverter from './converters/Select';
+
+export { Select, SelectPropsConverter };

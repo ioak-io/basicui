@@ -8,8 +8,7 @@ import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface SelectProps {
-    options: string[];
-    optionsAsNameValue: OptionsObjectType[];
+    options: OptionsObjectType[];
     initialValues?: string[];
     placeholder?: string;
     handleChange?: any;
@@ -21,7 +20,10 @@ export interface SelectProps {
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Select = (props: SelectProps) => {
-    const [values, setValues] = useState<string[]>([]);
+    const [values, setValues] = useState<(string | number)[]>([]);
+    const valuesRef: React.MutableRefObject<(string | number)[]> = useRef<(string | number)[]>([]);
+
+    const [valuesText, setValuesText] = useState<(string | number)[]>([]);
     const [isVisible, setIsVisible] = useState(false);
     const referenceElement: React.MutableRefObject<any> = useRef(null);
     const popperElement: React.MutableRefObject<any> = useRef(null);
@@ -32,26 +34,33 @@ const Select = (props: SelectProps) => {
     useEffect(() => {
         if (values.length === 0 && props.initialValues && props.initialValues.length > 0) {
             setValues(props.initialValues);
+            valuesRef.current = props.initialValues;
         }
     }, [props.initialValues]);
 
     useEffect(() => {
-        let _options: OptionsObjectType[] = [];
-        let _optionsAsNameValue: OptionsObjectType[] = [];
-        if (props.optionsAsNameValue && props.optionsAsNameValue.length > 0) {
-            _optionsAsNameValue = props.optionsAsNameValue;
-        } else if (props.options && props.options.length > 0) {
-            _optionsAsNameValue = props.options.map(item => ({ name: item, value: item }));
+        if (!isVisible) {
+            setSearchText("");
         }
+    }, [isVisible]);
 
+    useEffect(() => {
         if (isEmptyOrSpaces(searchText)) {
-            _options = _optionsAsNameValue;
+            setOptions(props.options);
         } else {
-            _options = _optionsAsNameValue.filter(item => searchText.includes((item.value + "").toLowerCase()));
+            setOptions(props.options.filter(
+                item => (item.value + "").toLowerCase().includes(searchText)
+            ));
         }
+    }, [searchText, props.options]);
 
-        setOptions(_options);
-    }, [searchText, props.options, props.optionsAsNameValue]);
+    useEffect(() => {
+        const _optionsAsMap: any = {};
+        props.options.forEach(item => (_optionsAsMap[item.name] = item.value));
+        const _valuesText: (string | number)[] = [];
+        values.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item]));
+        setValuesText(_valuesText);
+    }, [values]);
 
     useEffect(() => {
         // listen for clicks and close select on body
@@ -89,7 +98,7 @@ const Select = (props: SelectProps) => {
     }
 
     const handleChange = (index: number, option: string) => {
-        let _values = [...values];
+        let _values = [...valuesRef.current];
         if (!props.multiple && _values.includes(option)) {
             _values = [];
         } else if (!props.multiple && !_values.includes(option)) {
@@ -101,6 +110,7 @@ const Select = (props: SelectProps) => {
         }
 
         setValues(_values);
+        valuesRef.current = _values;
         if (props.handleChange) { props.handleChange(_values) };
 
         if (!props.multiple) {
@@ -119,7 +129,7 @@ const Select = (props: SelectProps) => {
             )}
         >
             <button className="basicui-input basicui-select__button" type="button" ref={referenceElement} onClick={handleSelectClick}>
-                {values.join(', ') || props.placeholder || "-"}
+                {valuesText.join(', ') || props.placeholder || "-"}
             </button>
 
             <div ref={popperElement} className="basicui-select__popper">

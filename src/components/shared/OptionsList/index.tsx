@@ -9,7 +9,7 @@ export interface OptionsObjectType {
 
 export interface OptionsListProps {
     referenceElement: any;
-    values: string[];
+    values: (string | number)[];
     options: OptionsObjectType[];
     handleChange: any;
     handleClose: any;
@@ -20,6 +20,13 @@ const OptionsList = (props: OptionsListProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentIndexRef = useRef(0);
     const searchReferenceElement: React.MutableRefObject<any> = useRef(null);
+    const optionsRef: React.MutableRefObject<OptionsObjectType[]> = useRef<OptionsObjectType[]>([]);
+
+    useEffect(() => {
+        setCurrentIndex(0);
+        currentIndexRef.current = 0;
+        optionsRef.current = props.options;
+    }, [props.options]);
 
     useEffect(() => {
         if (props.referenceElement.current) {
@@ -61,7 +68,7 @@ const OptionsList = (props: OptionsListProps) => {
                 break;
             case 'Enter':
                 event.preventDefault();
-                props.handleChange(currentIndexRef.current, props.options[currentIndexRef.current]);
+                props.handleChange(currentIndexRef.current, optionsRef.current[currentIndexRef.current].name);
                 break;
             case 'Tab':
                 event.preventDefault();
@@ -81,7 +88,7 @@ const OptionsList = (props: OptionsListProps) => {
         if (currentIndexRef.current !== 0) {
             _current = currentIndexRef.current - 1;
         } else {
-            _current = props.options.length - 1
+            optionsRef.current.length - 1
         }
         currentIndexRef.current = _current;
         setCurrentIndex(_current);
@@ -89,7 +96,7 @@ const OptionsList = (props: OptionsListProps) => {
 
     const navigateDown = () => {
         let _current = 0;
-        if (currentIndexRef.current < props.options.length - 1) {
+        if (currentIndexRef.current < optionsRef.current.length - 1) {
             _current = currentIndexRef.current + 1
         }
         currentIndexRef.current = _current;
@@ -100,15 +107,19 @@ const OptionsList = (props: OptionsListProps) => {
         props.handleChange(index, option);
     }
 
+    const handleSearchTextChange = (event: any) => {
+        if (props.handleSearchTextChange) { props.handleSearchTextChange(event.target.value); }
+    }
+
     return <div>
         <ul role="listbox" className="basicui-select__ul basicui-popup">
-            <div className="basicui-select__ul__search">
-                <input ref={searchReferenceElement} className="basicui-input" autoFocus />
-            </div>
+            {props.handleSearchTextChange && <div className="basicui-select__ul__search">
+                <input ref={searchReferenceElement} className="basicui-input" autoFocus onInput={handleSearchTextChange} />
+            </div>}
             {
                 props.options?.map((option, index) => (
                     <li key={index} role="option" className="basicui-select__ul__li">
-                        <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option)}>
+                        <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option.name)}>
                             <div className="basicui-select__ul__li__indicator">
                                 {props.values.includes(option.name + "") && <div><svg
                                     height="16"
