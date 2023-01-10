@@ -8,11 +8,13 @@ export interface OptionsListProps {
     options: string[];
     handleChange: any;
     handleClose: any;
+    handleSearchTextChange?: any;
 };
 
 const OptionsList = (props: OptionsListProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentIndexRef = useRef(0);
+    const searchReferenceElement: React.MutableRefObject<any> = useRef(null);
 
     useEffect(() => {
         if (props.referenceElement.current) {
@@ -28,22 +30,40 @@ const OptionsList = (props: OptionsListProps) => {
         };
     }, [props.referenceElement]);
 
+    useEffect(() => {
+        if (searchReferenceElement.current) {
+            searchReferenceElement.current.addEventListener('keydown', keydownEventHandler);
+        }
+        // if (props.popperElement.current) {
+        //     props.popperElement.current.addEventListener('keydown', keydownEventHandler);
+        // }
+        return () => {
+            if (searchReferenceElement.current) {
+                searchReferenceElement.current.removeEventListener('keydown', keydownEventHandler);
+            }
+        };
+    }, [searchReferenceElement]);
+
     const keydownEventHandler = (event: any) => {
-        event.preventDefault();
         switch (event.key) {
             case 'ArrowDown':
+                event.preventDefault();
                 navigateDown();
                 break;
             case 'ArrowUp':
+                event.preventDefault();
                 navigateUp();
                 break;
             case 'Enter':
+                event.preventDefault();
                 props.handleChange(currentIndexRef.current, props.options[currentIndexRef.current]);
                 break;
             case 'Tab':
+                event.preventDefault();
                 console.log("_deactivate()");
                 break;
             case 'Escape':
+                event.preventDefault();
                 props.handleClose();
                 break;
             default:
@@ -77,6 +97,9 @@ const OptionsList = (props: OptionsListProps) => {
 
     return <div>
         <ul role="listbox" className="basicui-select__ul basicui-popup">
+            <div className="basicui-select__ul__search">
+                <input ref={searchReferenceElement} className="basicui-input" autoFocus />
+            </div>
             {
                 props.options?.map((option, index) => (
                     <li key={index} role="option" className="basicui-select__ul__li">

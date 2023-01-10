@@ -8,6 +8,14 @@
     border-radius: 4px;
 }
 
+.basicui-select__ul__search {
+    padding: 0 6px 6px 6px;
+}
+
+.basicui-select__ul__search input {
+    width: 100%;
+}
+
 .basicui-select__ul__li {
     /* border-bottom: 1px solid #00000020; */
 }
