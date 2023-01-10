@@ -2,10 +2,15 @@ import React, { useState, useRef, useEffect } from "react";
 
 import "./style.css";
 
+export interface OptionsObjectType {
+    name: string | number;
+    value: string | number;
+}
+
 export interface OptionsListProps {
     referenceElement: any;
     values: string[];
-    options: string[];
+    options: OptionsObjectType[];
     handleChange: any;
     handleClose: any;
     handleSearchTextChange?: any;
@@ -105,7 +110,7 @@ const OptionsList = (props: OptionsListProps) => {
                     <li key={index} role="option" className="basicui-select__ul__li">
                         <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option)}>
                             <div className="basicui-select__ul__li__indicator">
-                                {props.values.includes(option) && <div><svg
+                                {props.values.includes(option.name + "") && <div><svg
                                     height="16"
                                     viewBox="0 0 16 16"
                                     version="1.1"
@@ -119,7 +124,7 @@ const OptionsList = (props: OptionsListProps) => {
                                 </svg></div>}
                             </div>
                             <div className="basicui-select__ul__li__text">
-                                {option}
+                                {option.value}
                             </div>
                         </button>
                     </li>

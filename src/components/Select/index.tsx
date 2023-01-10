@@ -4,14 +4,17 @@ import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
 import flip from '@popperjs/core/lib/modifiers/flip.js';
 
 import "./style.css";
-import OptionsList from "../shared/OptionsList";
+import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
+import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface SelectProps {
     options: string[];
+    optionsAsNameValue: OptionsObjectType[];
     initialValues?: string[];
     placeholder?: string;
     handleChange?: any;
     multiple?: boolean;
+    autocomplete?: boolean;
 };
 
 /**
@@ -22,6 +25,8 @@ const Select = (props: SelectProps) => {
     const [isVisible, setIsVisible] = useState(false);
     const referenceElement: React.MutableRefObject<any> = useRef(null);
     const popperElement: React.MutableRefObject<any> = useRef(null);
+    const [searchText, setSearchText] = useState('');
+    const [options, setOptions] = useState<OptionsObjectType[]>([]);
 
 
     useEffect(() => {
@@ -29,6 +34,24 @@ const Select = (props: SelectProps) => {
             setValues(props.initialValues);
         }
     }, [props.initialValues]);
+
+    useEffect(() => {
+        let _options: OptionsObjectType[] = [];
+        let _optionsAsNameValue: OptionsObjectType[] = [];
+        if (props.optionsAsNameValue && props.optionsAsNameValue.length > 0) {
+            _optionsAsNameValue = props.optionsAsNameValue;
+        } else if (props.options && props.options.length > 0) {
+            _optionsAsNameValue = props.options.map(item => ({ name: item, value: item }));
+        }
+
+        if (isEmptyOrSpaces(searchText)) {
+            _options = _optionsAsNameValue;
+        } else {
+            _options = _optionsAsNameValue.filter(item => searchText.includes((item.value + "").toLowerCase()));
+        }
+
+        setOptions(_options);
+    }, [searchText, props.options, props.optionsAsNameValue]);
 
     useEffect(() => {
         // listen for clicks and close select on body
@@ -85,6 +108,10 @@ const Select = (props: SelectProps) => {
         }
     }
 
+    const handleSearchTextChange = (_searchText: string) => {
+        setSearchText(_searchText.toLowerCase());
+    }
+
     return (
         <div
             className={["basicui-select"].join(
@@ -96,7 +123,7 @@ const Select = (props: SelectProps) => {
             </button>
 
             <div ref={popperElement} className="basicui-select__popper">
-                {isVisible && <OptionsList values={values} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
+                {isVisible && <OptionsList values={values} options={options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} handleSearchTextChange={props.autocomplete ? handleSearchTextChange : null} />}
             </div>
         </div>
     );
