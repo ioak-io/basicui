@@ -4,7 +4,7 @@ import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
 import flip from '@popperjs/core/lib/modifiers/flip.js';
 
 import "./Select.css";
-import PopupArea from "./PopupArea";
+import OptionsList from "../shared/OptionsList";
 
 export interface SelectProps {
     type: string;
@@ -85,7 +85,7 @@ const Select = (props: SelectProps) => {
             </button>
 
             <div ref={popperElement} className="basicui-select__popper">
-                {isVisible && <PopupArea value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
+                {isVisible && <OptionsList value={value} options={props.options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} />}
             </div>
         </div>
     );

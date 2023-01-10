@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import "./PopupArea.css";
+import "./style.css";
 
-export interface PopupAreaProps {
+export interface OptionsListProps {
     referenceElement: any;
     value: string;
     options: string[];
@@ -10,7 +10,7 @@ export interface PopupAreaProps {
     handleClose: any;
 };
 
-const PopupArea = (props: PopupAreaProps) => {
+const OptionsList = (props: OptionsListProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentIndexRef = useRef(0);
 
@@ -101,4 +101,4 @@ const PopupArea = (props: PopupAreaProps) => {
     </div>
 };
 
-export default PopupArea;
+export default OptionsList;
