@@ -15,9 +15,6 @@ export default {
 // Create a master template for mapping args to render the Button component
 const Template: Story<SelectProps> = (args: SelectProps) => <Select {...args} />;
 
-
-let valueDefault = ""
-
 // Reuse that template for creating different stories
 export const Default = Template.bind({});
 Default.args = { type: "default", initialValue: "", options: ["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "], placeholder: 'Default drop down'};
