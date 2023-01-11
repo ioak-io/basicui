@@ -9,7 +9,8 @@ export default {
   title: "Components/Select",
   component: Select,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    initialValues: [],
+    options: []
   },
 } as Meta;
 

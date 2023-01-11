@@ -11,7 +11,8 @@ export interface SelectProps {
     options: OptionsObjectType[];
     initialValues?: string[];
     placeholder?: string;
-    handleChange?: any;
+    onChange?: any;
+    onInput?: any;
     multiple?: boolean;
     autocomplete?: boolean;
 };
@@ -111,7 +112,8 @@ const Select = (props: SelectProps) => {
 
         setValues(_values);
         valuesRef.current = _values;
-        if (props.handleChange) { props.handleChange(_values) };
+        if (props.onChange) { props.onChange(_values) };
+        if (props.onInput) { props.onInput(_values) };
 
         if (!props.multiple) {
             setIsVisible(false);
