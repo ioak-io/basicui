@@ -5,6 +5,11 @@
 .basicui-select__button {
     width: 100%;
     text-align: left;
+    height: auto;
+    min-height: var(--basicui-formelement-height);
+    padding: var(--basicui-formelement-padding);
+    padding-top: 6px;
+    padding-bottom: 6px;
     /* justify-content: flex-start; */
 }
 

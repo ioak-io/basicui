@@ -11,7 +11,7 @@ export interface InputProps {
 };
 
 /**
- * Component to render input form element
+ * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
 const Input = (props: InputProps) => {
     const [value, setValue] = useState<(string | number)>('');
@@ -30,11 +30,11 @@ const Input = (props: InputProps) => {
 
     return (
         <div
-            className={["basicui-input"].join(
+            className={["basicui-input-el"].join(
                 " "
             )}
         >
-            <input className="basicui-input basicui-input-el" onInput={handleChange} />
+            <input className="basicui-input" onInput={handleChange} />
         </div>
     );
 };

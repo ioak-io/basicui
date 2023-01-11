@@ -27,7 +27,8 @@
 .basicui-select__ul__li__link {
     width: 100%;
     padding: 6px 6px;
-    font-weight: 400;
+    font-size: var(--basicui-formelement-font-size);
+    font-weight: var(--basicui-formelement-font-weight);
     text-align: left;
     background-color: transparent;
     color: #000;
@@ -50,9 +51,9 @@
 }
 
 .basicui-select__ul__li__link--active {
-    background-color: #00000010;
+    background-color: var(--basicui-formelement-background-color);
 }
 
 .basicui-select__ul__li__link:hover {
-    background-color: #00000010;
+    background-color: var(--basicui-formelement-background-color);
 }
