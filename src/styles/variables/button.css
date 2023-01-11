@@ -1,0 +1,8 @@
+* {
+    --basicui-button-font-size: 12px;
+    --basicui-button-border-thickness: 1px;
+    --basicui-button-background-color: #ececec;
+    --basicui-button-height: 32px;
+    --basicui-button-padding: 0 10px;
+    --basicui-button-border-radius: 2px;
+}
