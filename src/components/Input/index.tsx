@@ -2,12 +2,22 @@ import React, { useState, useRef, useEffect } from "react";
 
 import "./style.css";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
+import Tooltip from "../shared/Tooltip";
+import FormElementMessage from "../shared/FormElementMessage";
 
 export interface InputProps {
+    label?: string;
     initialValue?: string | number;
     placeholder?: string;
+    tooltip?: string;
+    errorMessage?: string;
+    warningMessage?: string;
+    successMessage?: string;
     onChange?: any;
     onInput?: any;
+    onFocus?: any;
+    onClick?: any;
+    onBlur?: any;
 };
 
 /**
@@ -22,10 +32,11 @@ const Input = (props: InputProps) => {
         }
     }, [props.initialValue]);
 
-    const handleChange = (event: any) => {
+    const onInput = (event: any) => {
         setValue(event.currentTarget.value);
-        if (props.onChange) { props.onChange(event.currentTarget.value) };
-        if (props.onInput) { props.onInput(event.currentTarget.value) };
+        if (props.onInput) {
+            props.onInput(event);
+        }
     }
 
     return (
@@ -34,7 +45,15 @@ const Input = (props: InputProps) => {
                 " "
             )}
         >
-            <input className="basicui-input" onInput={handleChange} />
+            <input className="basicui-input"
+                onInput={onInput}
+                onChange={props.onChange}
+                onFocus={props.onFocus}
+                onClick={props.onClick}
+                onBlur={props.onBlur}
+            />
+            {props.tooltip && <Tooltip text={props.tooltip} />}
+            {props.errorMessage && <FormElementMessage text={props.errorMessage} />}
         </div>
     );
 };

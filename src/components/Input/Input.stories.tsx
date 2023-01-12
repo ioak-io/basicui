@@ -18,5 +18,7 @@ const Template: Story<InputProps> = (args: InputProps) => <Input {...args} />;
 export const Text = Template.bind({});
 Text.args = {
   initialValue: "Dolor sit",
-  placeholder: 'Lorep ipsum dolor sit'
+  placeholder: 'Lorep ipsum dolor sit',
+  tooltip: "Ipsum dolor sit",
+  errorMessage: "jhsdfdsgf sdfg hfdsg"
 };

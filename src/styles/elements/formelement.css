@@ -1,0 +1,5 @@
+.basicui-form-element-error {
+    margin-top: 4px;
+    font-size: 10px;
+    color: var(--theme-danger-500);
+}
