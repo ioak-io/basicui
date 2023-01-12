@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 
 import "./style.css";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
-import Tooltip from "../shared/Tooltip";
 import FormElementMessage from "../shared/FormElementMessage";
 
 export interface InputProps {
@@ -52,8 +51,10 @@ const Input = (props: InputProps) => {
                 onClick={props.onClick}
                 onBlur={props.onBlur}
             />
-            {props.tooltip && <Tooltip text={props.tooltip} />}
-            {props.errorMessage && <FormElementMessage text={props.errorMessage} />}
+            {props.tooltip && <FormElementMessage text={props.tooltip} type="info" />}
+            {props.errorMessage && <FormElementMessage text={props.errorMessage} type="error" />}
+            {props.warningMessage && <FormElementMessage text={props.warningMessage} type="warning" />}
+            {props.successMessage && <FormElementMessage text={props.successMessage} type="success" />}
         </div>
     );
 };

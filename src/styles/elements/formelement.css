@@ -1,5 +1,20 @@
-.basicui-form-element-error {
+.basicui-form-element-error,
+.basicui-form-element-warning,
+.basicui-form-element-success,
+.basicui-form-element-info {
     margin-top: 4px;
     font-size: 10px;
     color: var(--theme-danger-500);
+}
+
+.basicui-form-element-warning {
+    color: var(--theme-warning-500);
+}
+
+.basicui-form-element-success {
+    color: var(--theme-success-500);
+}
+
+.basicui-form-element-info {
+    color: var(--theme-default-500);
 }

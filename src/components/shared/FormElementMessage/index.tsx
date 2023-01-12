@@ -4,6 +4,7 @@ import "./style.css";
 
 export interface FormElementMessageProps {
     text: string;
+    type: 'error' | 'warning' | 'success' | 'info';
 };
 
 /**
@@ -13,9 +14,7 @@ const FormElementMessage = (props: FormElementMessageProps) => {
 
     return (
         <div
-            className={["basicui-form-element-error"].join(
-                " "
-            )}
+            className={`basicui-form-element-${props.type}`}
         >
             {props.text}
         </div>
