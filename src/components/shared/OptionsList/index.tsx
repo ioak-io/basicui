@@ -103,7 +103,7 @@ const OptionsList = (props: OptionsListProps) => {
         setCurrentIndex(_current);
     }
 
-    const handleClick = (index: number, option: string) => {
+    const handleClick = (index: number, option: string | number) => {
         props.handleChange(index, option);
     }
 
