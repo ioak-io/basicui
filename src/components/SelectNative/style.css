@@ -1,0 +1,34 @@
+.basicui-selectnative {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+.basicui-selectnative option {
+    background-color: var(--theme-default-50);
+}
+
+.basicui-selectnative option:checked {
+    background-color: var(--theme-default-200);
+}
+
+.basicui-dark .basicui-selectnative option {
+    background-color: var(--theme-default-900);
+}
+
+.basicui-dark .basicui-selectnative option:checked {
+    background-color: var(--theme-default-700);
+}
+
+.basicui-selectnative--multiple {
+    height: auto;
+    padding: 0;
+}
+
+.basicui-selectnative--multiple option {
+    background-color: transparent;
+}
+
+.basicui-dark .basicui-selectnative--multiple option {
+    background-color: transparent;
+    color: #fff;
+}

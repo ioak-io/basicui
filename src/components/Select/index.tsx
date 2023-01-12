@@ -9,7 +9,7 @@ import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface SelectProps {
     options: OptionsObjectType[];
-    initialValues?: string[];
+    initialValues?: (string | number)[];
     placeholder?: string;
     onChange?: any;
     onInput?: any;
