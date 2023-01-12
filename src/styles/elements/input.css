@@ -48,3 +48,7 @@
     border-color: var(--theme-primary-transparent-400);
     background-color: var(--theme-primary-transparent-300);
 }
+
+.basicui-dark .basicui-input::placeholder {
+    color: var(--theme-default-300);
+}

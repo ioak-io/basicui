@@ -4,7 +4,7 @@ import "./style.css";
 
 export interface FormElementMessageProps {
     text: string;
-    type: 'error' | 'warning' | 'success' | 'info';
+    type: 'error' | 'warning' | 'success' | 'info' | 'label';
 };
 
 /**

@@ -5,6 +5,8 @@ import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";
 
 export interface InputProps {
+    id?: string;
+    type?: string;
     label?: string;
     initialValue?: string | number;
     placeholder?: string;
@@ -44,12 +46,18 @@ const Input = (props: InputProps) => {
                 " "
             )}
         >
-            <input className="basicui-input"
+            {props.label && <FormElementMessage text={props.label} type="label" />}
+            <input
+                id={props.id}
+                className="basicui-input"
                 onInput={onInput}
                 onChange={props.onChange}
                 onFocus={props.onFocus}
                 onClick={props.onClick}
                 onBlur={props.onBlur}
+                value={value}
+                type={props.type}
+                placeholder={props.placeholder}
             />
             {props.tooltip && <FormElementMessage text={props.tooltip} type="info" />}
             {props.errorMessage && <FormElementMessage text={props.errorMessage} type="error" />}

@@ -18,3 +18,15 @@
 .basicui-form-element-info {
     color: var(--theme-default-500);
 }
+
+.basicui-dark .basicui-form-element-info {
+    color: var(--theme-default-300);
+}
+
+.basicui-form-element-label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+    word-break: keep-all;
+}
