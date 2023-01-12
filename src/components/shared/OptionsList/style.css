@@ -78,5 +78,5 @@
 
 .basicui-dark .basicui-select__ul__li__link--active,
 .basicui-dark .basicui-select__ul__li__link:hover {
-    background-color: var(--theme-primary-transparent-100);
+    background-color: var(--theme-default-800);
 }
