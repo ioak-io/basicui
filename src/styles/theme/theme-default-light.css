@@ -1,0 +1,12 @@
+.basicui-light {
+    --theme-default-50: #f5f6f6;
+    --theme-default-100: #e6e7e7;
+    --theme-default-200: #d0d1d1;
+    --theme-default-300: #afb1b1;
+    --theme-default-400: #86898a;
+    --theme-default-500: #696c6d;
+    --theme-default-600: #5b5e5f;
+    --theme-default-700: #4e5050;
+    --theme-default-800: #444546;
+    --theme-default-900: #3c3d3d;
+}

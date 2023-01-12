@@ -7,22 +7,44 @@
     font-weight: var(--basicui-formelement-font-weight);
     text-overflow: ellipsis;
     outline: none;
-    background-color: var(--basicui-formelement-background-color);
-    border: none;
-    border: 1px solid var(--basicui-formelement-border-color);
+    border-width: 1px;
+    border-style: solid;
     border-radius: var(--basicui-formelement-border-radius);
     display: flex;
     align-items: center;
-    transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out;
+    transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
+}
+
+.basicui-input {
+    border-color: var(--theme-default-100);
+    background-color: var(--theme-default-50);
+    color: #000;
+}
+
+.basicui-input:hover {
+    border-color: var(--theme-primary-transparent-200);
+    background-color: var(--theme-primary-transparent-100);
 }
 
 .basicui-input:active,
 .basicui-input:focus {
-    border-color: var(--basicui-formelement-border-color-active);
-    background-color: var(--basicui-formelement-background-color-active);
+    border-color: var(--theme-primary-transparent-300);
+    background-color: var(--theme-primary-transparent-200);
 }
 
-.basicui-input:hover {
-    border-color: var(--basicui-formelement-border-color-hover);
-    background-color: var(--basicui-formelement-background-color-hover);
+.basicui-dark .basicui-input {
+    border-color: var(--theme-default-700);
+    background-color: var(--theme-default-600);
+    color: #fff;
+}
+
+.basicui-dark .basicui-input:hover {
+    border-color: var(--theme-primary-transparent-300);
+    background-color: var(--theme-primary-transparent-200);
+}
+
+.basicui-dark .basicui-input:active,
+.basicui-dark .basicui-input:focus {
+    border-color: var(--theme-primary-transparent-400);
+    background-color: var(--theme-primary-transparent-300);
 }
