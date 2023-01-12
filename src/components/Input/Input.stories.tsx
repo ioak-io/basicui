@@ -15,23 +15,23 @@ export default {
 const Template: Story<InputProps> = (args: InputProps) => <Input {...args} />;
 
 // Reuse that template for creating different stories
-export const Text = Template.bind({});
-Text.args = {
+export const BasicInput = Template.bind({});
+BasicInput.args = {
   label: "First name",
   initialValue: "",
   placeholder: 'Lorem ipsum dolor sit',
 };
 
-export const TextWithTooltip = Template.bind({});
-TextWithTooltip.args = {
+export const InputWithTooltip = Template.bind({});
+InputWithTooltip.args = {
   label: "First name",
   initialValue: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   tooltip: "Quisque tincidunt vitae purus id feugiat"
 };
 
-export const TextWithError = Template.bind({});
-TextWithError.args = {
+export const InputWithError = Template.bind({});
+InputWithError.args = {
   label: "First name",
   initialValue: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
@@ -39,8 +39,8 @@ TextWithError.args = {
 };
 
 
-export const TextWithWarning = Template.bind({});
-TextWithWarning.args = {
+export const InputWithWarning = Template.bind({});
+InputWithWarning.args = {
   label: "First name",
   initialValue: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
@@ -48,19 +48,35 @@ TextWithWarning.args = {
 };
 
 
-export const TextWithSuccess = Template.bind({});
-TextWithSuccess.args = {
+export const InputWithSuccess = Template.bind({});
+InputWithSuccess.args = {
   label: "First name",
   initialValue: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   successMessage: "Quisque tincidunt vitae purus id feugiat"
 };
 
-export const TextWithTooltipAndError = Template.bind({});
-TextWithTooltipAndError.args = {
+export const InputWithTooltipAndError = Template.bind({});
+InputWithTooltipAndError.args = {
   label: "First name",
   initialValue: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   tooltip: "Ipsum dolor sit",
   errorMessage: "Quisque tincidunt vitae purus id feugiat"
+};
+
+export const DateInput = Template.bind({});
+DateInput.args = {
+  type: "date",
+  label: "Date of birth",
+  initialValue: "Dolor sit",
+  placeholder: 'Lorem ipsum dolor sit'
+};
+
+export const NumberInput = Template.bind({});
+NumberInput.args = {
+  type: "number",
+  label: "Age",
+  initialValue: "Dolor sit",
+  placeholder: 'Lorem ipsum dolor sit'
 };

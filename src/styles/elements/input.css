@@ -1,5 +1,6 @@
 .basicui-input {
     /* padding: 6px 6px; */
+    width: 100%;
     padding: var(--basicui-formelement-padding);
     line-height: 1.5;
     height: var(--basicui-formelement-height);

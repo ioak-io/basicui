@@ -4,7 +4,7 @@ import "./style.css";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";
 
-export interface InputProps {
+export interface TextareaProps {
     id?: string;
     type?: string;
     label?: string;
@@ -19,12 +19,15 @@ export interface InputProps {
     onFocus?: any;
     onClick?: any;
     onBlur?: any;
+    onResize?: any;
+    rows?: number;
+    cols?: number;
 };
 
 /**
  * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
-const Input = (props: InputProps) => {
+const Textarea = (props: TextareaProps) => {
     const [value, setValue] = useState<(string | number)>('');
 
     useEffect(() => {
@@ -42,12 +45,12 @@ const Input = (props: InputProps) => {
 
     return (
         <div
-            className={["basicui-input-el"].join(
+            className={["basicui-textarea"].join(
                 " "
             )}
         >
             {props.label && <FormElementMessage text={props.label} type="label" />}
-            <input
+            <textarea
                 id={props.id}
                 className="basicui-input"
                 onInput={onInput}
@@ -56,8 +59,10 @@ const Input = (props: InputProps) => {
                 onClick={props.onClick}
                 onBlur={props.onBlur}
                 value={value}
-                type={props.type}
                 placeholder={props.placeholder}
+                onResize={props.onResize}
+                rows={props.rows}
+                cols={props.cols}
                 autoComplete="none"
             />
             {props.tooltip && <FormElementMessage text={props.tooltip} type="info" />}
@@ -68,4 +73,4 @@ const Input = (props: InputProps) => {
     );
 };
 
-export default Input;
+export default Textarea;

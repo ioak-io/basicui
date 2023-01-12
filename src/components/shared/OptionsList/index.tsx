@@ -114,7 +114,7 @@ const OptionsList = (props: OptionsListProps) => {
     return <div>
         <ul role="listbox" className="basicui-select__ul basicui-popup">
             {props.handleSearchTextChange && <div className="basicui-select__ul__search">
-                <input ref={searchReferenceElement} className="basicui-input" autoFocus onInput={handleSearchTextChange} />
+                <input ref={searchReferenceElement} className="basicui-input" autoFocus onInput={handleSearchTextChange} autoComplete="none" />
             </div>}
             {
                 props.options?.map((option, index) => (
