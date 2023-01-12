@@ -32,18 +32,3 @@ MultiSelectNative.args = {
   options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
   placeholder: 'Default drop down'
 };
-
-export const Autocomplete = Template.bind({});
-Autocomplete.args = {
-  autocomplete: true,
-  options: SelectPropsConverter.optionsFromObject({ 1: "Lorem ipsum", 2: "Dolor sit", 4: 56 }),
-  placeholder: 'Autocomplete drop down'
-};
-
-export const AutocompleteMultiSelectNative = Template.bind({});
-AutocompleteMultiSelectNative.args = {
-  autocomplete: true,
-  multiple: true,
-  options: SelectPropsConverter.optionsFromObject({ 1: "Lorem ipsum", 2: "Dolor sit", 4: 56 }),
-  placeholder: 'Autocomplete drop down'
-};
