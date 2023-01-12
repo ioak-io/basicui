@@ -48,11 +48,17 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
+    "storybook-dark-mode": "^2.0.5",
     "style-loader": "^3.3.1",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@storybook/addons": "^6.5.15",
+    "@storybook/theming": "^6.5.15",
+    "D": "^1.0.0"
   }
 }

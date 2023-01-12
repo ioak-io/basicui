@@ -1,0 +1,12 @@
+.basicui-button--theme-default {
+    background-color: var(--theme-default-100);
+    border-color: var(--theme-default-100);
+    color: #000;
+}
+
+.basicui-button--theme-default:hover,
+.basicui-button--theme-default:focus {
+    background-color: var(--theme-default-200);
+    border-color: var(--theme-default-200);
+    color: #000;
+}

@@ -1,0 +1,12 @@
+* {
+    --theme-danger-50: #fff1f2;
+    --theme-danger-100: #ffe0e3;
+    --theme-danger-200: #ffc6cc;
+    --theme-danger-300: #ff9ea8;
+    --theme-danger-400: #ff6776;
+    --theme-danger-500: #fc374b;
+    --theme-danger-600: #db1428;
+    --theme-danger-700: #c51022;
+    --theme-danger-800: #a31120;
+    --theme-danger-900: #861621;
+}

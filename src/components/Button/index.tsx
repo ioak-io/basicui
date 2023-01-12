@@ -1,13 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import { createPopper } from '@popperjs/core';
-import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
-import flip from '@popperjs/core/lib/modifiers/flip.js';
-
+import ThemeType from "../types/ThemeType";
 import "./style.css";
-import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
-import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface ButtonProps {
+    theme?: ThemeType;
     onClick?: any;
     children: any;
 };
@@ -22,7 +18,7 @@ const Button = (props: ButtonProps) => {
     }
 
     return (
-        <button className="basicui-button" type="button" onClick={handleClick}>
+        <button className={`basicui-button basicui-button--theme-${props.theme || ThemeType.default}`} type="button" onClick={handleClick}>
             {props.children}
         </button>
     );

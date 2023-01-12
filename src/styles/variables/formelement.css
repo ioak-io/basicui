@@ -1,5 +1,4 @@
 * {
-    /* formelement properties */
     --basicui-formelement-height: 32px;
     --basicui-formelement-padding: 0 6px;
     --basicui-formelement-font-size: 12px;
@@ -7,8 +6,8 @@
     --basicui-formelement-border-radius: 2px;
     --basicui-formelement-background-color: #f9f9f9;
     --basicui-formelement-border-color: #e7e7e7;
-    --basicui-formelement-background-color-active: #dbeefb;
-    --basicui-formelement-border-color-active: #45aee5;
-    --basicui-formelement-background-color-hover: #dbeefb;
-    --basicui-formelement-border-color-hover: #9ed6f0;
+    --basicui-formelement-background-color-active: var(--theme-primary-100);
+    --basicui-formelement-border-color-active: var(--theme-primary-400);
+    --basicui-formelement-background-color-hover: var(--theme-primary-100);
+    --basicui-formelement-border-color-hover: var(--theme-primary-300);
 }

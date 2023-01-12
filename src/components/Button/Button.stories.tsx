@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Button, { ButtonProps } from ".";
+import ThemeType from "../types/ThemeType";
 
 export default {
   title: "Components/Button",
@@ -19,5 +20,11 @@ const Template: Story<ButtonProps> = (args: ButtonProps) => <Button {...args} />
 // Reuse that template for creating different stories
 export const Default = Template.bind({});
 Default.args = {
-  children: <div>Submit</div>
+  children: <div>Default button</div>
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  children: <div>Primary button</div>,
+  theme: ThemeType.primary
 };

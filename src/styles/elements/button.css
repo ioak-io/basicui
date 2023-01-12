@@ -1,0 +1,36 @@
+@import './button-default.css';
+@import './button-primary.css';
+
+.basicui-button {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    font-size: var(--basicui-button-font-size);
+    height: var(--basicui-button-height);
+    padding: var(--basicui-button-padding);
+    border-radius: var(--basicui-button-border-radius);
+    border-width: var(--basicui-button-border-thickness);
+    border-style: solid;
+    transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
+}
+
+/* .basicui-button:focus {
+    outline-offset: -2px;
+    outline: rgb(25, 148, 210) auto 2px;
+} */
+
+
+.basicui-button--theme-primary {
+    background-color: var(--theme-primary-500);
+    border-color: var(--theme-primary-500);
+    color: #fff;
+}
+
+.basicui-button--theme-primary:hover,
+.basicui-button--theme-primary:focus {
+    background-color: var(--theme-primary-400);
+    border-color: var(--theme-primary-400);
+    color: #fff;
+}
