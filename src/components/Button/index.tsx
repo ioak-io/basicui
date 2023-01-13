@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import ButtonVariantType from "../types/ButtonVariantType";
 import ThemeType from "../types/ThemeType";
 import "./style.css";
 
@@ -8,6 +9,7 @@ export interface ButtonProps {
     onSubmit?: any;
     onReset?: any;
     type?: 'button' | 'submit' | 'reset';
+    variant?: ButtonVariantType;
     children: any;
 };
 
@@ -16,7 +18,7 @@ export interface ButtonProps {
  */
 const Button = (props: ButtonProps) => {
     return (
-        <button className={`basicui-button basicui-button--theme-${props.theme || ThemeType.default}`}
+        <button className={`basicui-button basicui-button--theme-${props.theme || ThemeType.default} basicui-button--variant-${props.variant || ButtonVariantType.default}`}
             type={props.type || "button"}
             onSubmit={props.onSubmit}
             onReset={props.onReset}
