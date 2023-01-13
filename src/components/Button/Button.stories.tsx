@@ -4,6 +4,7 @@ import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Button, { ButtonProps } from ".";
 import ThemeType from "../types/ThemeType";
+import ButtonVariantType from "../types/ButtonVariantType";
 
 export default {
   title: "Components/Button",
@@ -18,13 +19,23 @@ export default {
 const Template: Story<ButtonProps> = (args: ButtonProps) => <Button {...args} />;
 
 // Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = {
-  children: <div>Default button</div>
+export const DefaultThemeWithDefaultVariant = Template.bind({});
+DefaultThemeWithDefaultVariant.args = {
+  theme: ThemeType.default,
+  variant: ButtonVariantType.default,
+  children: <div>Lorem ipsum</div>
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: <div>Primary button</div>,
-  theme: ThemeType.primary
+export const DefaultThemeWithOutlineVariant = Template.bind({});
+DefaultThemeWithOutlineVariant.args = {
+  theme: ThemeType.default,
+  variant: ButtonVariantType.outline,
+  children: <div>Lorem ipsum</div>
+};
+
+export const PrimaryThemeWithDefaultVariant = Template.bind({});
+PrimaryThemeWithDefaultVariant.args = {
+  theme: ThemeType.primary,
+  variant: ButtonVariantType.default,
+  children: <div>Primary button</div>
 };
