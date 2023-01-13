@@ -33,6 +33,13 @@ DefaultThemeWithOutlineVariant.args = {
   children: <div>Lorem ipsum</div>
 };
 
+export const DefaultThemeWithFillVariant = Template.bind({});
+DefaultThemeWithFillVariant.args = {
+  theme: ThemeType.default,
+  variant: ButtonVariantType.fill,
+  children: <div>Lorem ipsum</div>
+};
+
 export const PrimaryThemeWithDefaultVariant = Template.bind({});
 PrimaryThemeWithDefaultVariant.args = {
   theme: ThemeType.primary,
