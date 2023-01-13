@@ -1,0 +1,52 @@
+.basicui-link {
+    color: var(--theme-default-700);
+}
+
+.basicui-link svg {
+    fill: var(--theme-default-700);
+}
+
+.basicui-dark .basicui-link {
+    color: var(--theme-default-200);
+}
+
+.basicui-dark .basicui-link svg {
+    fill: var(--theme-default-200);
+}
+
+.basicui-link.basicui-link--no-glow {
+    color: var(--theme-default-900);
+}
+
+.basicui-link.basicui-link--no-glow svg {
+    fill: var(--theme-default-900);
+}
+
+.basicui-dark .basicui-link.basicui-link--no-glow {
+    color: var(--theme-default-50);
+}
+
+.basicui-dark .basicui-link.basicui-link--no-glow svg {
+    fill: var(--theme-default-50);
+}
+
+.basicui-link:hover,
+.basicui-link:focus
+ {
+    color: var(--theme-default-900);
+}
+
+.basicui-link:hover svg,
+.basicui-link:focus svg {
+    fill: var(--theme-default-900);
+}
+
+.basicui-dark .basicui-link:hover,
+.basicui-dark .basicui-link:focus {
+    color: var(--theme-default-50);
+}
+
+.basicui-dark .basicui-link:hover svg,
+.basicui-dark .basicui-link:focus svg {
+    fill: var(--theme-default-50);
+}

@@ -4,6 +4,8 @@ import "./style.css";
 
 export interface LinkProps {
     theme?: ThemeType;
+    noUnderline?: boolean;
+    noGlow?: boolean;
     onClick?: any;
     onSubmit?: any;
     onReset?: any;
@@ -17,7 +19,7 @@ export interface LinkProps {
 const Link = (props: LinkProps) => {
     return (
         <a href="https://google.com"
-            className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default}`}>
+            className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default} ${props.noUnderline ? "basicui-link--no-underline" : ""} ${props.noGlow ? "basicui-link--no-glow" : ""}`}>
             {props.children}
             <span>{props.label}</span>
         </a>

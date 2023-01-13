@@ -1,6 +1,14 @@
+@import './link-default.css';
+@import './link-primary.css';
+
 .basicui-link {
     font-size: 12px;
     display: inline;
+    transition: 250ms color ease-in-out;
+}
+
+.basicui-link svg {
+    transition: 250ms fill ease-in-out;
 }
 
 .basicui-link>* {
@@ -20,22 +28,12 @@
     margin-right: 4px;
 }
 
-.basicui-link:hover span {
+.basicui-link:hover span,
+.basicui-link:focus span {
     text-decoration: underline;
 }
 
-.basicui-link {
-    color: var(--theme-default-700);
-}
-
-.basicui-link svg {
-    fill: var(--theme-default-700);
-}
-
-.basicui-dark .basicui-link {
-    color: var(--theme-default-200);
-}
-
-.basicui-dark .basicui-link svg {
-    fill: var(--theme-default-200);
+.basicui-link--no-underline.basicui-link:hover span,
+.basicui-link--no-underline.basicui-link:focus span {
+    text-decoration: none;
 }
