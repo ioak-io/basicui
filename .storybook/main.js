@@ -8,5 +8,5 @@ module.exports = {
     "@storybook/addon-interactions",
     "storybook-dark-mode"
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
 }
