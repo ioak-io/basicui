@@ -1,14 +1,41 @@
-.basicui-link, .basicui-link div {
+.basicui-link {
     font-size: 12px;
-    color: #fff;
-    /* display: grid;
-    grid-auto-flow: column;
-    column-gap: 10px;
-    align-items: center;
-    justify-content: flex-start; */
+    display: inline;
+}
+
+.basicui-link>* {
+    vertical-align: middle;
+}
+
+.basicui-link,
+.basicui-link:hover,
+.basicui-link:focus,
+.basicui-link:active {
+    text-decoration: none;
 }
 
 .basicui-link svg {
-    height: 24px;
-    fill: #fff;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.basicui-link:hover span {
+    text-decoration: underline;
+}
+
+.basicui-link {
+    color: var(--theme-default-700);
+}
+
+.basicui-link svg {
+    fill: var(--theme-default-700);
+}
+
+.basicui-dark .basicui-link {
+    color: var(--theme-default-200);
+}
+
+.basicui-dark .basicui-link svg {
+    fill: var(--theme-default-200);
 }

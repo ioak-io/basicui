@@ -19,7 +19,7 @@ const Link = (props: LinkProps) => {
         <a href="https://google.com"
             className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default}`}>
             {props.children}
-            <div>{props.label}</div>
+            <span>{props.label}</span>
         </a>
     );
 };
