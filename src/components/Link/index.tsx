@@ -7,7 +7,8 @@ export interface LinkProps {
     onClick?: any;
     onSubmit?: any;
     onReset?: any;
-    children: any;
+    children?: any;
+    label?: string;
 };
 
 /**
@@ -15,8 +16,10 @@ export interface LinkProps {
  */
 const Link = (props: LinkProps) => {
     return (
-        <a className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default}`}>
+        <a href="https://google.com"
+            className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default}`}>
             {props.children}
+            <div>{props.label}</div>
         </a>
     );
 };

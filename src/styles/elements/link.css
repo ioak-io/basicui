@@ -1,0 +1,14 @@
+.basicui-link, .basicui-link div {
+    font-size: 12px;
+    color: #fff;
+    /* display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: flex-start; */
+}
+
+.basicui-link svg {
+    height: 24px;
+    fill: #fff;
+}
