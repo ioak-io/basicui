@@ -1,5 +1,6 @@
-@import './theme-default-dark.css';
-@import './theme-default-light.css';
+@import './theme-default.css';
+@import './theme-default-light-transparent.css';
+@import './theme-default-dark-transparent.css';
 @import './theme-success.css';
 @import './theme-warning.css';
 @import './theme-danger.css';

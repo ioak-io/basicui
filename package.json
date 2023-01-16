@@ -9,8 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c --bundleConfigAsCjs",
-    "prepublishOnly": "npm build"
+    "build": "rollup -c --bundleConfigAsCjs && npm run copy-css",
+    "prepublishOnly": "npm build",
+    "copy-css": "cp -r ./src/styles/ ./lib/"
   },
   "repository": {
     "type": "git",

@@ -40,9 +40,38 @@ DefaultThemeWithFillVariant.args = {
   children: <div>Lorem ipsum</div>
 };
 
-export const PrimaryThemeWithDefaultVariant = Template.bind({});
-PrimaryThemeWithDefaultVariant.args = {
+export const DefaultThemeWithTransparentVariant = Template.bind({});
+DefaultThemeWithTransparentVariant.args = {
+  theme: ThemeType.default,
+  variant: ButtonVariantType.transparent,
+  children: <div>Lorem ipsum</div>
+};
+
+// Primary theme
+export const PrimaryThemeWithPrimaryVariant = Template.bind({});
+PrimaryThemeWithPrimaryVariant.args = {
   theme: ThemeType.primary,
   variant: ButtonVariantType.default,
-  children: <div>Primary button</div>
+  children: <div>Lorem ipsum</div>
+};
+
+export const PrimaryThemeWithOutlineVariant = Template.bind({});
+PrimaryThemeWithOutlineVariant.args = {
+  theme: ThemeType.primary,
+  variant: ButtonVariantType.outline,
+  children: <div>Lorem ipsum</div>
+};
+
+export const PrimaryThemeWithFillVariant = Template.bind({});
+PrimaryThemeWithFillVariant.args = {
+  theme: ThemeType.primary,
+  variant: ButtonVariantType.fill,
+  children: <div>Lorem ipsum</div>
+};
+
+export const PrimaryThemeWithTransparentVariant = Template.bind({});
+PrimaryThemeWithTransparentVariant.args = {
+  theme: ThemeType.primary,
+  variant: ButtonVariantType.transparent,
+  children: <div>Lorem ipsum</div>
 };
