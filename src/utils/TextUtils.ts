@@ -1,4 +1,7 @@
 export function isEmptyOrSpaces(str: any) {
+  if (typeof str === 'number') {
+    return !str || str === 0;
+  }
   return !str || str.match(/^ *$/) !== null;
 }
 
@@ -37,14 +40,14 @@ export function sort(
       return o1[property] > o2[property]
         ? -1
         : o1[property] < o2[property]
-        ? 1
-        : 0;
+          ? 1
+          : 0;
     }
     return o1[property] < o2[property]
       ? -1
       : o1[property] > o2[property]
-      ? 1
-      : 0;
+        ? 1
+        : 0;
   });
 
   return result;

@@ -77,6 +77,6 @@ export const NumberInput = Template.bind({});
 NumberInput.args = {
   type: "number",
   label: "Age",
-  initialValue: "Dolor sit",
+  initialValue: 1,
   placeholder: 'Lorem ipsum dolor sit'
 };
