@@ -1,0 +1,33 @@
+.basicui-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.basicui-modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000060;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basicui-modal__base {
+    z-index: 102;
+    background-color: #ffffff;
+    width: 500px;
+    max-width: 90vw;
+    border-radius: var(--basicui-formelement-border-radius);
+    padding: 24px;
+}

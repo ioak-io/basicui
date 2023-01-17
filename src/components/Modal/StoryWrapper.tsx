@@ -10,13 +10,24 @@ import Button from "../Button";
 const StoryWrapper = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
+
+    const openModal = () => {
+        console.log("**1", isOpen);
+        setIsOpen(!isOpen)
+    }
+
+    const openModal2 = () => {
+        console.log("**2", isOpen2);
+        setIsOpen2(!isOpen2)
+    }
+
     return (
         <div>
-            <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+            <Button onClick={openModal}>Open Modal</Button>
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} >
                 First modal</Modal>
 
-            <Button onClick={() => setIsOpen2(true)}>Open Modal 2</Button>
+            <Button onClick={openModal2}>Open Modal 2</Button>
             <Modal isOpen={isOpen2} onClose={() => setIsOpen2(false)}>
                 Second modal</Modal>
         </div>
