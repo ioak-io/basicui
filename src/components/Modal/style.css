@@ -8,6 +8,7 @@
     display: grid;
     align-items: center;
     justify-items: center;
+    z-index: 100;
 }
 
 .basicui-modal__overlay {
@@ -25,9 +26,47 @@
 
 .basicui-modal__base {
     z-index: 102;
-    background-color: #ffffff;
-    width: 500px;
+    background-color: var(--theme-default-50);
+    min-width: 500px;
     max-width: 90vw;
     border-radius: var(--basicui-formelement-border-radius);
-    padding: 24px;
+}
+
+.basicui-dark .basicui-modal__base {
+    background-color: var(--theme-default-600);
+}
+
+.basicui-modal__header {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 46px;
+    align-items: center;
+    border-bottom: 1px solid var(--theme-default-100);
+}
+
+.basicui-dark .basicui-modal__header {
+    border-bottom: 1px solid var(--theme-default-500);
+}
+
+.basicui-modal__header__heading {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.basicui-modal__footer {
+    padding: 0 12px;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 46px;
+    align-items: center;
+    border-top: 1px solid var(--theme-default-100);
+}
+
+.basicui-dark .basicui-modal__footer {
+    border-top: 1px solid var(--theme-default-500);
+}
+
+.basicui-modal__body {
+    padding: 24px 12px;
 }

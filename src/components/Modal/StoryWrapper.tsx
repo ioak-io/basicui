@@ -24,8 +24,8 @@ const StoryWrapper = () => {
     return (
         <div>
             <Button onClick={openModal}>Open Modal</Button>
-            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} >
-                First modal</Modal>
+            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} heading="Lorem ipsum">
+                Praesent urna erat, pharetra vel est vitae, tincidunt viverra sapien. Nullam ac rutrum diam. Curabitur non augue justo. Morbi pulvinar convallis leo eu faucibus. Nullam eu ullamcorper nisl. Ut cursus sagittis elit at congue. Donec malesuada sem at condimentum ultrices. Ut elementum tincidunt ipsum quis condimentum. Mauris nec arcu vitae diam sollicitudin aliquet. Nunc sed euismod ante. Proin eros magna, lobortis ut varius finibus, dignissim eu purus. Praesent ornare rutrum turpis imperdiet fringilla.</Modal>
 
             <Button onClick={openModal2}>Open Modal 2</Button>
             <Modal isOpen={isOpen2} onClose={() => setIsOpen2(false)}>
