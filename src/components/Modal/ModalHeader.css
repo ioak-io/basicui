@@ -1,0 +1,20 @@
+.basicui-modal-header {
+    padding: 0 var(--basicui-modal-padding);
+    display: flex;
+    justify-content: space-between;
+    height: var(--basicui-modal-header-height);
+    align-items: center;
+}
+
+.basicui-modal-header--show-border {
+    border-bottom: 1px solid var(--theme-white-100);
+}
+
+.basicui-dark .basicui-modal-header {
+    border-color: var(--theme-black-400);
+}
+
+.basicui-modal-header__heading {
+    font-size: var(--basicui-modal-heading-font-size);
+    font-weight: var(--basicui-modal-heading-font-weight);
+}

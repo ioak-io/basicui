@@ -6,6 +6,7 @@ import Modal, { ModalProps }  from ".";
 import ThemeType from "../types/ThemeType";
 import StoryWrapper from "./StoryWrapper";
 import ModalSizeType from "../types/ModalSizeType";
+import ModalPlacement from "../types/ModalPlacement";
 
 export default {
   title: "Components/Modal",
@@ -19,17 +20,11 @@ export default {
 // Create a master template for mapping args to render the Modal component
 const Template: Story<ModalProps> = (args: any) => <StoryWrapper {...args} />;
 
-let open = false;
-
-const handleClose = () => {
-  console.log("123")
-  open = !open;
-}
-
 // Reuse that template for creating different stories
 export const DefaultModal = Template.bind({});
 DefaultModal.args = {
   isOpen: true,
+  placement: ModalPlacement.bottom,
   size: ModalSizeType.xlarge
   // open,
   // onClose: handleClose,

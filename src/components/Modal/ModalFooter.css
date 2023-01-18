@@ -1,0 +1,31 @@
+.basicui-modal-footer {
+    padding: 0 var(--basicui-modal-padding);
+    display: flex;
+    justify-content: flex-end;
+    min-height: var(--basicui-modal-header-height);
+    align-items: center;
+}
+
+.basicui-modal-footer--show-border {
+    border-top: 1px solid var(--theme-default-100);
+}
+
+.basicui-modal-footer * {
+    margin-right: var(--basicui-action-spacing);
+}
+
+.basicui-modal-footer *:last-child {
+    margin-right: 0px;
+}
+
+.basicui-dark .basicui-modal-footer {
+    border-color: var(--theme-default-500);
+}
+
+.basicui-modal-footer--alignment-left {
+    justify-content: flex-start;
+}
+
+.basicui-modal-footer--alignment-center {
+    justify-content: center;
+}
