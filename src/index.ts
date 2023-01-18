@@ -4,8 +4,28 @@ import Button from './components/Button';
 import Link from './components/Link';
 import Textarea from './components/Textarea';
 import SelectNative from './components/SelectNative';
+import Modal from './components/Modal';
+import ModalHeader from './components/Modal/ModalHeader';
+import ModalFooter from './components/Modal/ModalFooter';
 
 import * as SelectPropsConverter from './converters/Select';
 import ThemeType from "./components/types/ThemeType";
+import AlignmentType from "./components/types/AlignmentType";
+import ButtonVariantType from "./components/types/ButtonVariantType";
+import ModalPlacement from "./components/types/ModalPlacement";
+import ModalSizeType from "./components/types/ModalSizeType";
 
-export { Select, SelectPropsConverter, Input, Button, Link, Textarea, SelectNative, ThemeType };
+export {
+    Select, SelectPropsConverter,
+    Input,
+    Button,
+    Link,
+    Textarea,
+    SelectNative,
+    Modal, ModalHeader, ModalFooter,
+    ThemeType,
+    AlignmentType,
+    ButtonVariantType,
+    ModalPlacement,
+    ModalSizeType
+};
