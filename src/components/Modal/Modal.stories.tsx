@@ -5,6 +5,7 @@ import { useAddonState } from '@storybook/api';
 import Modal, { ModalProps }  from ".";
 import ThemeType from "../types/ThemeType";
 import StoryWrapper from "./StoryWrapper";
+import ModalSizeType from "../types/ModalSizeType";
 
 export default {
   title: "Components/Modal",
@@ -28,7 +29,8 @@ const handleClose = () => {
 // Reuse that template for creating different stories
 export const DefaultModal = Template.bind({});
 DefaultModal.args = {
-  isOpen: true
+  isOpen: true,
+  size: ModalSizeType.xlarge
   // open,
   // onClose: handleClose,
   // children:

@@ -1,12 +1,16 @@
 // @src/components/Modal.tsx
 import React, { useState, Dispatch, SetStateAction, Children } from 'react';
 import { Button, SelectPropsConverter, ThemeType } from '../..';
+import ModalPlacement from '../types/ModalPlacement';
+import ModalSizeType from '../types/ModalSizeType';
 import Portal from './Portal';
 
 // Define the props of Modal.
 export type ModalProps = {
     isOpen: boolean,
     onClose: any,
+    size?: ModalSizeType,
+    placement?: ModalPlacement,
     heading?: string;
     children?: any
 }
@@ -20,7 +24,7 @@ const Modal = (
         <Portal wrapperId="basicui-modal">
             <div className="basicui-modal">
                 <div className="basicui-modal__overlay">
-                    <div className="basicui-modal__base">
+                    <div className={`basicui-modal__base basicui-modal__base--size-${props.size || "default"}`}>
                         <div className="basicui-modal__header">
                             <div className="basicui-modal__header__heading">{props.heading}</div>
                             x
@@ -39,7 +43,7 @@ const Modal = (
                                 onClick={props.onClose}
                                 theme={ThemeType.default}
                             >
-                                theme-white and theme-white
+                                Cancel
                             </Button>
                         </div>
                     </div>
