@@ -1,12 +1,12 @@
 * {
-    --theme-black-900: #121212;
-    --theme-black-800: #1d1d1d;
+    --theme-black-900: #020202;
+    --theme-black-800: #121212;
     --theme-black-700: #222222;
-    --theme-black-600: #242424;
-    --theme-black-500: #272727;
-    --theme-black-400: #2c2c2c;
-    --theme-black-300: #2e2e2e;
-    --theme-black-200: #323232;
-    --theme-black-100: #353535;
-    --theme-black-50: #383838;
+    --theme-black-600: #323232;
+    --theme-black-500: #424242;
+    --theme-black-400: #525252;
+    --theme-black-300: #626262;
+    --theme-black-200: #727272;
+    --theme-black-100: #828282;
+    --theme-black-50: #929292;
 }

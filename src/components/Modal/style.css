@@ -26,14 +26,14 @@
 
 .basicui-modal__base {
     z-index: 102;
-    background-color: var(--theme-default-50);
+    background-color: var(--theme-white-50);
     min-width: 500px;
     max-width: 90vw;
     border-radius: var(--basicui-formelement-border-radius);
 }
 
 .basicui-dark .basicui-modal__base {
-    background-color: var(--theme-default-600);
+    background-color: var(--theme-black-500);
 }
 
 .basicui-modal__header {
@@ -42,11 +42,11 @@
     justify-content: space-between;
     height: 46px;
     align-items: center;
-    border-bottom: 1px solid var(--theme-default-100);
+    border-bottom: 1px solid var(--theme-white-100);
 }
 
 .basicui-dark .basicui-modal__header {
-    border-bottom: 1px solid var(--theme-default-500);
+    border-color: var(--theme-black-400);
 }
 
 .basicui-modal__header__heading {
