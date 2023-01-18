@@ -27,9 +27,9 @@
 .basicui-modal__base {
     z-index: 102;
     background-color: var(--theme-white-50);
-    min-width: 500px;
+    width: 500px;
     max-width: 90vw;
-    border-radius: var(--basicui-formelement-border-radius);
+    border-radius: var(--basicui-modal-border-radius);
 }
 
 .basicui-dark .basicui-modal__base {
@@ -37,10 +37,10 @@
 }
 
 .basicui-modal__header {
-    padding: 0 12px;
+    padding: 0 var(--basicui-modal-padding);
     display: flex;
     justify-content: space-between;
-    height: 46px;
+    height: var(--basicui-modal-header-height);
     align-items: center;
     border-bottom: 1px solid var(--theme-white-100);
 }
@@ -50,15 +50,15 @@
 }
 
 .basicui-modal__header__heading {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--basicui-modal-heading-font-size);
+    font-weight: var(--basicui-modal-heading-font-weight);
 }
 
 .basicui-modal__footer {
-    padding: 0 12px;
+    padding: 0 var(--basicui-modal-padding);
     display: flex;
     justify-content: flex-end;
-    min-height: 46px;
+    min-height: var(--basicui-modal-header-height);
     align-items: center;
     border-top: 1px solid var(--theme-default-100);
 }
@@ -68,5 +68,5 @@
 }
 
 .basicui-modal__body {
-    padding: 24px 12px;
+    padding: var(--basicui-modal-padding) var(--basicui-modal-padding);
 }
