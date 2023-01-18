@@ -1,0 +1,9 @@
+.basicui-icon-button {
+    height: var(--basicui-button-height);
+    width: var(--basicui-button-height);
+    padding: 0;
+}
+
+.basicui-icon-button--circle {
+    border-radius: 50%;
+}
