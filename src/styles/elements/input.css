@@ -19,7 +19,7 @@
 .basicui-input {
     border-color: var(--theme-default-100);
     background-color: var(--theme-default-50);
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-input:hover {
@@ -36,7 +36,7 @@
 .basicui-dark .basicui-input {
     border-color: var(--theme-default-700);
     background-color: var(--theme-default-600);
-    color: #fff;
+    color: var(--theme-white-50);
 }
 
 .basicui-dark .basicui-input:hover {

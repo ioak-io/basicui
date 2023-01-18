@@ -39,7 +39,7 @@
     font-weight: var(--basicui-formelement-font-weight);
     text-align: left;
     background-color: transparent;
-    color: #000;
+    color: var(--theme-black-900);
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 8px;
@@ -52,7 +52,7 @@
 }
 
 .basicui-dark .basicui-select__ul__li__link {
-    color: #fff;
+    color: var(--theme-white-50);
 }
 
 .basicui-select__ul__li__indicator {
@@ -64,11 +64,11 @@
 }
 
 .basicui-select__ul__li__indicator svg {
-    fill: #000;
+    fill: var(--theme-black-900);
 }
 
 .basicui-dark .basicui-select__ul__li__indicator svg {
-    fill: #fff;
+    fill: var(--theme-white-50);
 }
 
 .basicui-select__ul__li__link--active,

@@ -1,27 +1,27 @@
 .basicui-button--theme-default {
     background-color: var(--theme-default-100);
     border-color: var(--theme-default-100);
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-button--theme-default:hover,
 .basicui-button--theme-default:focus {
     background-color: var(--theme-default-200);
     border-color: var(--theme-default-200);
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-dark .basicui-button--theme-default {
     background-color: var(--theme-default-600);
     border-color: var(--theme-default-600);
-    color: #fff;
+    color: var(--theme-white-50);
 }
 
 .basicui-dark .basicui-button--theme-default:hover,
 .basicui-dark .basicui-button--theme-default:focus {
     background-color: var(--theme-default-500);
     border-color: var(--theme-default-500);
-    color: #fff;
+    color: var(--theme-white-50);
 }
 
 /* Variant = outline */
@@ -72,25 +72,25 @@
 .basicui-button--variant-transparent.basicui-button--theme-default {
     background-color: var(--theme-default-transparent-200);
     border-color: var(--theme-default-500); 
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-button--variant-transparent.basicui-button--theme-default:hover,
 .basicui-button--variant-transparent.basicui-button--theme-default:focus {
     background-color: var(--theme-default-transparent-400);
     border-color: var(--theme-default-500); 
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default {
     background-color: var(--theme-default-transparent-200);
     border-color: var(--theme-default-500);
-    color: #fff;
+    color: var(--theme-white-50);
 }
 
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default:hover,
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default:focus {
     background-color: var(--theme-default-transparent-400);
     border-color: var(--theme-default-500);
-    color: #fff;
+    color: var(--theme-white-50);
 }

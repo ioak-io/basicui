@@ -30,5 +30,5 @@
 
 .basicui-dark .basicui-selectnative--multiple option {
     background-color: transparent;
-    color: #fff;
+    color: var(--theme-white-50);
 }

@@ -11,9 +11,9 @@
 @import './theme-primary-dark-transparent.css';
 
 .basicui-light {
-    color: #000;
+    color: var(--theme-black-900);
 }
 
 .basicui-dark {
-    color: #fff;
+    color: var(--theme-white-50);
 }
