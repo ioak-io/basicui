@@ -75,3 +75,33 @@ PrimaryThemeWithTransparentVariant.args = {
   variant: ButtonVariantType.transparent,
   children: <div>Lorem ipsum</div>
 };
+
+
+// Danger theme
+export const DangerThemeWithDangerVariant = Template.bind({});
+DangerThemeWithDangerVariant.args = {
+  theme: ThemeType.danger,
+  variant: ButtonVariantType.default,
+  children: <div>Lorem ipsum</div>
+};
+
+export const DangerThemeWithOutlineVariant = Template.bind({});
+DangerThemeWithOutlineVariant.args = {
+  theme: ThemeType.danger,
+  variant: ButtonVariantType.outline,
+  children: <div>Lorem ipsum</div>
+};
+
+export const DangerThemeWithFillVariant = Template.bind({});
+DangerThemeWithFillVariant.args = {
+  theme: ThemeType.danger,
+  variant: ButtonVariantType.fill,
+  children: <div>Lorem ipsum</div>
+};
+
+export const DangerThemeWithTransparentVariant = Template.bind({});
+DangerThemeWithTransparentVariant.args = {
+  theme: ThemeType.danger,
+  variant: ButtonVariantType.transparent,
+  children: <div>Lorem ipsum</div>
+};

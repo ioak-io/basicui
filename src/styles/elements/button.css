@@ -1,5 +1,6 @@
 @import './button-default.css';
 @import './button-primary.css';
+@import './button-danger.css';
 
 .basicui-button {
     text-align: center;
