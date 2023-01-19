@@ -3,7 +3,8 @@ import ThemeType from "../types/ThemeType";
 import "./style.css";
 
 export interface AccordionProps {
-    theme?: ThemeType;
+    expanded: boolean;
+    onChange: any;
     heading: string;
     children: any;
 };
@@ -12,22 +13,17 @@ export interface AccordionProps {
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Accordion = (props: AccordionProps) => {
-    const [temp, setTemp] = useState(false);
     const bodyRef: React.MutableRefObject<any> = useRef(null);
 
     useEffect(() => {
         updateScrollHeight();
-    }, [temp]);
-
-    const handleToggle = () => {
-        setTemp(!temp);
-    }
+    }, [props.expanded]);
 
     const updateScrollHeight = () => {
         console.log(bodyRef.current)
         if (!bodyRef.current) return;
         //   setTimeout(() => {
-        if (temp && bodyRef.current) {
+        if (props.expanded && bodyRef.current) {
             console.log("**", bodyRef.current.scrollHeight);
             bodyRef.current.style.maxHeight = bodyRef.current.scrollHeight + 'px';
             bodyRef.current.style.overflowY = 'hidden';
@@ -46,8 +42,8 @@ const Accordion = (props: AccordionProps) => {
     }
 
     return (
-        <div className={`basicui-accordion  ${temp ? "basicui-accordion--active" : ""}`}>
-            <button className="basicui-accordion__header" onClick={handleToggle}>
+        <div className={`basicui-accordion  ${props.expanded ? "basicui-accordion--active" : ""}`}>
+            <button className="basicui-accordion__header" onClick={props.onChange}>
                 <div>{props.heading}</div>
                 v
             </button>
