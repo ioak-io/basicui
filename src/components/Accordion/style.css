@@ -14,9 +14,32 @@
     height: var(--basicui-accordion-header-height);
     padding: 0 var(--basicui-accordion-padding-x);
     cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+}
+
+.basicui-accordion--active .basicui-accordion__header,
+.basicui-accordion__header:hover,
+.basicui-accordion__header:focus {
+    background-color: var(--theme-primary-transparent-100);
 }
 
 .basicui-accordion__body {
+    visibility: hidden;
+    overflow-y: hidden;
+    max-height: 0;
+    transition: max-height 250ms ease-in-out;
+}
+
+.basicui-accordion--active .basicui-accordion__body {
     border-top: 1px solid var(--basicui-accordion-border-color);
+}
+
+.basicui-accordion--active .basicui-accordion__body {
+    visibility: visible;
+    max-height: 300px;
+    /* overflow-y: visible; */
+}
+
+.basicui-accordion__body__content {
     padding: 16px var(--basicui-accordion-padding-x);
 }
