@@ -1,0 +1,27 @@
+.basicui-tabs__ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--basicui-tab-border-color);
+}
+
+.basicui-tabs__ul__li__button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+    padding: var(--basicui-tab-padding-y) var(--basicui-tab-padding-x);
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: var(--basicui-tab-border-radius) var(--basicui-tab-border-radius) 0 0;
+    transition: border-color 250ms ease-in-out;
+}
+
+.basicui-tabs__ul__li__button:hover,
+.basicui-tabs__ul__li__button:focus,
+.basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
+    border: 1px solid var(--basicui-tab-border-color);
+    border-bottom: none;
+}

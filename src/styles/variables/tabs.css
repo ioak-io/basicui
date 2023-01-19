@@ -1,0 +1,13 @@
+* {
+    --basicui-tab-padding-x: 16px;
+    --basicui-tab-padding-y: 10px;
+    --basicui-tab-border-radius: 6px;
+}
+
+.basicui-light {
+    --basicui-tab-border-color: var(--theme-white-200);
+}
+
+.basicui-dark {
+    --basicui-tab-border-color: var(--theme-black-300);
+}
