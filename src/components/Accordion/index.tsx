@@ -13,10 +13,36 @@ export interface AccordionProps {
  */
 const Accordion = (props: AccordionProps) => {
     const [temp, setTemp] = useState(false);
-    const bodyRef = useRef();
+    const bodyRef: React.MutableRefObject<any> = useRef(null);
+
+    useEffect(() => {
+        updateScrollHeight();
+    }, [temp]);
 
     const handleToggle = () => {
         setTemp(!temp);
+    }
+
+    const updateScrollHeight = () => {
+        console.log(bodyRef.current)
+        if (!bodyRef.current) return;
+        //   setTimeout(() => {
+        if (temp && bodyRef.current) {
+            console.log("**", bodyRef.current.scrollHeight);
+            bodyRef.current.style.maxHeight = bodyRef.current.scrollHeight + 'px';
+            bodyRef.current.style.overflowY = 'hidden';
+            bodyRef.current.style.visibility = 'visible';
+            setTimeout(() => {
+                bodyRef.current.style.overflowY = 'visible';
+            }, 300);
+        } else if (bodyRef.current) {
+            bodyRef.current.style.maxHeight = '0px';
+            bodyRef.current.style.overflowY = 'hidden';
+            setTimeout(() => {
+                bodyRef.current.style.visibility = 'hidden';
+            }, 300);
+        }
+        //   }, 0);
     }
 
     return (
@@ -25,7 +51,7 @@ const Accordion = (props: AccordionProps) => {
                 <div>{props.heading}</div>
                 v
             </button>
-            <div className="basicui-accordion__body" ref={bodyRef.current}>
+            <div className="basicui-accordion__body" ref={bodyRef}>
                 <div className="basicui-accordion__body__content">
                     {props.children}
                 </div>

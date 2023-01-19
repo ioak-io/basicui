@@ -1,5 +1,6 @@
 .basicui-accordion {
     border: 1px solid var(--basicui-accordion-border-color);
+    overflow: hidden;
 }
 
 .basicui-accordion__header {
@@ -24,8 +25,8 @@
 }
 
 .basicui-accordion__body {
-    visibility: hidden;
-    overflow-y: hidden;
+    /* visibility: hidden;
+    overflow-y: hidden; */
     max-height: 0;
     transition: max-height 250ms ease-in-out;
 }
@@ -35,8 +36,8 @@
 }
 
 .basicui-accordion--active .basicui-accordion__body {
-    visibility: visible;
-    max-height: 300px;
+    /* visibility: visible; */
+    /* max-height: 300px; */
     /* overflow-y: visible; */
 }
 
