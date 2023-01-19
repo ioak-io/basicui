@@ -4,7 +4,7 @@ import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Accordion, { AccordionProps } from ".";
 import ThemeType from "../types/ThemeType";
-import AccordionWrapper from "./AccordionWrapper";
+import AccordionWrapper, { AccordionWrapperProps } from "./AccordionWrapper";
 
 export default {
   title: "Components/Accordion",
@@ -16,9 +16,15 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Accordion component
-const Template: Story<any> = (args: any) => <AccordionWrapper {...args} />;
+const Template: Story<AccordionWrapperProps> = (args: AccordionWrapperProps) => <AccordionWrapper {...args} />;
 
 // Reuse that template for creating different stories
 export const Default = Template.bind({});
 Default.args = {
+  flushed: false
+};
+
+export const Flushed = Template.bind({});
+Flushed.args = {
+  flushed: true
 };

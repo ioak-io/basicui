@@ -6,6 +6,7 @@ export interface AccordionProps {
     expanded: boolean;
     onChange: any;
     heading: string;
+    flushed?: boolean;
     children: any;
 };
 
@@ -42,7 +43,7 @@ const Accordion = (props: AccordionProps) => {
     }
 
     return (
-        <div className={`basicui-accordion  ${props.expanded ? "basicui-accordion--active" : ""}`}>
+        <div className={`basicui-accordion  ${props.expanded ? "basicui-accordion--active" : ""} ${props.flushed ? "basicui-accordion--flushed" : ""}`}>
             <button className="basicui-accordion__header" onClick={props.onChange}>
                 <div>{props.heading}</div>
                 v
