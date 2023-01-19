@@ -1,0 +1,22 @@
+.basicui-accordion {
+    border: 1px solid var(--basicui-accordion-border-color);
+}
+
+.basicui-accordion__header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: flex-start;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    height: var(--basicui-accordion-header-height);
+    padding: 0 var(--basicui-accordion-padding-x);
+    cursor: pointer;
+}
+
+.basicui-accordion__body {
+    border-top: 1px solid var(--basicui-accordion-border-color);
+    padding: 16px var(--basicui-accordion-padding-x);
+}

@@ -1,0 +1,12 @@
+* {    
+    --basicui-accordion-header-height: 52px;
+    --basicui-accordion-padding-x: 16px;
+}
+
+.basicui-light {
+    --basicui-accordion-border-color: var(--theme-white-200);
+}
+
+.basicui-dark {
+    --basicui-accordion-border-color: var(--theme-black-300);
+}
