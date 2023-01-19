@@ -2,6 +2,7 @@
     --basicui-accordion-header-height: 52px;
     --basicui-accordion-padding-x: 16px;
     --basicui-accordion-border-radius: 6px;
+    --basicui-accordion-border-width: 1px;
 }
 
 .basicui-light {

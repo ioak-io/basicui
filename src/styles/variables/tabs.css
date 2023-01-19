@@ -2,6 +2,7 @@
     --basicui-tab-padding-x: 16px;
     --basicui-tab-padding-y: 10px;
     --basicui-tab-border-radius: 6px;
+    --basicui-tab-border-width: 1px;
 }
 
 .basicui-light {

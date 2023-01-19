@@ -1,5 +1,5 @@
 .basicui-accordion {
-    border: 1px solid var(--basicui-accordion-border-color);
+    border: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
     border-bottom: none;
     overflow: hidden;
 }
@@ -10,7 +10,7 @@
 
 .basicui-accordion:last-of-type {
     border-radius: 0 0 var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius);
-    border-bottom: 1px solid var(--basicui-accordion-border-color);
+    border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
     ;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .basicui-accordion--active .basicui-accordion__body {
-    border-top: 1px solid var(--basicui-accordion-border-color);
+    border-top: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }
 
 .basicui-accordion--active .basicui-accordion__body {
@@ -69,5 +69,5 @@
 }
 
 .basicui-accordion--flushed.basicui-accordion:not(:last-of-type) {
-    border-bottom: 1px solid var(--basicui-accordion-border-color);
+    border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }

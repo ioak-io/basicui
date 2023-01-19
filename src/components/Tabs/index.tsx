@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect, ElementRef, ReactChild, ReactNode, ReactFragment } from "react";
+import TabVariantType from "../types/TabVariantType";
 import ThemeType from "../types/ThemeType";
 import "./style.css";
 
-export interface TabsProps {
+export type TabsProps = {
+    theme?: ThemeType;
+    variant?: TabVariantType;
     activeTabId: string;
     onChange: any;
     heading: string;
@@ -11,14 +14,13 @@ export interface TabsProps {
 };
 
 /**
- * Component to render drop down input form element. Supports multi select and auto complete features
+ * Component to render tab surface
  */
 const Tabs = (props: TabsProps) => {
     const [tabSpec, setTabSpec] = useState<{ id: string }[]>([]);
     const [tabMap, setTabMap] = useState<any>({});
 
     useEffect(() => {
-        console.log(props.children);
         const _tabMap: any = {};
         const _tabSpec: { id: string }[] = [];
         props.children.forEach((tab: any) => {
@@ -29,16 +31,16 @@ const Tabs = (props: TabsProps) => {
         setTabSpec(_tabSpec);
     }, [props.children]);
 
-    useEffect(() => {
-        console.log("tab=", tabSpec, tabMap);
-    }, [tabSpec, tabMap]);
+    const handleClick = (tabId: string) => {
+        props.onChange(tabId);
+    }
 
     return (
         <div className="basicui-tabs">
             <ul className="basicui-tabs__ul">
                 {tabSpec.map((tab) =>
                     <li className={`basicui-tabs__ul__li ${props.activeTabId === tab.id ? "basicui-tabs__ul__li--active" : ""} `}>
-                        <button className="basicui-tabs__ul__li__button">{tab.id}</button>
+                        <button className={`basicui-tabs__ul__li__button basicui-tabs__ul__li__button--theme-${props.theme || ThemeType.default} basicui-tabs__ul__li__button--variant-${props.variant || TabVariantType.default}`} onClick={() => handleClick(tab.id)}>{tab.id}</button>
                     </li>
                 )}
             </ul>
