@@ -43,8 +43,8 @@
 .basicui-accordion__body {
     /* visibility: hidden;
     overflow-y: hidden; */
-    max-height: 0;
-    transition: max-height 250ms ease-in-out;
+    height: 0;
+    transition: height 250ms ease-in-out;
 }
 
 .basicui-accordion--active .basicui-accordion__body {
