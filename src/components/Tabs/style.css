@@ -32,6 +32,7 @@
 .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
     /* margin-bottom: calc(-1 * var(--basicui-tab-border-width)); */
     background-color: var(--theme-primary-transparent-100);
+    color: var(--theme-primary-transparent-100i);
 }
 
 .basicui-tabs--shape-round .basicui-tabs__ul__li__button {

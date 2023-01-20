@@ -10,10 +10,12 @@
 
 .basicui-select__ul {
     background-color: var(--theme-default-50);
+    color: var(--theme-default-50i);
 }
 
 .basicui-dark .basicui-select__ul {
     background-color: var(--theme-default-900);
+    color: var(--theme-default-900i);
 }
 
 .basicui-select__ul__search {
@@ -74,9 +76,11 @@
 .basicui-select__ul__li__link--active,
 .basicui-select__ul__li__link:hover {
     background-color: var(--theme-primary-transparent-50);
+    color: var(--theme-primary-transparent-50i);
 }
 
 .basicui-dark .basicui-select__ul__li__link--active,
 .basicui-dark .basicui-select__ul__li__link:hover {
     background-color: var(--theme-default-800);
+    color: var(--theme-default-800i);
 }

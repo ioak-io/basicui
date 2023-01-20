@@ -19,35 +19,39 @@
 .basicui-input {
     border-color: var(--theme-default-100);
     background-color: var(--theme-default-50);
-    color: var(--theme-black-900);
+    color: var(--theme-default-50i);
 }
 
 .basicui-input:hover {
     border-color: var(--theme-primary-transparent-200);
     background-color: var(--theme-primary-transparent-100);
+    color: var(--theme-primary-transparent-100i);
 }
 
 .basicui-input:active,
 .basicui-input:focus {
     border-color: var(--theme-primary-transparent-300);
     background-color: var(--theme-primary-transparent-200);
+    color: var(--theme-primary-transparent-200i);
 }
 
 .basicui-dark .basicui-input {
     border-color: var(--theme-default-700);
     background-color: var(--theme-default-600);
-    color: var(--theme-white-50);
+    color: var(--theme-default-600i);
 }
 
 .basicui-dark .basicui-input:hover {
     border-color: var(--theme-primary-transparent-300);
     background-color: var(--theme-primary-transparent-200);
+    color: var(--theme-primary-transparent-200i);
 }
 
 .basicui-dark .basicui-input:active,
 .basicui-dark .basicui-input:focus {
     border-color: var(--theme-primary-transparent-400);
     background-color: var(--theme-primary-transparent-300);
+    color: var(--theme-primary-transparent-300i);
 }
 
 .basicui-dark .basicui-input::placeholder {

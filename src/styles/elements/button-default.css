@@ -1,27 +1,31 @@
 .basicui-button--theme-default {
     background-color: var(--theme-default-100);
+    color: var(--theme-default-100i);
+    fill: var(--theme-default-100i);
     border-color: var(--theme-default-100);
-    color: var(--theme-black-900);
 }
 
 .basicui-button--theme-default:hover,
 .basicui-button--theme-default:focus {
     background-color: var(--theme-default-200);
+    color: var(--theme-default-200i);
+    fill: var(--theme-default-200i);
     border-color: var(--theme-default-200);
-    color: var(--theme-black-900);
 }
 
 .basicui-dark .basicui-button--theme-default {
     background-color: var(--theme-default-600);
+    color: var(--theme-default-600i);
+    fill: var(--theme-default-600i);
     border-color: var(--theme-default-600);
-    color: var(--theme-white-50);
 }
 
 .basicui-dark .basicui-button--theme-default:hover,
 .basicui-dark .basicui-button--theme-default:focus {
     background-color: var(--theme-default-500);
+    color: var(--theme-default-500i);
+    fill: var(--theme-default-500i);
     border-color: var(--theme-default-500);
-    color: var(--theme-white-50);
 }
 
 /* Variant = outline */
@@ -54,6 +58,8 @@
 .basicui-button--variant-fill.basicui-button--theme-default:hover,
 .basicui-button--variant-fill.basicui-button--theme-default:focus {
     background-color: var(--theme-default-200);
+    color: var(--theme-default-200i);
+    fill: var(--theme-default-200i);
     border-color: var(--theme-default-200);
 }
 
@@ -64,6 +70,8 @@
 .basicui-dark .basicui-button--variant-fill.basicui-button--theme-default:hover,
 .basicui-dark .basicui-button--variant-fill.basicui-button--theme-default:focus {
     background-color: var(--theme-default-600);
+    color: var(--theme-default-600i);
+    fill: var(--theme-default-600i);
     border-color: var(--theme-default-600);
 }
 
@@ -71,26 +79,30 @@
 /* Variant = transparent */
 .basicui-button--variant-transparent.basicui-button--theme-default {
     background-color: var(--theme-default-transparent-200);
-    border-color: var(--theme-default-500); 
-    color: var(--theme-black-900);
+    color: var(--theme-default-transparent-200i);
+    fill: var(--theme-default-transparent-200i);
+    border-color: var(--theme-default-500);
 }
 
 .basicui-button--variant-transparent.basicui-button--theme-default:hover,
 .basicui-button--variant-transparent.basicui-button--theme-default:focus {
     background-color: var(--theme-default-transparent-400);
-    border-color: var(--theme-default-500); 
-    color: var(--theme-black-900);
+    color: var(--theme-default-transparent-400i);
+    fill: var(--theme-default-transparent-400i);
+    border-color: var(--theme-default-500);
 }
 
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default {
     background-color: var(--theme-default-transparent-200);
+    color: var(--theme-default-transparent-200i);
+    fill: var(--theme-default-transparent-200i);
     border-color: var(--theme-default-500);
-    color: var(--theme-white-50);
 }
 
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default:hover,
 .basicui-dark .basicui-button--variant-transparent.basicui-button--theme-default:focus {
     background-color: var(--theme-default-transparent-400);
+    color: var(--theme-default-transparent-400i);
+    fill: var(--theme-default-transparent-400i);
     border-color: var(--theme-default-500);
-    color: var(--theme-white-50);
 }

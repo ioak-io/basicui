@@ -32,12 +32,14 @@
 .basicui-accordion__header:hover,
 .basicui-accordion__header:focus {
     background-color: var(--theme-primary-transparent-100);
+    color: var(--theme-primary-transparent-100i);
 }
 
 .basicui-dark .basicui-accordion--active .basicui-accordion__header,
 .basicui-dark .basicui-accordion__header:hover,
 .basicui-dark .basicui-accordion__header:focus {
     background-color: var(--theme-primary-transparent-200);
+    color: var(--theme-primary-transparent-200i);
 }
 
 .basicui-accordion__body {

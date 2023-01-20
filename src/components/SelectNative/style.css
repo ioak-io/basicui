@@ -5,18 +5,22 @@
 
 .basicui-selectnative option {
     background-color: var(--theme-default-50);
+    color: var(--theme-default-50i);
 }
 
 .basicui-selectnative option:checked {
     background-color: var(--theme-default-200);
+    color: var(--theme-default-200i);
 }
 
 .basicui-dark .basicui-selectnative option {
     background-color: var(--theme-default-900);
+    color: var(--theme-default-900i);
 }
 
 .basicui-dark .basicui-selectnative option:checked {
     background-color: var(--theme-default-700);
+    color: var(--theme-default-700i);
 }
 
 .basicui-selectnative--multiple {
