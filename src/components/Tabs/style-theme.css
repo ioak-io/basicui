@@ -1,20 +1,21 @@
 .basicui-tabs--theme-default .basicui-tabs__ul__li__button:hover,
-.basicui-tabs--theme-default .basicui-tabs__ul__li__button:focus,
-.basicui-tabs--theme-default .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
-    background-color: var(--theme-default-transparent-100);
+.basicui-tabs--theme-default .basicui-tabs__ul__li__button:focus {
+    /* background-color: var(--theme-default-transparent-100); */
 }
 
 .basicui-tabs--theme-default .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
     background-color: var(--theme-default-500);
+    border-color: var(--theme-default-500);
 }
 
 /* primary */
-.basicui-tabs--theme-primary .basicui-tabs__ul__li__button:hover,
-.basicui-tabs--theme-primary .basicui-tabs__ul__li__button:focus,
-.basicui-tabs--theme-primary .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
-    background-color: var(--theme-primary-transparent-100);
-}
-
 .basicui-tabs--theme-primary .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
     background-color: var(--theme-primary-500);
+    border-color: var(--theme-primary-500);
+}
+
+/* DANGER */
+.basicui-tabs--theme-danger .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
+    background-color: var(--theme-danger-500);
+    border-color: var(--theme-danger-500);
 }
