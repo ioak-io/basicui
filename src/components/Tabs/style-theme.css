@@ -4,15 +4,24 @@
 }
 
 .basicui-tabs--theme-default .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
-    background-color: var(--theme-default-500);
-    color: var(--theme-default-500i);
-    border-color: var(--theme-default-500);
+    background-color: var(--theme-default-200);
+    color: var(--theme-default-200i);
+    fill: var(--theme-default-200i);
+    border-color: var(--theme-default-200);
+}
+
+.basicui-dark .basicui-tabs--theme-default .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
+    background-color: var(--theme-default-400);
+    color: var(--theme-default-400i);
+    fill: var(--theme-default-400i);
+    border-color: var(--theme-default-400);
 }
 
 /* primary */
 .basicui-tabs--theme-primary .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
     background-color: var(--theme-primary-500);
     color: var(--theme-primary-500i);
+    fill: var(--theme-primary-500i);
     border-color: var(--theme-primary-500);
 }
 
@@ -20,5 +29,6 @@
 .basicui-tabs--theme-danger .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
     background-color: var(--theme-danger-500);
     color: var(--theme-danger-500i);
+    fill: var(--theme-danger-500i);
     border-color: var(--theme-danger-500);
 }

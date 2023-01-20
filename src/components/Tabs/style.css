@@ -11,8 +11,8 @@
 .basicui-tabs__ul__li__button {
     background-color: transparent;
     border: none;
-    color: inherit;
-    fill: inherit;
+    color: var(--theme-black-900);
+    fill: var(--theme-black-900);
     cursor: pointer;
     width: 100%;
     padding: var(--basicui-tab-padding-y) var(--basicui-tab-padding-x);
@@ -22,6 +22,12 @@
     transition: border-color 250ms ease-in-out, background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
+
+.basicui-dark .basicui-tabs__ul__li__button {
+    color: var(--theme-white-50);
+    fill: var(--theme-white-50);
+}
+
 .basicui-tabs__ul__li__button:hover,
 .basicui-tabs__ul__li__button:focus,
 .basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
@@ -29,15 +35,10 @@
     /* border-bottom: none; */
 }
 
-.basicui-tabs__ul__li--active .basicui-tabs__ul__li__button {
-    /* margin-bottom: calc(-1 * var(--basicui-tab-border-width)); */
-    background-color: var(--theme-primary-transparent-100);
-    color: var(--theme-primary-transparent-100i);
-}
-
 .basicui-tabs--shape-round .basicui-tabs__ul__li__button {
     border-radius: var(--basicui-tab-border-radius);
 }
+
 .basicui-tabs--shape-rectangle .basicui-tabs__ul__li__button {
     border-radius: 0px;
 }
