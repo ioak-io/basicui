@@ -9,4 +9,15 @@
     --theme-primary-700: #08609c;
     --theme-primary-800: #0b5181;
     --theme-primary-900: #0f446b;
+
+    --theme-primary-50i: #000;
+    --theme-primary-100i: #000;
+    --theme-primary-200i: #000;
+    --theme-primary-300i: #000;
+    --theme-primary-400i: #000;
+    --theme-primary-500i: #000;
+    --theme-primary-600i: #fff;
+    --theme-primary-700i: #fff;
+    --theme-primary-800i: #fff;
+    --theme-primary-900i: #fff;
 }

@@ -9,4 +9,15 @@
     --theme-primary-transparent-700: #3eb1f280;
     --theme-primary-transparent-800: #3eb1f290;
     --theme-primary-transparent-900: #3eb1f2a0;
+    
+    --theme-primary-transparent-50i: #fff;
+    --theme-primary-transparent-100i: #fff;
+    --theme-primary-transparent-200i: #fff;
+    --theme-primary-transparent-300i: #fff;
+    --theme-primary-transparent-400i: #fff;
+    --theme-primary-transparent-500i: #fff;
+    --theme-primary-transparent-600i: #fff;
+    --theme-primary-transparent-700i: #fff;
+    --theme-primary-transparent-800i: #fff;
+    --theme-primary-transparent-900i: #fff;
 }
