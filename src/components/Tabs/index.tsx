@@ -1,15 +1,14 @@
 import React, { useState, useRef, useEffect, ElementRef, ReactChild, ReactNode, ReactFragment } from "react";
-import TabVariantType from "../types/TabVariantType";
+import TabShapeType from "../types/TabShapeType";
 import ThemeType from "../types/ThemeType";
 import "./style.css";
 
 export type TabsProps = {
     theme?: ThemeType;
-    variant?: TabVariantType;
+    shape?: TabShapeType;
+    offset?: boolean;
     activeTabId: string;
     onChange: any;
-    heading: string;
-    flushed?: boolean;
     children: any;
 };
 
@@ -17,18 +16,23 @@ export type TabsProps = {
  * Component to render tab surface
  */
 const Tabs = (props: TabsProps) => {
-    const [tabSpec, setTabSpec] = useState<{ id: string }[]>([]);
+    const [tabHeaders, setTabHeaders] = useState<{ id: string, component: any }[]>([]);
     const [tabMap, setTabMap] = useState<any>({});
 
     useEffect(() => {
         const _tabMap: any = {};
-        const _tabSpec: { id: string }[] = [];
+        const _tabHeaders: { id: string, component: any }[] = [];
         props.children.forEach((tab: any) => {
             _tabMap[tab.props.id] = tab;
-            _tabSpec.push({ id: tab.props.id });
+            console.log(tab);
+            tab.props.children?.forEach((item: any) => {
+                if (item.type.displayName === "TabHeader") {
+                    _tabHeaders.push({ id: tab.props.id, component: item });
+                }
+            })
         })
         setTabMap(_tabMap);
-        setTabSpec(_tabSpec);
+        setTabHeaders(_tabHeaders);
     }, [props.children]);
 
     const handleClick = (tabId: string) => {
@@ -36,11 +40,11 @@ const Tabs = (props: TabsProps) => {
     }
 
     return (
-        <div className={`basicui-tabs basicui-tabs--theme-${props.theme || ThemeType.default} basicui-tabs--variant-${props.variant || TabVariantType.default}`}>
+        <div className={`basicui-tabs ${props.offset ? "basicui-tabs--offset" : ""} basicui-tabs--theme-${props.theme || ThemeType.default} basicui-tabs--shape-${props.shape || TabShapeType.default}`}>
             <ul className="basicui-tabs__ul">
-                {tabSpec.map((tab) =>
+                {tabHeaders.map((tab) =>
                     <li className={`basicui-tabs__ul__li ${props.activeTabId === tab.id ? "basicui-tabs__ul__li--active" : ""} `}>
-                        <button className={`basicui-tabs__ul__li__button basicui-tabs__ul__li__button--theme-${props.theme || ThemeType.default} basicui-tabs__ul__li__button--variant-${props.variant || TabVariantType.default}`} onClick={() => handleClick(tab.id)}>{tab.id}</button>
+                        <button className="basicui-tabs__ul__li__button" onClick={() => handleClick(tab.id)}>{tab.component}</button>
                     </li>
                 )}
             </ul>

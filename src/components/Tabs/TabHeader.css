@@ -1,0 +1,19 @@
+.basicui-tab-header {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 6px;
+    row-gap: 6px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.basicui-tab-header--alignment-column {
+    grid-auto-flow: row;
+    column-gap: 10px;
+}
+
+.basicui-tab-header * {
+    display: flex;
+}

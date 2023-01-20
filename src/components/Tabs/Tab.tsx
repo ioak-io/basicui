@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import ThemeType from "../types/ThemeType";
 import "./style.css";
 
 export interface TabProps {
@@ -11,11 +10,20 @@ export interface TabProps {
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Tab = (props: TabProps) => {
-    const bodyRef: React.MutableRefObject<any> = useRef(null);
+
+    const [tabDetail, setTabDetail] = useState<any>();
+
+    useEffect(() => {
+        props.children.forEach((item: any) => {
+            if (item.type.displayName === "TabDetail") {
+                setTabDetail(item);
+            }
+        });
+    }, [props.children]);
 
     return (
         <div className="basicui-tab">
-            {props.children}
+            {tabDetail}
         </div>
     );
 };
