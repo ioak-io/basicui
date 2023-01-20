@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import Tabs, { TabsProps } from ".";
+import ThemeType from "../types/ThemeType";
 import Tab from "./Tab";
 
 export type TabsWrapperProps = {
     flushed: boolean;
+    theme: ThemeType;
 }
 
 const TabsWrapper = (props: TabsWrapperProps) => {
@@ -15,7 +17,7 @@ const TabsWrapper = (props: TabsWrapperProps) => {
 
     return (
         <div>
-            <Tabs activeTabId={activeTabId} flushed={props.flushed} heading="Etiam venenatis" onChange={handleChange}>
+            <Tabs theme={props.theme} activeTabId={activeTabId} flushed={props.flushed} heading="Etiam venenatis" onChange={handleChange}>
                 <Tab id="lorem ipsum tab-1">tab one</Tab>
                 <Tab id="lorem ipsum tab-2">tab two</Tab>
                 <Tab id="lorem ipsum tab-3">tab three</Tab>

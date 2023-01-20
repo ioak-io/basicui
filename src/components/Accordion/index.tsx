@@ -31,9 +31,13 @@ const Accordion = (props: AccordionProps) => {
             bodyRef.current.style.visibility = 'visible';
             setTimeout(() => {
                 bodyRef.current.style.overflowY = 'visible';
+                bodyRef.current.style.maxHeight = 'none';
             }, 300);
         } else if (bodyRef.current) {
-            bodyRef.current.style.maxHeight = '0px';
+            bodyRef.current.style.maxHeight = bodyRef.current.scrollHeight + 'px';
+            setTimeout(() => {
+                bodyRef.current.style.maxHeight = '0px';
+            }, 0);
             bodyRef.current.style.overflowY = 'hidden';
             setTimeout(() => {
                 bodyRef.current.style.visibility = 'hidden';

@@ -24,7 +24,7 @@ Default.args = {
   flushed: false
 };
 
-export const Flushed = Template.bind({});
-Flushed.args = {
-  flushed: true
+export const Primary = Template.bind({});
+Primary.args = {
+  theme: ThemeType.primary
 };

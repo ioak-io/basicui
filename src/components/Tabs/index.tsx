@@ -36,7 +36,7 @@ const Tabs = (props: TabsProps) => {
     }
 
     return (
-        <div className="basicui-tabs">
+        <div className={`basicui-tabs basicui-tabs--theme-${props.theme || ThemeType.default} basicui-tabs--variant-${props.variant || TabVariantType.default}`}>
             <ul className="basicui-tabs__ul">
                 {tabSpec.map((tab) =>
                     <li className={`basicui-tabs__ul__li ${props.activeTabId === tab.id ? "basicui-tabs__ul__li--active" : ""} `}>
