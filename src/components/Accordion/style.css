@@ -1,3 +1,5 @@
+@import './style-theme.css';
+
 .basicui-accordion {
     border: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
     border-bottom: none;
@@ -28,35 +30,13 @@
     transition: background-color 250ms ease-in-out;
 }
 
-.basicui-accordion--active .basicui-accordion__header,
-.basicui-accordion__header:hover,
-.basicui-accordion__header:focus {
-    background-color: var(--theme-primary-transparent-100);
-    color: var(--theme-primary-transparent-100i);
-}
-
-.basicui-dark .basicui-accordion--active .basicui-accordion__header,
-.basicui-dark .basicui-accordion__header:hover,
-.basicui-dark .basicui-accordion__header:focus {
-    background-color: var(--theme-primary-transparent-200);
-    color: var(--theme-primary-transparent-200i);
-}
-
 .basicui-accordion__body {
-    /* visibility: hidden;
-    overflow-y: hidden; */
     height: 0;
     transition: height 250ms ease-in-out;
 }
 
 .basicui-accordion--active .basicui-accordion__body {
     border-top: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
-}
-
-.basicui-accordion--active .basicui-accordion__body {
-    /* visibility: visible; */
-    /* max-height: 300px; */
-    /* overflow-y: visible; */
 }
 
 .basicui-accordion__body__content {
