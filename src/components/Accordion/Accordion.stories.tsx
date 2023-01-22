@@ -4,7 +4,7 @@ import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Accordion, { AccordionProps } from ".";
 import ThemeType from "../types/ThemeType";
-import AccordionWrapper, { AccordionWrapperProps } from "./AccordionWrapper";
+import AccordionWrapper from "./AccordionWrapper";
 
 export default {
   title: "Components/Accordion",

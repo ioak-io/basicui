@@ -18,14 +18,14 @@ const Template: Story<InputProps> = (args: InputProps) => <Input {...args} />;
 export const BasicInput = Template.bind({});
 BasicInput.args = {
   label: "First name",
-  initialValue: "",
+  value: "",
   placeholder: 'Lorem ipsum dolor sit',
 };
 
 export const InputWithTooltip = Template.bind({});
 InputWithTooltip.args = {
   label: "First name",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   tooltip: "Quisque tincidunt vitae purus id feugiat"
 };
@@ -33,7 +33,7 @@ InputWithTooltip.args = {
 export const InputWithError = Template.bind({});
 InputWithError.args = {
   label: "First name",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   errorMessage: "Quisque tincidunt vitae purus id feugiat"
 };
@@ -42,7 +42,7 @@ InputWithError.args = {
 export const InputWithWarning = Template.bind({});
 InputWithWarning.args = {
   label: "First name",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   warningMessage: "Quisque tincidunt vitae purus id feugiat"
 };
@@ -51,7 +51,7 @@ InputWithWarning.args = {
 export const InputWithSuccess = Template.bind({});
 InputWithSuccess.args = {
   label: "First name",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   successMessage: "Quisque tincidunt vitae purus id feugiat"
 };
@@ -59,7 +59,7 @@ InputWithSuccess.args = {
 export const InputWithTooltipAndError = Template.bind({});
 InputWithTooltipAndError.args = {
   label: "First name",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit',
   tooltip: "Ipsum dolor sit",
   errorMessage: "Quisque tincidunt vitae purus id feugiat"
@@ -69,7 +69,7 @@ export const DateInput = Template.bind({});
 DateInput.args = {
   type: "date",
   label: "Date of birth",
-  initialValue: "Dolor sit",
+  value: "Dolor sit",
   placeholder: 'Lorem ipsum dolor sit'
 };
 
@@ -77,6 +77,6 @@ export const NumberInput = Template.bind({});
 NumberInput.args = {
   type: "number",
   label: "Age",
-  initialValue: 1,
+  value: 1,
   placeholder: 'Lorem ipsum dolor sit'
 };

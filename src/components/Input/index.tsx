@@ -8,7 +8,7 @@ export interface InputProps {
     id?: string;
     type?: string;
     label?: string;
-    initialValue?: string | number;
+    value?: string | number;
     placeholder?: string;
     tooltip?: string;
     errorMessage?: string;
@@ -25,16 +25,8 @@ export interface InputProps {
  * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
 const Input = (props: InputProps) => {
-    const [value, setValue] = useState<(string | number)>('');
-
-    useEffect(() => {
-        if (isEmptyOrSpaces(value) && !isEmptyOrSpaces(props.initialValue)) {
-            setValue(props.initialValue || '');
-        }
-    }, [props.initialValue]);
 
     const onInput = (event: any) => {
-        setValue(event.currentTarget.value);
         if (props.onInput) {
             props.onInput(event);
         }
@@ -55,7 +47,7 @@ const Input = (props: InputProps) => {
                 onFocus={props.onFocus}
                 onClick={props.onClick}
                 onBlur={props.onBlur}
-                value={value}
+                value={props.value}
                 type={props.type}
                 placeholder={props.placeholder}
                 autoComplete="none"

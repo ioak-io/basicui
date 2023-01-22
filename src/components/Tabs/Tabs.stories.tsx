@@ -16,12 +16,11 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Tabs component
-const Template: Story<TabsWrapperProps> = (args: TabsWrapperProps) => <TabsWrapper {...args} />;
+const Template: Story<TabsProps> = (args: TabsProps) => <TabsWrapper {...args} />;
 
 // Reuse that template for creating different stories
 export const Default = Template.bind({});
 Default.args = {
-  flushed: false
 };
 
 export const Primary = Template.bind({});
