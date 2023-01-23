@@ -9,7 +9,7 @@ export default {
   title: "Components/Select",
   component: Select,
   argTypes: {
-    initialValues: [],
+    value: [],
     options: []
   },
 } as Meta;
@@ -20,7 +20,7 @@ const Template: Story<SelectProps> = (args: SelectProps) => <Select {...args} />
 // Reuse that template for creating different stories
 export const SingleSelect = Template.bind({});
 SingleSelect.args = {
-  initialValues: ["Dolor sit"],
+  value: ["Dolor sit"],
   options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
   placeholder: 'Default drop down'
 };
@@ -28,7 +28,7 @@ SingleSelect.args = {
 export const MultiSelect = Template.bind({});
 MultiSelect.args = {
   multiple: true,
-  initialValues: ["Lorem ipsum"],
+  value: ["Lorem ipsum"],
   options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
   placeholder: 'Default drop down'
 };

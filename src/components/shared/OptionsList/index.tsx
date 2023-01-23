@@ -9,7 +9,7 @@ export interface OptionsObjectType {
 
 export interface OptionsListProps {
     referenceElement: any;
-    values: (string | number)[];
+    value: (string | number)[];
     options: OptionsObjectType[];
     handleChange: any;
     handleClose: any;
@@ -121,7 +121,7 @@ const OptionsList = (props: OptionsListProps) => {
                     <li key={index} role="option" className="basicui-select__ul__li">
                         <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={() => handleClick(index, option.name)}>
                             <div className="basicui-select__ul__li__indicator">
-                                {props.values.includes(option.name + "") && <div><svg
+                                {props.value.includes(option.name + "") && <div><svg
                                     height="16"
                                     viewBox="0 0 16 16"
                                     version="1.1"

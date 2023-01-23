@@ -9,7 +9,7 @@ import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface SelectProps {
     options: OptionsObjectType[];
-    initialValues?: (string | number)[];
+    value: (string | number)[];
     placeholder?: string;
     onChange?: any;
     onInput?: any;
@@ -21,8 +21,7 @@ export interface SelectProps {
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
 const Select = (props: SelectProps) => {
-    const [values, setValues] = useState<(string | number)[]>([]);
-    const valuesRef: React.MutableRefObject<(string | number)[]> = useRef<(string | number)[]>([]);
+    const valueRef: React.MutableRefObject<(string | number)[]> = useRef<(string | number)[]>([]);
 
     const [valuesText, setValuesText] = useState<(string | number)[]>([]);
     const [isVisible, setIsVisible] = useState(false);
@@ -33,11 +32,8 @@ const Select = (props: SelectProps) => {
 
 
     useEffect(() => {
-        if (values.length === 0 && props.initialValues && props.initialValues.length > 0) {
-            setValues(props.initialValues);
-            valuesRef.current = props.initialValues;
-        }
-    }, [props.initialValues]);
+        valueRef.current = props.value || [];
+    }, [props.value]);
 
     useEffect(() => {
         if (!isVisible) {
@@ -59,9 +55,9 @@ const Select = (props: SelectProps) => {
         const _optionsAsMap: any = {};
         props.options.forEach(item => (_optionsAsMap[item.name] = item.value));
         const _valuesText: (string | number)[] = [];
-        values.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item]));
+        props.value.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item]));
         setValuesText(_valuesText);
-    }, [values]);
+    }, [props.value]);
 
     useEffect(() => {
         // listen for clicks and close select on body
@@ -99,21 +95,19 @@ const Select = (props: SelectProps) => {
     }
 
     const handleChange = (index: number, option: string) => {
-        let _values = [...valuesRef.current];
-        if (!props.multiple && _values.includes(option)) {
-            _values = [];
-        } else if (!props.multiple && !_values.includes(option)) {
-            _values = [option];
-        } else if (_values.includes(option)) {
-            _values = _values.filter(item => item !== option);
+        let _value = [...valueRef.current];
+        if (!props.multiple && _value.includes(option)) {
+            _value = [];
+        } else if (!props.multiple && !_value.includes(option)) {
+            _value = [option];
+        } else if (_value.includes(option)) {
+            _value = _value.filter(item => item !== option);
         } else {
-            _values = [..._values, option];
+            _value = [..._value, option];
         }
-
-        setValues(_values);
-        valuesRef.current = _values;
-        if (props.onChange) { props.onChange(_values) };
-        if (props.onInput) { props.onInput(_values) };
+        
+        if (props.onChange) { props.onChange(_value) };
+        if (props.onInput) { props.onInput(_value) };
 
         if (!props.multiple) {
             setIsVisible(false);
@@ -135,7 +129,7 @@ const Select = (props: SelectProps) => {
             </button>
 
             <div ref={popperElement} className="basicui-select__popper">
-                {isVisible && <OptionsList values={values} options={options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} handleSearchTextChange={props.autocomplete ? handleSearchTextChange : null} />}
+                {isVisible && <OptionsList value={props.value} options={options} referenceElement={referenceElement} handleChange={handleChange} handleClose={() => setIsVisible(false)} handleSearchTextChange={props.autocomplete ? handleSearchTextChange : null} />}
             </div>
         </div>
     );
