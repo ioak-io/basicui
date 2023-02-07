@@ -18,49 +18,15 @@ const Template: Story<ChekboxProps> = (args: ChekboxProps) => <Chekbox {...args}
 export const BasicChekbox = Template.bind({});
 BasicChekbox.args = {
   label: "Article description",
-  initialValue: "",
-  placeholder: 'Lorem ipsum dolor sit',
 };
 
 export const ChekboxWithTooltip = Template.bind({});
 ChekboxWithTooltip.args = {
   label: "Article description",
-  initialValue: "Dolor sit",
-  placeholder: 'Lorem ipsum dolor sit',
   tooltip: "Quisque tincidunt vitae purus id feugiat"
 };
 
 export const ChekboxWithError = Template.bind({});
 ChekboxWithError.args = {
   label: "Article description",
-  initialValue: "Dolor sit",
-  placeholder: 'Lorem ipsum dolor sit',
-  errorMessage: "Quisque tincidunt vitae purus id feugiat"
-};
-
-
-export const ChekboxWithWarning = Template.bind({});
-ChekboxWithWarning.args = {
-  label: "Article description",
-  initialValue: "Dolor sit",
-  placeholder: 'Lorem ipsum dolor sit',
-  warningMessage: "Quisque tincidunt vitae purus id feugiat"
-};
-
-
-export const ChekboxWithSuccess = Template.bind({});
-ChekboxWithSuccess.args = {
-  label: "Article description",
-  initialValue: "Dolor sit",
-  placeholder: 'Lorem ipsum dolor sit',
-  successMessage: "Quisque tincidunt vitae purus id feugiat"
-};
-
-export const ChekboxWithTooltipAndError = Template.bind({});
-ChekboxWithTooltipAndError.args = {
-  label: "Article description",
-  initialValue: "Dolor sit",
-  placeholder: 'Lorem ipsum dolor sit',
-  tooltip: "Ipsum dolor sit",
-  errorMessage: "Quisque tincidunt vitae purus id feugiat"
 };
