@@ -4,10 +4,28 @@
     --basicui-formelement-font-size: 12px;
     --basicui-formelement-font-weight: 400;
     --basicui-formelement-border-radius: 2px;
-    --basicui-formelement-background-color: var(--color-default-500);
-    --basicui-formelement-border-color: var(--color-default-500);
-    --basicui-formelement-background-color-active: var(--theme-primary-100);
-    --basicui-formelement-border-color-active: var(--theme-primary-400);
-    --basicui-formelement-background-color-hover: var(--theme-primary-100);
-    --basicui-formelement-border-color-hover: var(--theme-primary-300);
+}
+
+.basicui-light {
+    --basicui-formelement-background-color: var(--theme-default-50);
+    --basicui-formelement-border-color: var(--theme-default-100);
+    --basicui-formelement-color: var(--theme-default-50i);
+    --basicui-formelement-border-color-hover: var(--theme-primary-transparent-200);
+    --basicui-formelement-background-color-hover: var(--theme-primary-transparent-100);
+    --basicui-formelement-color-hover: var(--theme-primary-transparent-100i);
+    --basicui-formelement-border-color-active: var(--theme-primary-transparent-300);
+    --basicui-formelement-background-color-active: var(--theme-primary-transparent-200);
+    --basicui-formelement-color-active: var(--theme-primary-transparent-200i);
+}
+
+.basicui-dark {
+    --basicui-formelement-background-color: var(--theme-black-500);
+    --basicui-formelement-border-color: var(--theme-black-300);
+    --basicui-formelement-color: var(--theme-default-600i);
+    --basicui-formelement-border-color-hover: var(--theme-primary-transparent-300);
+    --basicui-formelement-background-color-hover: var(--theme-primary-transparent-200);
+    --basicui-formelement-color-hover: var(--theme-primary-transparent-200i);
+    --basicui-formelement-border-color-active: var(--theme-primary-transparent-400);
+    --basicui-formelement-background-color-active: var(--theme-primary-transparent-300);
+    --basicui-formelement-color-active: var(--theme-primary-transparent-300i);
 }

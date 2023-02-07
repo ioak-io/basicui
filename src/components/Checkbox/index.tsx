@@ -21,7 +21,7 @@ const Chekbox = (props: ChekboxProps) => {
         <div className="basicui-checkbox">
             <label className="basicui-checkbox__label" htmlFor={props.id}>
                 <input className="basicui-checkbox__label__input" id={props.id} checked={props.checked} type="checkbox" value={props.value} />
-                {props.label && <span className="basicui-checkbox__label__text">{props.label}</span>}
+                {props.label && <span className="basicui-checkbox__label__span">{props.label}</span>}
             </label>
         </div>
     );
