@@ -41,7 +41,7 @@ const Input = (props: InputProps) => {
             {props.label && <FormElementMessage text={props.label} type="label" />}
             <input
                 id={props.id}
-                className="basicui-input"
+                className={`basicui-input ${props.errorMessage ? "basicui-input--error" : ""} ${props.warningMessage ? "basicui-input--warning" : ""} ${props.successMessage ? "basicui-input--success" : ""}`}
                 onInput={onInput}
                 onChange={props.onChange}
                 onFocus={props.onFocus}

@@ -16,6 +16,16 @@
     --basicui-formelement-border-color-active: var(--theme-primary-transparent-300);
     --basicui-formelement-background-color-active: var(--theme-primary-transparent-200);
     --basicui-formelement-color-active: var(--theme-primary-transparent-200i);
+    
+    --basicui-formelement-error-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-error-border-color: var(--theme-danger-300);
+    --basicui-formelement-error-color: var(--basicui-formelement-color);
+    --basicui-formelement-warning-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-warning-border-color: var(--theme-warning-300);
+    --basicui-formelement-warning-color: var(--basicui-formelement-color);    
+    --basicui-formelement-success-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-success-border-color: var(--theme-success-500);
+    --basicui-formelement-success-color: var(--basicui-formelement-color);
 }
 
 .basicui-dark {
@@ -28,4 +38,14 @@
     --basicui-formelement-border-color-active: var(--theme-primary-transparent-400);
     --basicui-formelement-background-color-active: var(--theme-primary-transparent-300);
     --basicui-formelement-color-active: var(--theme-primary-transparent-300i);
+    
+    --basicui-formelement-error-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-error-border-color: var(--theme-danger-800);
+    --basicui-formelement-error-color: var(--basicui-formelement-color);
+    --basicui-formelement-warning-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-warning-border-color: var(--theme-warning-600);
+    --basicui-formelement-warning-color: var(--basicui-formelement-color);    
+    --basicui-formelement-success-background-color: var(--basicui-formelement-background-color);
+    --basicui-formelement-success-border-color: var(--theme-success-700);
+    --basicui-formelement-success-color: var(--basicui-formelement-color);
 }
