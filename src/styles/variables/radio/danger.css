@@ -1,0 +1,21 @@
+* {
+    --basicui-radio-background-color: none;
+}
+
+.basicui-light .basicui-radio--theme-danger {
+    --basicui-radio-border-color: var(--theme-black-100);
+    --basicui-radio-dotmark-color: var(--theme-black-500);
+    --basicui-radio-background-color-hover: var(--theme-danger-transparent-100);
+    --basicui-radio-border-color-hover: var(--theme-danger-300);
+    --basicui-radio-background-color-checked: none;
+    --basicui-radio-border-color-checked: var(--theme-danger-400);
+}
+
+.basicui-dark .basicui-radio--theme-danger {
+    --basicui-radio-border-color: var(--theme-white-400);
+    --basicui-radio-dotmark-color: var(--theme-white-100);
+    --basicui-radio-background-color-hover: var(--theme-danger-transparent-100);
+    --basicui-radio-border-color-hover: var(--theme-danger-400);
+    --basicui-radio-background-color-checked: none;
+    --basicui-radio-border-color-checked: var(--theme-danger-500);
+}

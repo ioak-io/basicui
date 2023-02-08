@@ -22,9 +22,9 @@ const Radio = ({
     ...restProps
 }: RadioProps) => {
     return (
-        <label className={`basicui-checkbox ${checked ? "basicui-checkbox--checked" : ""} basicui-checkbox--theme-${theme || ThemeType.default}`} htmlFor={id}>
-            <input className="basicui-checkbox__input" id={id} checked={checked} type="checkbox" {...restProps} />
-            {label && <span className="basicui-checkbox__span">{label}</span>}
+        <label className={`basicui-radio ${checked ? "basicui-radio--checked" : ""} basicui-radio--theme-${theme || ThemeType.default}`} htmlFor={id}>
+            <input className="basicui-radio__input" id={id} checked={checked} type="radio" {...restProps} />
+            {label && <span className="basicui-radio__span">{label}</span>}
         </label>
     );
 };

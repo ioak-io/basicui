@@ -1,0 +1,18 @@
+@import './default.css';
+@import './primary.css';
+@import './danger.css';
+
+* {
+    --basicui-radio-height: var(--basicui-checkbox-height);
+    --basicui-radio-label-offset: var(--basicui-checkbox-label-offset);
+    --basicui-radio-font-size: var(--basicui-checkbox-font-size);
+    --basicui-radio-font-weight: var(--basicui-checkbox-font-weight);
+    --basicui-radio-border-radius: 50%;
+    --basicui-radio-border-thickness: 1px;
+    --basicui-radio-background-color: none;
+
+    /* Dotmark */
+    --basicui-radio-dotmark-size: 10px;
+    --basicui-radio-dotmark-offset-left: 4.7px;
+    --basicui-radio-dotmark-offset-bottom: -4px;
+}
