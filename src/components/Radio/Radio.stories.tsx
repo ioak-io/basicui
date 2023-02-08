@@ -21,9 +21,10 @@ BasicRadio.args = {
   label: "Article description",
 };
 
-export const RadioWithTooltip = Template.bind({});
-RadioWithTooltip.args = {
-  label: "Article description",
+export const RadioWithPrimary = Template.bind({});
+RadioWithPrimary.args = {
+  theme: ThemeType.primary,
+  label: "Primary theme",
 };
 
 export const RadioWithError = Template.bind({});
