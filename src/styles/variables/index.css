@@ -2,6 +2,6 @@
 @import './button.css';
 @import './modal.css';
 @import './form.css';
-@import './checkbox.css';
+@import './checkbox/index.css';
 @import './accordion.css';
 @import './tabs.css';

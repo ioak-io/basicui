@@ -1,0 +1,17 @@
+@import './primary.css';
+
+* {
+    --basicui-checkbox-height: 20px;
+    --basicui-checkbox-label-offset: 6px;
+    --basicui-checkbox-font-size: var(--basicui-formelement-font-size);
+    --basicui-checkbox-font-weight: var(--basicui-formelement-font-weight);
+    --basicui-checkbox-border-radius: 2px;
+    --basicui-checkbox-border-thickness: 1px;
+    --basicui-checkbox-background-color: none;
+
+    /* Checkmark */
+    --basicui-checkbox-checkmark-width: 6px;
+    --basicui-checkbox-checkmark-height: 12px;
+    --basicui-checkbox-checkmark-offset-left: 6.2px;
+    --basicui-checkbox-checkmark-offset-bottom: -1px;
+}
