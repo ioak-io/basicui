@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
 import ThemeType from "../types/ThemeType";
 
-export interface CheckboxProps {
+export interface RadioProps {
     id: string;
     label?: string;
     theme?: ThemeType;
@@ -12,15 +12,15 @@ export interface CheckboxProps {
 };
 
 /**
- * Component to render checkbox form element. For using it with standard html input, add css class basicui-input
+ * Component to render radio form element. For using it with standard html input, add css class basicui-input
  */
-const Checkbox = ({
+const Radio = ({
     id,
     label,
     theme,
     checked,
     ...restProps
-}: CheckboxProps) => {
+}: RadioProps) => {
     return (
         <label className={`basicui-checkbox ${checked ? "basicui-checkbox--checked" : ""} basicui-checkbox--theme-${theme || ThemeType.default}`} htmlFor={id}>
             <input className="basicui-checkbox__input" id={id} checked={checked} type="checkbox" {...restProps} />
@@ -29,4 +29,4 @@ const Checkbox = ({
     );
 };
 
-export default Checkbox;
+export default Radio;

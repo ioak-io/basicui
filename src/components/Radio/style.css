@@ -22,17 +22,15 @@
     transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
 }
 
+.basicui-checkbox__input:hover,
+.basicui-checkbox__input:focus {
+    background-color: var(--basicui-checkbox-background-color-hover);
+    border-color: var(--basicui-checkbox-border-color-hover);
+}
+
 .basicui-checkbox__input:checked {
     background-color: var(--basicui-checkbox-background-color-checked);
     border-color: var(--basicui-checkbox-border-color-checked);
-}
-
-.basicui-checkbox__input:hover,
-.basicui-checkbox__input:focus,
-.basicui-checkbox__input:checked:hover,
-.basicui-checkbox__input:checked:focus {
-    background-color: var(--basicui-checkbox-background-color-hover);
-    border-color: var(--basicui-checkbox-border-color-hover);
 }
 
 .basicui-checkbox__input:checked:after {
