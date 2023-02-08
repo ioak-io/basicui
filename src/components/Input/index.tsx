@@ -4,7 +4,7 @@ import "./style.css";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";
 
-export interface InputProps {
+export type InputProps = {
     id?: string;
     type?: string;
     label?: string;
@@ -14,23 +14,23 @@ export interface InputProps {
     errorMessage?: string;
     warningMessage?: string;
     successMessage?: string;
-    onChange?: any;
-    onInput?: any;
-    onFocus?: any;
-    onClick?: any;
-    onBlur?: any;
+    [key: string]: any;
 };
 
 /**
  * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
-const Input = (props: InputProps) => {
-
-    const onInput = (event: any) => {
-        if (props.onInput) {
-            props.onInput(event);
-        }
-    }
+const Input = ({ id,
+    type,
+    label,
+    value,
+    placeholder,
+    tooltip,
+    errorMessage,
+    warningMessage,
+    successMessage,
+    ...restProps
+}: InputProps) => {
 
     return (
         <div
@@ -38,24 +38,20 @@ const Input = (props: InputProps) => {
                 " "
             )}
         >
-            {props.label && <FormElementMessage text={props.label} type="label" />}
+            {label && <FormElementMessage text={label} type="label" />}
             <input
-                id={props.id}
-                className={`basicui-input ${props.errorMessage ? "basicui-input--error" : ""} ${props.warningMessage ? "basicui-input--warning" : ""} ${props.successMessage ? "basicui-input--success" : ""}`}
-                onInput={onInput}
-                onChange={props.onChange}
-                onFocus={props.onFocus}
-                onClick={props.onClick}
-                onBlur={props.onBlur}
-                value={props.value}
-                type={props.type}
-                placeholder={props.placeholder}
+                id={id}
+                className={`basicui-input ${errorMessage ? "basicui-input--error" : ""} ${warningMessage ? "basicui-input--warning" : ""} ${successMessage ? "basicui-input--success" : ""}`}
+                {...restProps}
+                value={value}
+                type={type}
+                placeholder={placeholder}
                 autoComplete="none"
             />
-            {props.tooltip && <FormElementMessage text={props.tooltip} type="info" />}
-            {props.errorMessage && <FormElementMessage text={props.errorMessage} type="error" />}
-            {props.warningMessage && <FormElementMessage text={props.warningMessage} type="warning" />}
-            {props.successMessage && <FormElementMessage text={props.successMessage} type="success" />}
+            {tooltip && <FormElementMessage text={tooltip} type="info" />}
+            {errorMessage && <FormElementMessage text={errorMessage} type="error" />}
+            {warningMessage && <FormElementMessage text={warningMessage} type="warning" />}
+            {successMessage && <FormElementMessage text={successMessage} type="success" />}
         </div>
     );
 };

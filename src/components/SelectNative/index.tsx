@@ -17,52 +17,57 @@ export interface SelectNativeProps {
     successMessage?: string;
     multiple?: boolean;
     autocomplete?: boolean;
-    onChange?: any;
-    onInput?: any;
-    onFocus?: any;
-    onClick?: any;
-    onBlur?: any;
+    [key: string]: any;
 };
 
 /**
  * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
-const SelectNative = (props: SelectNativeProps) => {
+const SelectNative = ({
+    id,
+    label,
+    placeholder,
+    initialValues,
+    options,
+    tooltip,
+    errorMessage,
+    warningMessage,
+    successMessage,
+    multiple,
+    autocomplete,
+    ...restProps
+}: SelectNativeProps) => {
     const [values, setValues] = useState<(string | number)[]>([]);
 
     useEffect(() => {
-        if (values.length === 0 && props.initialValues && props.initialValues.length > 0) {
-            setValues(props.initialValues);
+        if (values.length === 0 && initialValues && initialValues.length > 0) {
+            setValues(initialValues);
         }
-    }, [props.initialValues]);
+    }, [initialValues]);
     return (
         <div
             className={["basicui-selectnative"].join(
                 " "
             )}
         >
-            {props.label && <FormElementMessage text={props.label} type="label" />}
+            {label && <FormElementMessage text={label} type="label" />}
             <select
-                id={props.id}
-                className={`basicui-input basicui-selectnative ${props.multiple ? 'basicui-selectnative--multiple' : ''}`}
-                onInput={props.onInput}
-                onChange={props.onChange}
-                onFocus={props.onFocus}
-                onClick={props.onClick}
-                onBlur={props.onBlur}
-                placeholder={props.placeholder}
-                multiple={props.multiple}
-                size={props.multiple ? 5 : 1}
+                id={id}
+                className={`basicui-input basicui-selectnative ${multiple ? 'basicui-selectnative--multiple' : ''}`}
+                {...restProps}
+                placeholder={placeholder}
+                multiple={multiple}
+                size={multiple ? 5 : 1}
             >
-                {props.options.map(option =>
+                {options.map(option =>
                     <option selected={values.includes(option.name)} className="basicui-selectnative__option">
                         {option.value}
                     </option>)}
             </select>
-            {props.tooltip && <FormElementMessage text={props.tooltip} type="info" />}
-            {props.errorMessage && <FormElementMessage text={props.errorMessage} type="error" />}
-            {props.warningMessage && <FormElementMessage text={props.warningMessage} type="warning" />}
-            {props.successMessage && <FormElementMessage text={props.successMessage} type="success" />}
+            {tooltip && <FormElementMessage text={tooltip} type="info" />}
+            {errorMessage && <FormElementMessage text={errorMessage} type="error" />}
+            {warningMessage && <FormElementMessage text={warningMessage} type="warning" />}
+            {successMessage && <FormElementMessage text={successMessage} type="success" />}
         </div>
     );
 };
