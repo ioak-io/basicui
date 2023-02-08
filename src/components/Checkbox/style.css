@@ -22,7 +22,8 @@
     transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
 }
 
-.basicui-checkbox__input:hover {
+.basicui-checkbox__input:hover,
+.basicui-checkbox__input:focus {
     background-color: var(--basicui-checkbox-background-color-hover);
     border-color: var(--basicui-checkbox-border-color-hover);
 }
@@ -38,8 +39,8 @@
     position: relative;
     width: var(--basicui-checkbox-checkmark-width);
     height: var(--basicui-checkbox-checkmark-height);
-    border-bottom: 1px solid var(--basicui-checkbox-border-color);
-    border-right: 1px solid var(--basicui-checkbox-border-color);
+    border-bottom: 1px solid var(--basicui-checkbox-checkmark-color);
+    border-right: 1px solid var(--basicui-checkbox-checkmark-color);
     left: var(--basicui-checkbox-checkmark-offset-left);
     bottom: var(--basicui-checkbox-checkmark-offset-bottom);
     transform: rotate(40deg);

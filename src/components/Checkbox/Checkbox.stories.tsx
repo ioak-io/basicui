@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import { useAddonState } from '@storybook/api';
 import Chekbox, { ChekboxProps } from ".";
+import ThemeType from "../types/ThemeType";
 
 export default {
   title: "Components/Chekbox",
@@ -23,10 +24,10 @@ BasicChekbox.args = {
 export const ChekboxWithTooltip = Template.bind({});
 ChekboxWithTooltip.args = {
   label: "Article description",
-  tooltip: "Quisque tincidunt vitae purus id feugiat"
 };
 
 export const ChekboxWithError = Template.bind({});
 ChekboxWithError.args = {
-  label: "Article description",
+  label: "Danger theme",
+  theme: ThemeType.danger
 };
