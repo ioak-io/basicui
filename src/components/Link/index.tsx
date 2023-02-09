@@ -6,22 +6,20 @@ export interface LinkProps {
     theme?: ThemeType;
     noUnderline?: boolean;
     noGlow?: boolean;
-    onClick?: any;
-    onSubmit?: any;
-    onReset?: any;
     children?: any;
     label?: string;
+    href: string;
 };
 
 /**
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
-const Link = (props: LinkProps) => {
+const Link = ({href, children, label, noGlow, noUnderline, theme, ...restProps}: LinkProps) => {
     return (
-        <a href="https://google.com"
-            className={`basicui-link basicui-link--theme-${props.theme || ThemeType.default} ${props.noUnderline ? "basicui-link--no-underline" : ""} ${props.noGlow ? "basicui-link--no-glow" : ""}`}>
-            {props.children}
-            <span>{props.label}</span>
+        <a href={href} {...restProps}
+            className={`basicui-link basicui-link--theme-${theme || ThemeType.default} ${noUnderline ? "basicui-link--no-underline" : ""} ${noGlow ? "basicui-link--no-glow" : ""}`}>
+            {children}
+            <span>{label}</span>
         </a>
     );
 };

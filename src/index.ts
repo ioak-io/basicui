@@ -4,6 +4,8 @@ import Button from './components/Button';
 import Link from './components/Link';
 import Textarea from './components/Textarea';
 import SelectNative from './components/SelectNative';
+import Radio from './components/Radio';
+import Checkbox from './components/Checkbox';
 import Modal from './components/Modal';
 import ModalHeader from './components/Modal/ModalHeader';
 import ModalFooter from './components/Modal/ModalFooter';
@@ -22,6 +24,8 @@ export {
     Link,
     Textarea,
     SelectNative,
+    Checkbox,
+    Radio,
     Modal, ModalHeader, ModalFooter,
     ThemeType,
     AlignmentType,
