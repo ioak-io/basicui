@@ -6,7 +6,7 @@ import Radio, { RadioProps } from ".";
 import ThemeType from "../types/ThemeType";
 
 export default {
-  title: "Components/Radio",
+  title: "Form elements/Radio",
   component: Radio,
   argTypes: {
   },

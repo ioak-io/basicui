@@ -5,7 +5,7 @@ import { useAddonState } from '@storybook/api';
 import Textarea, { TextareaProps } from ".";
 
 export default {
-  title: "Components/Textarea",
+  title: "Form elements/Textarea",
   component: Textarea,
   argTypes: {
   },

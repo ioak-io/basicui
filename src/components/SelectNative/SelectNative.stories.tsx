@@ -6,7 +6,7 @@ import SelectNative, { SelectNativeProps } from ".";
 import { SelectPropsConverter } from "../..";
 
 export default {
-  title: "Components/SelectNative",
+  title: "Form elements/SelectNative",
   component: SelectNative,
   argTypes: {
     initialValues: [],

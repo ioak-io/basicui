@@ -7,7 +7,7 @@ import ThemeType from "../types/ThemeType";
 import ButtonVariantType from "../types/ButtonVariantType";
 
 export default {
-  title: "Components/Button",
+  title: "Form elements/Button",
   component: Button,
   argTypes: {
     initialValues: [],

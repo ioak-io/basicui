@@ -7,7 +7,7 @@ import ThemeType from "../types/ThemeType";
 import AccordionWrapper from "./AccordionWrapper";
 
 export default {
-  title: "Components/Accordion",
+  title: "Surfaces/Accordion",
   component: Accordion,
   argTypes: {
     initialValues: [],

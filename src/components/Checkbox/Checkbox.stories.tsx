@@ -6,7 +6,7 @@ import Checkbox, { CheckboxProps } from ".";
 import ThemeType from "../types/ThemeType";
 
 export default {
-  title: "Components/Checkbox",
+  title: "Form elements/Checkbox",
   component: Checkbox,
   argTypes: {
   },

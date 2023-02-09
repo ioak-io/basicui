@@ -9,7 +9,7 @@ import AlignmentType from "../types/AlignmentType";
 import Button from "../Button";
 
 export default {
-  title: "Components/ModalFooter",
+  title: "Surfaces/ModalFooter",
   component: ModalFooter,
   argTypes: {
     // initialValues: [],

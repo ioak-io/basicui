@@ -6,7 +6,7 @@ import Link, { LinkProps } from ".";
 import ThemeType from "../types/ThemeType";
 
 export default {
-  title: "Components/Link",
+  title: "Form elements/Link",
   component: Link,
   argTypes: {
     initialValues: [],

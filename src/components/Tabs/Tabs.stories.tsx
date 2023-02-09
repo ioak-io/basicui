@@ -7,7 +7,7 @@ import ThemeType from "../types/ThemeType";
 import TabsWrapper, { TabsWrapperProps } from "./TabsWrapper";
 
 export default {
-  title: "Components/Tabs",
+  title: "Surfaces/Tabs",
   component: Tabs,
   argTypes: {
     initialValues: [],

@@ -6,7 +6,7 @@ import ButtonVariantType from "../types/ButtonVariantType";
 import IconButton, { IconButtonProps } from ".";
 
 export default {
-  title: "Components/IconButton",
+  title: "Form elements/IconButton",
   component: IconButton,
   argTypes: {
     initialValues: [],

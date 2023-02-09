@@ -5,7 +5,7 @@ import { useAddonState } from '@storybook/api';
 import Input, { InputProps } from ".";
 
 export default {
-  title: "Components/Input",
+  title: "Form elements/Input",
   component: Input,
   argTypes: {
   },

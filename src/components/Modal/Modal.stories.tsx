@@ -9,7 +9,7 @@ import ModalSizeType from "../types/ModalSizeType";
 import ModalPlacement from "../types/ModalPlacement";
 
 export default {
-  title: "Components/Modal",
+  title: "Surfaces/Modal",
   component: Modal,
   argTypes: {
     // initialValues: [],

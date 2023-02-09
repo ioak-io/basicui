@@ -6,7 +6,7 @@ import Select, { SelectProps } from ".";
 import { SelectPropsConverter } from "../..";
 
 export default {
-  title: "Components/Select",
+  title: "Form elements/Select",
   component: Select,
   argTypes: {
     value: [],
