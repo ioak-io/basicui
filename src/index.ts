@@ -1,6 +1,7 @@
 import Select from "./components/Select";
 import Input from './components/Input';
 import Button from './components/Button';
+import IconButton from './components/IconButton';
 import Link from './components/Link';
 import Textarea from './components/Textarea';
 import SelectNative from './components/SelectNative';
@@ -21,6 +22,7 @@ export {
     Select, SelectPropsConverter,
     Input,
     Button,
+    IconButton,
     Link,
     Textarea,
     SelectNative,
