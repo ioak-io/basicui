@@ -26,13 +26,14 @@ const Tabs = (props: TabsProps) => {
             _tabMap[tab.props.id] = tab;
             console.log(tab);
             tab.props.children?.forEach((item: any) => {
-                if (item.type.displayName === "TabHeader") {
+                if (item.type.displayName === "TabHeader" || item.type.name === "TabHeader") {
                     _tabHeaders.push({ id: tab.props.id, component: item });
                 }
             })
         })
         setTabMap(_tabMap);
         setTabHeaders(_tabHeaders);
+        console.log(props.children, _tabHeaders, _tabMap);
     }, [props.children]);
 
     const handleClick = (tabId: string) => {

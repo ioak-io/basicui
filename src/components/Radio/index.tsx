@@ -4,7 +4,8 @@ import "./style.css";
 import ThemeType from "../types/ThemeType";
 
 export interface RadioProps {
-    id: string;
+    name?: string;
+    id?: string;
     label?: string;
     theme?: ThemeType;
     checked?: boolean;
@@ -17,15 +18,14 @@ export interface RadioProps {
  */
 const Radio = ({
     id,
-    label,
     theme,
+    label,
     checked,
-    value,
     ...restProps
 }: RadioProps) => {
     return (
-        <label className={`basicui-radio ${checked ? "basicui-radio--checked" : ""} basicui-radio--theme-${theme || ThemeType.default}`} htmlFor={id}>
-            <input className="basicui-radio__input" id={id} checked={checked} value={value} type="radio" {...restProps} />
+        <label className={`basicui-radio ${checked ? "basicui-radio--checked" : ""} basicui-radio--theme-${theme || ThemeType.default}`}>
+            <input className="basicui-radio__input" type="radio" {...restProps} />
             {label && <span className="basicui-radio__span">{label}</span>}
         </label>
     );

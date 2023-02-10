@@ -15,7 +15,7 @@ const Tab = (props: TabProps) => {
 
     useEffect(() => {
         props.children.forEach((item: any) => {
-            if (item.type.displayName === "TabDetail") {
+            if (item.type.displayName === "TabDetail" || item.type.name === "TabDetail") {
                 setTabDetail(item);
             }
         });
