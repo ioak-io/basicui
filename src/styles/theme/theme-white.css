@@ -1,13 +1,13 @@
 * {
-    --theme-white-900: #6c6c6c;
-    --theme-white-800: #7c7c7c;
-    --theme-white-700: #8c8c8c;
-    --theme-white-600: #9c9c9c;
-    --theme-white-500: #acacac;
-    --theme-white-400: #bcbcbc;
-    --theme-white-300: #cccccc;
-    --theme-white-200: #dcdcdc;
-    --theme-white-100: #ececec;
+    --theme-white-900: #c6c6c6;
+    --theme-white-800: #cccccc;
+    --theme-white-700: #d2d2d2;
+    --theme-white-600: #d8d8d8;
+    --theme-white-500: #dedede;
+    --theme-white-400: #e4e4e4;
+    --theme-white-300: #eaeaea;
+    --theme-white-200: #f0f0f0;
+    --theme-white-100: #f6f6f6;
     --theme-white-50: #fcfcfc;
 
     --theme-white-900i: #000;
