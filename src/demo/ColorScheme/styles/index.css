@@ -1,0 +1,34 @@
+@import './adaptive.css';
+@import './black.css';
+@import './white.css';
+@import './default.css';
+@import './primary.css';
+
+.basicuidemo-color-scheme {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.basicuidemo-color-scheme__x {
+    /* height: 50px; */
+    width: 100%;
+    padding: 10px 20px;
+    display: grid;
+    align-content: center;
+    grid-auto-flow: row;
+    row-gap: 10px;
+}
+
+.basicuidemo-color-scheme__x__bg,
+.basicuidemo-color-scheme__x__fg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.basicuidemo-color-scheme__x__bg__label,
+.basicuidemo-color-scheme__x__bg__value,
+.basicuidemo-color-scheme__x__fg__label,
+.basicuidemo-color-scheme__x__fg__value {
+    margin-right: 6px;
+}
