@@ -6,6 +6,8 @@ export type ColorSchemeProps = {
     "adaptive"
     | "black"
     | "white"
+    | "black-extended"
+    | "white-extended"
     | "default"
     | "primary"
 };

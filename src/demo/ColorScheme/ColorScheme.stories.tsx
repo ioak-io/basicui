@@ -25,9 +25,19 @@ Black.args = {
   discriminator: "black"
 };
 
+export const BlackExtended = Template.bind({});
+BlackExtended.args = {
+  discriminator: "black-extended"
+};
+
 export const White = Template.bind({});
 White.args = {
   discriminator: "white"
+};
+
+export const WhiteExtended = Template.bind({});
+WhiteExtended.args = {
+  discriminator: "white-extended"
 };
 
 export const Default = Template.bind({});

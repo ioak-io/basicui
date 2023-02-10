@@ -1,6 +1,8 @@
 @import './theme-adaptive.css';
 @import './theme-black.css';
 @import './theme-white.css';
+@import './theme-black-extended.css';
+@import './theme-white-extended.css';
 @import './theme-default.css';
 @import './theme-default-light-transparent.css';
 @import './theme-default-dark-transparent.css';
