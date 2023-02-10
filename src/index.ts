@@ -7,6 +7,10 @@ import Textarea from './components/Textarea';
 import SelectNative from './components/SelectNative';
 import Radio from './components/Radio';
 import Checkbox from './components/Checkbox';
+import Tabs from './components/Tabs';
+import Tab from './components/Tabs/Tab';
+import TabHeader from './components/Tabs/TabHeader';
+import TabDetail from './components/Tabs/TabDetail';
 import Modal from './components/Modal';
 import ModalHeader from './components/Modal/ModalHeader';
 import ModalFooter from './components/Modal/ModalFooter';
@@ -28,6 +32,7 @@ export {
     SelectNative,
     Checkbox,
     Radio,
+    Tabs, Tab, TabHeader, TabDetail,
     Modal, ModalHeader, ModalFooter,
     ThemeType,
     AlignmentType,
