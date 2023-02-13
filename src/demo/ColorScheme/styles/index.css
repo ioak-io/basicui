@@ -22,7 +22,7 @@
     display: grid;
     align-content: center;
     grid-auto-flow: row;
-    row-gap: 10px;
+    /* row-gap: 10px; */
 }
 
 .basicuidemo-color-scheme__x__bg,
