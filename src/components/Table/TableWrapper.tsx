@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import ThemeType from "../types/ThemeType";
 import "./style.css";
 
 export type TableWrapperProps = {
+    theme?: ThemeType;
 };
 
 /**
@@ -9,7 +11,7 @@ export type TableWrapperProps = {
  */
 const TableWrapper = (props: TableWrapperProps) => {
     return (
-        <table className="basicui-table">
+        <table className={`basicui-table basicui-table--theme-${props.theme || ThemeType.default}`}>
             <thead>
                 <tr>
                     <th>First name</th>
