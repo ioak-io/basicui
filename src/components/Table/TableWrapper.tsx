@@ -4,6 +4,8 @@ import "./style.css";
 
 export type TableWrapperProps = {
     theme?: ThemeType;
+    inverse?: boolean;
+    inverseHeader?: boolean;
 };
 
 /**
@@ -11,7 +13,7 @@ export type TableWrapperProps = {
  */
 const TableWrapper = (props: TableWrapperProps) => {
     return (
-        <table className={`basicui-table basicui-table--theme-${props.theme || ThemeType.default}`}>
+        <table className={`basicui-table basicui-table--theme-${props.theme || ThemeType.default} ${props.inverse ? "basicui-table--inverse" : ""}`}>
             <thead>
                 <tr>
                     <th>First name</th>
