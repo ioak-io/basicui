@@ -9,29 +9,42 @@ export type TableWrapperProps = {
  */
 const TableWrapper = (props: TableWrapperProps) => {
     return (
-        <div className="basicuidemo-table">
-            <section className="basicuidemo-table__section">
-                <h4>Headings</h4>
-                <h1>h1. heading</h1>
-                <h2>h2. heading</h2>
-                <h3>h3. heading</h3>
-                <h4>h4. heading</h4>
-                <h5>h5. heading</h5>
-                <h6>h6. heading</h6>
-                <p>p. paragraph</p>
-            </section>
-            <section className="basicuidemo-table__section">
-                <h4>Body content</h4>
-                <h5>(p) Regular paragraph</h5>
-                <p>Purus adipiscing purus dictum nascetur hendrerit eleifend feugiat quam pulvinar. congue turpis est sodales placerat id nibh ante. ad justo platea mollis curae lacinia vitae mattis egestas eu musvestibulum. ullamcorper penatibus arcu eleifend cras massa justo. dictum lorem neque semper enim taciti leo imperdiet cubilia. cubilia nulla eu felis adipiscing at accumsan nibh</p>
-                <h5>(mark) Inline text with highlighted content</h5>
-                <p>maximus urna vivamus euismod quam cursus imperdiet <mark>integer litora nostra luctus</mark> pulvinarin. rutrumaliquam cras phasellus fusce vestibulum nec mattis. laoreet tellus turpis ullamcorper dis sagittis felis gravida. facilisis nisi nulla massa montes habitasse vehicula ante porttitor consequat fusce dis conubia et</p>
-                <h5>(small) Small text</h5>
-                <p><small>massa porta sed interdum penatibus euismod velit lacus et vestibulum nam class ipsum ad</small></p>
-                <h5>(strong) (b) Bold text</h5>
-                <p><strong>porttitor faucibus quam curae adipiscing eleifend pulvinar integer maecenas auctor urna</strong></p>
-            </section>
-        </div>
+        <table className="basicui-table">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gene</td>
+                    <td>Tierney</td>
+                    <td>gene.tierney@ioak.org</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td>Jack</td>
+                    <td>Lemmon</td>
+                    <td>jack.lemmon@ioak.org</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Billy</td>
+                    <td>Wilder</td>
+                    <td>billy.wilder@ioak.org</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Katherine</td>
+                    <td>Hepburn</td>
+                    <td>katherina.hepburn@ioak.org</td>
+                    <td>27</td>
+                </tr>
+            </tbody>
+        </table>
     );
 };
 
