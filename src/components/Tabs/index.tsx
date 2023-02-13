@@ -44,7 +44,7 @@ const Tabs = (props: TabsProps) => {
         <div className={`basicui-tabs ${props.offset ? "basicui-tabs--offset" : ""} basicui-tabs--theme-${props.theme || ThemeType.default} basicui-tabs--shape-${props.shape || TabShapeType.default}`}>
             <ul className="basicui-tabs__ul">
                 {tabHeaders.map((tab) =>
-                    <li className={`basicui-tabs__ul__li ${props.activeTabId === tab.id ? "basicui-tabs__ul__li--active" : ""} `}>
+                    <li key={tab.id} className={`basicui-tabs__ul__li ${props.activeTabId === tab.id ? "basicui-tabs__ul__li--active" : ""} `}>
                         <button className="basicui-tabs__ul__li__button" onClick={() => handleClick(tab.id)}>{tab.component}</button>
                     </li>
                 )}

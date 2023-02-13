@@ -25,7 +25,7 @@ const Radio = ({
 }: RadioProps) => {
     return (
         <label className={`basicui-radio ${checked ? "basicui-radio--checked" : ""} basicui-radio--theme-${theme || ThemeType.default}`}>
-            <input className="basicui-radio__input" type="radio" {...restProps} />
+            <input className="basicui-radio__input" type="radio" checked={checked} {...restProps} />
             {label && <span className="basicui-radio__span">{label}</span>}
         </label>
     );

@@ -6,6 +6,7 @@
     display: grid;
     grid-auto-flow: column;
     column-gap: 6px;
+    justify-content: center;
     align-items: center;
 
     text-align: center;
