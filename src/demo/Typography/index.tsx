@@ -25,7 +25,7 @@ const Typography = (props: TypographyProps) => {
                 <h5>(p) Regular paragraph</h5>
                 <p>Purus adipiscing purus dictum nascetur hendrerit eleifend feugiat quam pulvinar. congue turpis est sodales placerat id nibh ante. ad justo platea mollis curae lacinia vitae mattis egestas eu musvestibulum. ullamcorper penatibus arcu eleifend cras massa justo. dictum lorem neque semper enim taciti leo imperdiet cubilia. cubilia nulla eu felis adipiscing at accumsan nibh</p>
                 <h5>(mark) Inline text with highlighted content</h5>
-                <p>Purus adipiscing purus dictum nascetur hendrerit eleifend feugiat quam pulvinar. congue turpis est sodales placerat id nibh ante. ad justo platea mollis curae lacinia vitae mattis egestas eu musvestibulum. ullamcorper penatibus arcu eleifend cras massa justo. dictum lorem neque semper enim taciti leo imperdiet cubilia. cubilia nulla eu felis adipiscing at accumsan nibh</p>
+                <p>maximus urna vivamus euismod quam cursus imperdiet <mark>integer litora nostra luctus</mark> pulvinarin. rutrumaliquam cras phasellus fusce vestibulum nec mattis. laoreet tellus turpis ullamcorper dis sagittis felis gravida. facilisis nisi nulla massa montes habitasse vehicula ante porttitor consequat fusce dis conubia et</p>
             </section>
         </div>
     );
