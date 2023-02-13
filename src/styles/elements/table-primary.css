@@ -1,22 +1,9 @@
-@import './table-primary.css';
-
-.basicui-table {
-    width: 100%;
-    max-width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
 .basicui-table thead th {
-    vertical-align: bottom;
-    text-align: left;
     border-bottom: 2px solid var(--basicui-table-border-color);
 }
 
 .basicui-table th,
 .basicui-table td {
-    padding: 0.75rem;
-    line-height: 1.5;
     border-top: 1px solid var(--basicui-table-border-color);
 }
 
@@ -32,7 +19,6 @@
 
 .basicui-table.table-inverse th {
     border-bottom: 1px solid var(--basicui-table-inverse-border-color);
-    /* border-top: none; */
 }
 
 .basicui-table thead.thead-inverse {

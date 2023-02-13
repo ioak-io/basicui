@@ -13,10 +13,16 @@ const Table = (props: TableProps) => {
     return (
         <div className="basicuidemo-table">
             <section className="basicuidemo-table__section">
+                <h4>Basic table</h4>
                 <TableWrapper />
             </section>
             <section className="basicuidemo-table__section">
+                <h4>Inverse table</h4>
                 <TableWrapper inverse theme={ThemeType.primary} />
+            </section>
+            <section className="basicuidemo-table__section">
+                <h4>Inverse header table</h4>
+                <TableWrapper inverseHeader theme={ThemeType.primary} />
             </section>
         </div>
     );
