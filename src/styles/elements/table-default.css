@@ -1,0 +1,36 @@
+.basicui-table.theme-default.table-inverse {
+    background-color: var(--theme-default-600);
+    color: var(--theme-default-600i);
+}
+
+.basicui-dark .basicui-table.theme-default.table-inverse {
+    background-color: var(--theme-default-500);
+    color: var(--theme-default-500i);
+}
+
+.basicui-table.theme-default.table-inverse th,
+.basicui-table.theme-default.table-inverse td,
+.basicui-dark .basicui-table.theme-default.table-inverse th,
+.basicui-dark .basicui-table.theme-default.table-inverse td {
+    border-top: 1px solid var(--theme-white-700);
+}
+
+.basicui-table.theme-default.table-inverse th,
+.basicui-dark .basicui-table.theme-default.table-inverse th {
+    border-bottom: 2px solid var(--theme-white-700);
+    border-top: none;
+}
+
+.basicui-table.theme-default thead.thead-inverse {
+    background-color: var(--theme-default-600);
+    color: var(--theme-default-600i);
+}
+.basicui-dark .basicui-table.theme-default thead.thead-inverse {
+    background-color: var(--theme-default-500);
+    color: var(--theme-default-500i);
+}
+
+.basicui-table.theme-default thead.thead-inverse th {
+    border-bottom: none;
+    border-top: none;   
+}

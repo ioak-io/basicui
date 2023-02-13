@@ -13,7 +13,7 @@ export type TableWrapperProps = {
  */
 const TableWrapper = (props: TableWrapperProps) => {
     return (
-        <table className={`basicui-table basicui-table--theme-${props.theme || ThemeType.default} ${props.inverse ? "table-inverse" : ""}`}>
+        <table className={`basicui-table theme-${props.theme || ThemeType.default} ${props.inverse ? "table-inverse" : ""}`}>
             <thead className={`${props.inverseHeader ? "thead-inverse" : ""}`}>
                 <tr>
                     <th>First name</th>
