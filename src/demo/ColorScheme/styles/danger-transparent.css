@@ -1,0 +1,40 @@
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__50 {
+    background-color: var(--theme-danger-transparent-50);
+    color: var(--theme-danger-transparent-50i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__100 {
+    background-color: var(--theme-danger-transparent-100);
+    color: var(--theme-danger-transparent-100i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__200 {
+    background-color: var(--theme-danger-transparent-200);
+    color: var(--theme-danger-transparent-200i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__300 {
+    background-color: var(--theme-danger-transparent-300);
+    color: var(--theme-danger-transparent-300i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__400 {
+    background-color: var(--theme-danger-transparent-400);
+    color: var(--theme-danger-transparent-400i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__500 {
+    background-color: var(--theme-danger-transparent-500);
+    color: var(--theme-danger-transparent-500i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__600 {
+    background-color: var(--theme-danger-transparent-600);
+    color: var(--theme-danger-transparent-600i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__700 {
+    background-color: var(--theme-danger-transparent-700);
+    color: var(--theme-danger-transparent-700i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__800 {
+    background-color: var(--theme-danger-transparent-800);
+    color: var(--theme-danger-transparent-800i);
+}
+.basicuidemo-color-scheme--danger-transparent .basicuidemo-color-scheme__900 {
+    background-color: var(--theme-danger-transparent-900);
+    color: var(--theme-danger-transparent-900i);
+}

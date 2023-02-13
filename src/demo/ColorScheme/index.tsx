@@ -9,7 +9,11 @@ export type ColorSchemeProps = {
     | "black-extended"
     | "white-extended"
     | "default"
+    | "default-transparent"
     | "primary"
+    | "primary-transparent"
+    | "danger"
+    | "danger-transparent"
 };
 
 /**

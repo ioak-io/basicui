@@ -4,7 +4,11 @@
 @import './black-extended.css';
 @import './white-extended.css';
 @import './default.css';
+@import './default-transparent.css';
 @import './primary.css';
+@import './primary-transparent.css';
+@import './danger.css';
+@import './danger-transparent.css';
 
 .basicuidemo-color-scheme {
     display: grid;

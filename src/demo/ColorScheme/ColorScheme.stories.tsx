@@ -45,7 +45,27 @@ Default.args = {
   discriminator: "default"
 };
 
+export const DefaultTransparent = Template.bind({});
+DefaultTransparent.args = {
+  discriminator: "default-transparent"
+};
+
 export const Primary = Template.bind({});
 Primary.args = {
   discriminator: "primary"
+};
+
+export const PrimaryTransparent = Template.bind({});
+PrimaryTransparent.args = {
+  discriminator: "primary-transparent"
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  discriminator: "danger"
+};
+
+export const DangerTransparent = Template.bind({});
+DangerTransparent.args = {
+  discriminator: "danger-transparent"
 };
