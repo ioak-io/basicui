@@ -14,6 +14,14 @@
     border-top: 1px solid var(--theme-black-extended-700);
 }
 
-.basicui-table.table-striped tbody tr:nth-of-type(odd) {
+.basicui-table.table-striped tbody tr:nth-of-type(odd),
+.basicui-table.table-hover tbody tr:hover {
     background-color: var(--theme-white-100);
+    color: var(--theme-white-100i);
+}
+
+.basicui-dark .basicui-table.table-striped tbody tr:nth-of-type(odd),
+.basicui-dark .basicui-table.table-hover tbody tr:hover {
+    background-color: var(--theme-black-extended-800);
+    color: var(--theme-black-extended-800i);
 }

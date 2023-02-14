@@ -17,24 +17,24 @@ const Table = (props: TableProps) => {
                 <TableWrapper />
             </section>
             <section className="basicuidemo-table__section">
-                <h4>Inverse table with default theme</h4>
-                <TableWrapper inverse theme={ThemeType.default} />
-            </section>
-            <section className="basicuidemo-table__section">
                 <h4>Inverse table with primary theme</h4>
                 <TableWrapper inverse theme={ThemeType.primary} />
             </section>
             <section className="basicuidemo-table__section">
-                <h4>Inverse header table with default theme</h4>
-                <TableWrapper inverseHeader theme={ThemeType.default} />
-            </section>
-            <section className="basicuidemo-table__section">
-                <h4>Inverse header table with primary theme</h4>
-                <TableWrapper inverseHeader theme={ThemeType.primary} />
+                <h4>Inverse header table with danger theme</h4>
+                <TableWrapper inverseHeader theme={ThemeType.danger} />
             </section>
             <section className="basicuidemo-table__section">
                 <h4>Striped table</h4>
                 <TableWrapper striped />
+            </section>
+            <section className="basicuidemo-table__section">
+                <h4>Hoverable table</h4>
+                <TableWrapper hover />
+            </section>
+            <section className="basicuidemo-table__section">
+                <h4>Small table</h4>
+                <TableWrapper small />
             </section>
         </div>
     );

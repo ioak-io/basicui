@@ -1,6 +1,7 @@
 @import './table-common.css';
 @import './table-default.css';
 @import './table-primary.css';
+@import './table-danger.css';
 
 .basicui-table {
     width: 100%;
@@ -17,6 +18,12 @@
 .basicui-table th,
 .basicui-table td {
     padding: 0.75rem;
+    line-height: 1.5;
+}
+
+.basicui-table.table-small th,
+.basicui-table.table-small td {
+    padding: 0.25rem;
     line-height: 1.5;
 }
 

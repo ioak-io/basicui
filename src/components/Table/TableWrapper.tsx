@@ -7,6 +7,8 @@ export type TableWrapperProps = {
     inverse?: boolean;
     inverseHeader?: boolean;
     striped?: boolean;
+    hover?: boolean;
+    small?: boolean;
 };
 
 /**
@@ -14,7 +16,7 @@ export type TableWrapperProps = {
  */
 const TableWrapper = (props: TableWrapperProps) => {
     return (
-        <table className={`basicui-table theme-${props.theme || ThemeType.default} ${props.inverse ? "table-inverse" : ""} ${props.striped ? "table-striped" : ""}`}>
+        <table className={`basicui-table theme-${props.theme || ThemeType.default} ${props.inverse ? "table-inverse" : ""} ${props.striped ? "table-striped" : ""} ${props.hover ? "table-hover" : ""} ${props.small ? "table-small" : ""}`}>
             <thead className={`${props.inverseHeader ? "thead-inverse" : ""}`}>
                 <tr>
                     <th>First name</th>

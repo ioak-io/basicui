@@ -1,0 +1,36 @@
+.basicui-table.theme-danger.table-inverse {
+    background-color: var(--theme-danger-700);
+    color: var(--theme-danger-700i);
+}
+
+.basicui-dark .basicui-table.theme-danger.table-inverse {
+    background-color: var(--theme-danger-500);
+    color: var(--theme-danger-500i);
+}
+
+.basicui-table.theme-danger.table-inverse th,
+.basicui-table.theme-danger.table-inverse td,
+.basicui-dark .basicui-table.theme-danger.table-inverse th,
+.basicui-dark .basicui-table.theme-danger.table-inverse td {
+    border-top: 1px solid var(--theme-white-700);
+}
+
+.basicui-table.theme-danger.table-inverse th,
+.basicui-dark .basicui-table.theme-danger.table-inverse th {
+    border-bottom: 2px solid var(--theme-white-700);
+    border-top: none;
+}
+
+.basicui-table.theme-danger thead.thead-inverse {
+    background-color: var(--theme-danger-700);
+    color: var(--theme-danger-700i);
+}
+.basicui-dark .basicui-table.theme-danger thead.thead-inverse {
+    background-color: var(--theme-danger-500);
+    color: var(--theme-danger-500i);
+}
+
+.basicui-table.theme-danger thead.thead-inverse th {
+    border-bottom: none;
+    border-top: none;   
+}
