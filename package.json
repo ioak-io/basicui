@@ -29,13 +29,13 @@
     "@popperjs/core": "^2.11.6",
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@storybook/addon-actions": "^6.5.15",
-    "@storybook/addon-essentials": "^6.5.15",
-    "@storybook/addon-interactions": "^6.5.15",
-    "@storybook/addon-links": "^6.5.15",
-    "@storybook/builder-webpack4": "^6.5.15",
-    "@storybook/manager-webpack4": "^6.5.15",
-    "@storybook/react": "^6.5.15",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
@@ -50,7 +50,7 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
-    "storybook-dark-mode": "^2.0.5",
+    "storybook-dark-mode": "^2.0.6",
     "style-loader": "^3.3.1",
     "typescript": "^4.9.4"
   },
@@ -59,8 +59,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@storybook/addons": "^6.5.15",
-    "@storybook/theming": "^6.5.15",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/theming": "^6.5.16",
     "D": "^1.0.0"
   }
 }

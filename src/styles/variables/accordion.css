@@ -10,5 +10,5 @@
 }
 
 .basicui-dark {
-    --basicui-accordion-border-color: var(--theme-black-300);
+    --basicui-accordion-border-color: var(--theme-black-extended-300);
 }

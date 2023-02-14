@@ -11,5 +11,5 @@
 }
 
 .basicui-dark {
-    --basicui-tab-border-color: var(--theme-black-300);
+    --basicui-tab-border-color: var(--theme-black-extended-300);
 }

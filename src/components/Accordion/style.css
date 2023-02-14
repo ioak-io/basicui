@@ -44,11 +44,11 @@
 }
 
 
-.basicui-accordion.basicui-accordion--flushed {
+.basicui-accordion.accordion-flushed {
     border-radius: 0;
     border: none;
 }
 
-.basicui-accordion--flushed.basicui-accordion:not(:last-of-type) {
+.basicui-accordion.accordion-flushed:not(:last-of-type) {
     border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }
