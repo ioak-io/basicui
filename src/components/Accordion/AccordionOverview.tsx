@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Accordion, { AccordionProps } from ".";
+import DemoSection from "../../demo/DemoSection";
 import ThemeType from "../types/ThemeType";
 import AccordionWrapper from "./AccordionWrapper";
 
@@ -12,18 +13,15 @@ const AccordionOverview = () => {
 
     return (
         <div>
-            <section className="basicuidemo-section">
-                <h4>Accordion with primary theme</h4>
+            <DemoSection heading="Accordion with primary theme">
                 <AccordionWrapper theme={ThemeType.primary} />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Bordered accordion with default theme</h4>
+            </DemoSection>
+            <DemoSection heading="Bordered accordion with default theme">
                 <AccordionWrapper bordered />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Accordion with danger theme</h4>
+            </DemoSection>
+            <DemoSection heading="Accordion with danger theme">
                 <AccordionWrapper theme={ThemeType.danger} />
-            </section>
+            </DemoSection>
         </div>
     );
 };

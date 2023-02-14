@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import DemoSection from "../../demo/DemoSection";
 import ThemeType from "../types/ThemeType";
 import "./style.css";
 import TableWrapper from "./TableWrapper";
@@ -12,34 +13,27 @@ export type TableProps = {
 const Table = (props: TableProps) => {
     return (
         <div className="basicuidemo-table">
-            <section className="basicuidemo-section">
-                <h4>Basic table</h4>
+            <DemoSection heading="Basic table">
                 <TableWrapper />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Inverse table with primary theme</h4>
+            </DemoSection>
+            <DemoSection heading="Inverse table with primary theme">
                 <TableWrapper inverse theme={ThemeType.primary} />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Inverse header table with danger theme</h4>
+            </DemoSection>
+            <DemoSection heading="Inverse header table with danger theme">
                 <TableWrapper inverseHeader theme={ThemeType.danger} />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Striped table</h4>
+            </DemoSection>
+            <DemoSection heading="Striped table">
                 <TableWrapper striped />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Hoverable table</h4>
+            </DemoSection>
+            <DemoSection heading="Hoverable table">
                 <TableWrapper hover />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Bordered table</h4>
+            </DemoSection>
+            <DemoSection heading="Bordered table">
                 <TableWrapper bordered theme={ThemeType.primary} inverse />
-            </section>
-            <section className="basicuidemo-section">
-                <h4>Small table</h4>
+            </DemoSection>
+            <DemoSection heading="Small table">
                 <TableWrapper small />
-            </section>
+            </DemoSection>
         </div>
     );
 };
