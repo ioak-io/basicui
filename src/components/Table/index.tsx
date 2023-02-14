@@ -33,6 +33,10 @@ const Table = (props: TableProps) => {
                 <TableWrapper hover />
             </section>
             <section className="basicuidemo-table__section">
+                <h4>Bordered table</h4>
+                <TableWrapper bordered theme={ThemeType.primary} inverse />
+            </section>
+            <section className="basicuidemo-table__section">
                 <h4>Small table</h4>
                 <TableWrapper small />
             </section>

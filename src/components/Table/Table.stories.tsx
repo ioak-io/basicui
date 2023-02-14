@@ -9,6 +9,11 @@ export default {
   component: Table,
   argTypes: {
   },
+  parameters: {
+    previewTabs: {
+      'storybook/docs/panel': { hidden: true }
+    }
+  }
 } as Meta;
 
 // Create a master template for mapping args to render the Table component
