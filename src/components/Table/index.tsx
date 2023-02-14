@@ -32,6 +32,10 @@ const Table = (props: TableProps) => {
                 <h4>Inverse header table with primary theme</h4>
                 <TableWrapper inverseHeader theme={ThemeType.primary} />
             </section>
+            <section className="basicuidemo-table__section">
+                <h4>Striped table</h4>
+                <TableWrapper striped />
+            </section>
         </div>
     );
 };

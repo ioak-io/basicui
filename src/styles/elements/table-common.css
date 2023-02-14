@@ -13,3 +13,7 @@
 .basicui-dark .basicui-table td {
     border-top: 1px solid var(--theme-black-extended-700);
 }
+
+.basicui-table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--theme-white-100);
+}
