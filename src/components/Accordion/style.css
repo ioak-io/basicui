@@ -1,21 +1,10 @@
 @import './style-theme.css';
 
 .basicui-accordion {
-    border: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
-    border-bottom: none;
     overflow: hidden;
 }
 
-.basicui-accordion:first-of-type {
-    border-radius: var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius) 0 0;
-}
-
-.basicui-accordion:last-of-type {
-    border-radius: 0 0 var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius);
-    border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
-}
-
-.basicui-accordion__header {
+.basicui-accordion .basicui-accordion__header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -30,25 +19,39 @@
     transition: background-color 250ms ease-in-out;
 }
 
-.basicui-accordion__body {
+.basicui-accordion .basicui-accordion__body {
     height: 0;
     transition: height 250ms ease-in-out;
 }
 
-.basicui-accordion--active .basicui-accordion__body {
+.basicui-accordion.accordion-active .basicui-accordion__body {
     border-top: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }
 
-.basicui-accordion__body__content {
+.basicui-accordion .basicui-accordion__body__content {
     padding: 16px var(--basicui-accordion-padding-x);
 }
 
 
-.basicui-accordion.accordion-flushed {
+.basicui-accordion {
     border-radius: 0;
     border: none;
 }
 
-.basicui-accordion.accordion-flushed:not(:last-of-type) {
+.basicui-accordion:not(:last-of-type) {
+    border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
+}
+
+.basicui-accordion.accordion-bordered {
+    border: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
+    border-bottom: none;
+}
+
+.basicui-accordion.accordion-bordered:first-of-type {
+    border-radius: var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius) 0 0;
+}
+
+.basicui-accordion.accordion-bordered:last-of-type {
+    border-radius: 0 0 var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius);
     border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }

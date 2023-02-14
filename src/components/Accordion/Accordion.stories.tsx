@@ -5,6 +5,7 @@ import { useAddonState } from '@storybook/api';
 import Accordion, { AccordionProps } from ".";
 import ThemeType from "../types/ThemeType";
 import AccordionWrapper from "./AccordionWrapper";
+import AccordionOverview from "./AccordionOverview";
 
 export default {
   title: "Surfaces/Accordion",
@@ -17,14 +18,15 @@ export default {
 
 // Create a master template for mapping args to render the Accordion component
 const Template: Story<AccordionProps> = (args: AccordionProps) => <AccordionWrapper {...args} />;
+const TemplateOverview: Story<AccordionProps> = () => <AccordionOverview />;
 
 // Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = {
-  flushed: false
+export const Overview = TemplateOverview.bind({});
+TemplateOverview.args = {
+  bordered: false
 };
 
-export const Flushed = Template.bind({});
-Flushed.args = {
-  flushed: true
+export const Playground = Template.bind({});
+Playground.args = {
+  theme: ThemeType.primary
 };

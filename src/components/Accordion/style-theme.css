@@ -1,32 +1,32 @@
-.basicui-accordion--theme-default.basicui-accordion--active .basicui-accordion__header,
-.basicui-accordion--theme-default .basicui-accordion__header:hover,
-.basicui-accordion--theme-default .basicui-accordion__header:focus {
+.basicui-accordion.theme-default.basicui-accordion--active .basicui-accordion__header,
+.basicui-accordion.theme-default .basicui-accordion__header:hover,
+.basicui-accordion.theme-default .basicui-accordion__header:focus {
     background-color: var(--theme-default-200);
     color: var(--theme-default-200i);
     fill: var(--theme-default-200i);
 }
 
-.basicui-dark .basicui-accordion--theme-default.basicui-accordion--active .basicui-accordion__header,
-.basicui-dark .basicui-accordion--theme-default .basicui-accordion__header:hover,
-.basicui-dark .basicui-accordion--theme-default .basicui-accordion__header:focus {
+.basicui-dark .basicui-accordion.theme-default.accordion-active .basicui-accordion__header,
+.basicui-dark .basicui-accordion.theme-default .basicui-accordion__header:hover,
+.basicui-dark .basicui-accordion.theme-default .basicui-accordion__header:focus {
     background-color: var(--theme-default-400);
     color: var(--theme-default-400i);
     fill: var(--theme-default-400i);
 }
 
 /* primary */
-.basicui-accordion--theme-primary.basicui-accordion--active .basicui-accordion__header,
-.basicui-accordion--theme-primary .basicui-accordion__header:hover,
-.basicui-accordion--theme-primary .basicui-accordion__header:focus {
+.basicui-accordion.theme-primary.accordion-active .basicui-accordion__header,
+.basicui-accordion.theme-primary .basicui-accordion__header:hover,
+.basicui-accordion.theme-primary .basicui-accordion__header:focus {
     background-color: var(--theme-primary-400);
     color: var(--theme-primary-400i);
     fill: var(--theme-primary-400i);
 }
 
 /* danger */
-.basicui-accordion--theme-danger.basicui-accordion--active .basicui-accordion__header,
-.basicui-accordion--theme-danger .basicui-accordion__header:hover,
-.basicui-accordion--theme-danger .basicui-accordion__header:focus {
+.basicui-accordion.theme-danger.accordion-active .basicui-accordion__header,
+.basicui-accordion.theme-danger .basicui-accordion__header:hover,
+.basicui-accordion.theme-danger .basicui-accordion__header:focus {
     background-color: var(--theme-danger-400);
     color: var(--theme-danger-400i);
     fill: var(--theme-danger-400i);

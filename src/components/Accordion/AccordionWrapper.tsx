@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Accordion, { AccordionProps } from ".";
 
-const AccordionWrapper = (props: AccordionProps) => {
+const AccordionWrapper = (props: AccordionProps | any) => {
     const [expanded, setExpanded] = useState("");
 
     const handleChange = (panelName: string) => {

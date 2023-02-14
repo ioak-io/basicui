@@ -7,7 +7,7 @@ export interface AccordionProps {
     expanded: boolean;
     onChange: any;
     heading: string;
-    flushed?: boolean;
+    bordered?: boolean;
     children: any;
 };
 
@@ -58,7 +58,7 @@ const Accordion = (props: AccordionProps) => {
     }
 
     return (
-        <div className={`basicui-accordion  ${props.expanded ? "basicui-accordion--active" : ""} ${props.flushed ? "accordion-flushed" : ""} basicui-accordion--theme-${props.theme || ThemeType.default}`}>
+        <div className={`basicui-accordion  ${props.expanded ? "accordion-active" : ""} ${props.bordered ? "accordion-bordered" : ""} theme-${props.theme || ThemeType.default}`}>
             <button className="basicui-accordion__header" onClick={handleChange}>
                 <div>{props.heading}</div>
                 v
