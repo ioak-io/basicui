@@ -11,29 +11,36 @@ const ThemesOverview = (props: ThemesOverviewProps) => {
     const [themes, setThemes] = useState([
         "adaptive",
         "black",
+        "black-extended",
         "white",
+        "white-extended",
+        "default",
+        "default-transparent",
         "primary",
+        "primary-transparent",
         "warning",
-        "danger"
+        "warning-transparent",
+        "danger",
+        "danger-transparent"
     ]);
 
     return (
-        <div className="basicuidemo-themes-overview">
+        <div className="basicuidemo-color-scheme">
             {themes.map(theme => (
-                <div className={`basicuidemo-themes-overview__x basicuidemo-themes-overview__${theme}`}>
-                    <div className="basicuidemo-themes-overview__x__bg">
-                        <div className="basicuidemo-themes-overview__x__bg__label">
+                <div className={`basicuidemo-color-scheme__x basicuidemo-themes-overview__${theme}`}>
+                    <div className="basicuidemo-color-scheme__x__bg">
+                        <div className="basicuidemo-color-scheme__x__bg__label">
                             background-color:
                         </div>
-                        <div className="basicuidemo-themes-overview__x__bg__value">
+                        <div className="basicuidemo-color-scheme__x__bg__value">
                             {`var(--theme-${theme}-500)`}
                         </div>
                     </div>
-                    <div className="basicuidemo-themes-overview__x__fg">
-                        <div className="basicuidemo-themes-overview__x__fg__label">
+                    <div className="basicuidemo-color-scheme__x__fg">
+                        <div className="basicuidemo-color-scheme__x__fg__label">
                             color:
                         </div>
-                        <div className="basicuidemo-themes-overview__x__fg__value">
+                        <div className="basicuidemo-color-scheme__x__fg__value">
                             {`var(--theme-${theme}-500i)`}
                         </div>
                     </div>

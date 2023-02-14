@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./styles/index.css";
+import ThemesOverview from "./ThemesOverview";
 
 export type ColorSchemeProps = {
     discriminator:
@@ -14,6 +15,7 @@ export type ColorSchemeProps = {
     | "primary-transparent"
     | "danger"
     | "danger-transparent"
+    | "themes-overview"
 };
 
 /**
@@ -34,28 +36,31 @@ const ColorScheme = (props: ColorSchemeProps) => {
     ]);
 
     return (
-        <div className={`basicuidemo-color-scheme basicuidemo-color-scheme--${props.discriminator}`}>
-            {levels.map(level => (
-                <div className={`basicuidemo-color-scheme__x basicuidemo-color-scheme__${level}`}>
-                    <div className="basicuidemo-color-scheme__x__bg">
-                        <div className="basicuidemo-color-scheme__x__bg__label">
-                            background-color:
+        <>
+            {props.discriminator !== "themes-overview" && <div className={`basicuidemo-color-scheme basicuidemo-color-scheme--${props.discriminator}`}>
+                {levels.map(level => (
+                    <div className={`basicuidemo-color-scheme__x basicuidemo-color-scheme__${level}`}>
+                        <div className="basicuidemo-color-scheme__x__bg">
+                            <div className="basicuidemo-color-scheme__x__bg__label">
+                                background-color:
+                            </div>
+                            <div className="basicuidemo-color-scheme__x__bg__value">
+                                {`var(--theme-${props.discriminator}-${level})`}
+                            </div>
                         </div>
-                        <div className="basicuidemo-color-scheme__x__bg__value">
-                            {`var(--theme-${props.discriminator}-${level})`}
+                        <div className="basicuidemo-color-scheme__x__fg">
+                            <div className="basicuidemo-color-scheme__x__fg__label">
+                                color:
+                            </div>
+                            <div className="basicuidemo-color-scheme__x__fg__value">
+                                {`var(--theme-${props.discriminator}-${level}i)`}
+                            </div>
                         </div>
-                    </div>
-                    <div className="basicuidemo-color-scheme__x__fg">
-                        <div className="basicuidemo-color-scheme__x__fg__label">
-                            color:
-                        </div>
-                        <div className="basicuidemo-color-scheme__x__fg__value">
-                            {`var(--theme-${props.discriminator}-${level}i)`}
-                        </div>
-                    </div>
-                </div>))
-            }
-        </div>
+                    </div>))
+                }
+            </div>}
+            {props.discriminator === "themes-overview" && <ThemesOverview />}
+        </>
     );
 };
 

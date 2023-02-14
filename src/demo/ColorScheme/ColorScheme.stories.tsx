@@ -14,6 +14,11 @@ export default {
 // Create a master template for mapping args to render the ColorScheme component
 const Template: Story<ColorSchemeProps> = (args: ColorSchemeProps) => <ColorScheme {...args} />;
 
+export const ThemesOverview = Template.bind({});
+ThemesOverview.args = {
+  discriminator: "themes-overview"
+};
+
 // Reuse that template for creating different stories
 export const Adaptive = Template.bind({});
 Adaptive.args = {
