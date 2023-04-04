@@ -14,6 +14,7 @@ import TabDetail from './components/Tabs/TabDetail';
 import Modal from './components/Modal';
 import ModalHeader from './components/Modal/ModalHeader';
 import ModalFooter from './components/Modal/ModalFooter';
+import ModalBody from './components/Modal/ModalBody';
 
 import * as SelectPropsConverter from './converters/Select';
 import ThemeType from "./components/types/ThemeType";
@@ -33,7 +34,7 @@ export {
     Checkbox,
     Radio,
     Tabs, Tab, TabHeader, TabDetail,
-    Modal, ModalHeader, ModalFooter,
+    Modal, ModalHeader, ModalFooter, ModalBody,
     ThemeType,
     AlignmentType,
     ButtonVariantType,
