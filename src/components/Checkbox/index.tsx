@@ -4,7 +4,7 @@ import "./style.css";
 import ThemeType from "../types/ThemeType";
 
 export interface CheckboxProps {
-    id: string;
+    id?: string;
     label?: string;
     theme?: ThemeType;
     checked?: boolean;

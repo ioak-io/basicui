@@ -14,6 +14,8 @@ export type InputProps = {
     errorMessage?: string;
     warningMessage?: string;
     successMessage?: string;
+    onChange?: any;
+    onInput?: any;
     [key: string]: any;
 };
 
