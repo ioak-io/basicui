@@ -23,7 +23,8 @@ export const DefaultThemeWithDefaultVariant = Template.bind({});
 DefaultThemeWithDefaultVariant.args = {
   theme: ThemeType.default,
   variant: ButtonVariantType.default,
-  children: <div>Lorem ipsum</div>
+  children: <div>Lorem ipsum</div>,
+  disabled: true
 };
 
 export const DefaultThemeWithOutlineVariant = Template.bind({});

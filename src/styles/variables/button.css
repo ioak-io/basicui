@@ -4,4 +4,6 @@
     --basicui-button-height: 32px;
     --basicui-button-padding: 0 12px;
     --basicui-button-border-radius: 2px;
+    --basicui-button-opacity-disabled: 0.5;
+    --basicui-button-opacity-loading: 0.5;
 }
