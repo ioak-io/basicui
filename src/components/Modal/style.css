@@ -40,7 +40,7 @@
 }
 
 .basicui-dark .basicui-modal__base {
-    background-color: var(--theme-black-500);
+    background-color: var(--theme-black-50);
 }
 
 .basicui-modal__base--size-small {

@@ -32,10 +32,6 @@
     opacity: var(--basicui-button-opacity-disabled);
 }
 
-.basicui-button--loading {
-    opacity: var(--basicui-button-opacity-loading);
-}
-
 .basicui-button svg {
     height: calc(var(--basicui-button-height) - 12px);
 }

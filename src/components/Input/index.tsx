@@ -44,11 +44,11 @@ const Input = ({ id,
             <input
                 id={id}
                 className={`basicui-input ${errorMessage ? "basicui-input--error" : ""} ${warningMessage ? "basicui-input--warning" : ""} ${successMessage ? "basicui-input--success" : ""}`}
-                {...restProps}
                 value={value}
                 type={type}
                 placeholder={placeholder}
-                autoComplete="none"
+                autoComplete="off"
+                {...restProps}
             />
             {tooltip && <FormElementMessage text={tooltip} type="info" />}
             {errorMessage && <FormElementMessage text={errorMessage} type="error" />}

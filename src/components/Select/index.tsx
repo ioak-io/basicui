@@ -8,6 +8,7 @@ import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export interface SelectProps {
+    name?: string;
     options: OptionsObjectType[];
     value: (string | number)[];
     placeholder?: string;
@@ -105,9 +106,21 @@ const Select = (props: SelectProps) => {
         } else {
             _value = [..._value, option];
         }
-        
-        if (props.onChange) { props.onChange(_value) };
-        if (props.onInput) { props.onInput(_value) };
+
+        const _event: any = {
+            currentTarget: {
+                values: _value,
+                value: _value,
+                name: props.name
+            }
+        }
+
+        if (!props.multiple) {
+            _event.currentTarget.value = _value.length > 0 ? _value[0] : null;
+        }
+
+        if (props.onChange) { props.onChange(_event) };
+        if (props.onInput) { props.onInput(_event) };
 
         if (!props.multiple) {
             setIsVisible(false);

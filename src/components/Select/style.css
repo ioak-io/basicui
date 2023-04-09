@@ -15,4 +15,5 @@
 
 .basicui-select__popper {
     width: 100%;
+    z-index: 10;
 }

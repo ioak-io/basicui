@@ -23,7 +23,7 @@ const Template: Story<ModalFooterProps> = (args: any) => <ModalFooter {...args} 
 // Reuse that template for creating different stories
 export const DefaultModalFooter = Template.bind({});
 DefaultModalFooter.args = {
-  noBorder: true,
+  border: true,
   alignment: AlignmentType.default,
   children:
     <>

@@ -7,14 +7,30 @@
 }
 
 .basicui-modal-header--show-border {
-    border-bottom: 1px solid var(--theme-white-100);
+    border-bottom: 1px solid var(--theme-white-400);
 }
 
 .basicui-dark .basicui-modal-header {
-    border-color: var(--theme-black-400);
+    border-color: var(--theme-black-extended-400);
 }
 
 .basicui-modal-header__heading {
     font-size: var(--basicui-modal-heading-font-size);
     font-weight: var(--basicui-modal-heading-font-weight);
+}
+
+.basicui-modal-header__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.basicui-modal-header__close svg {
+    height: 16px;
+    fill: var(--theme-white-100i);
+}
+
+.basicui-dark .basicui-modal-header__close svg {
+    height: 16px;
+    fill: var(--theme-black-100i);
 }

@@ -26,11 +26,11 @@ const StoryWrapper = (props: ModalProps) => {
                 size={props.size}
                 placement={props.placement}
             >
-                <ModalHeader noBorder onClose={() => setIsOpen(false)} heading="Lorem ipsum dolor sit" />
+                <ModalHeader border onClose={() => setIsOpen(false)} heading="Lorem ipsum dolor sit" />
                 <ModalBody>
                     Praesent urna erat, pharetra vel est vitae, tincidunt viverra sapien. Nullam ac rutrum diam. Curabitur non augue justo. Morbi pulvinar convallis leo eu faucibus. Nullam eu ullamcorper nisl. Ut cursus sagittis elit at congue. Donec malesuada sem at condimentum ultrices. Ut elementum tincidunt ipsum quis condimentum. Mauris nec arcu vitae diam sollicitudin aliquet. Nunc sed euismod ante. Proin eros magna, lobortis ut varius finibus, dignissim eu purus. Praesent ornare rutrum turpis imperdiet fringilla.
                 </ModalBody>
-                <ModalFooter alignment={AlignmentType.left} noBorder>
+                <ModalFooter alignment={AlignmentType.left} border>
                     <Button onClick={() => setIsOpen(false)} theme={ThemeType.primary}>Apply</Button>
                     <Button onClick={() => setIsOpen(false)}>Cancel</Button>
                 </ModalFooter>

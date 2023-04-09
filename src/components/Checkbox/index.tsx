@@ -8,6 +8,7 @@ export interface CheckboxProps {
     label?: string;
     theme?: ThemeType;
     checked?: boolean;
+    defaultChecked?: boolean;
     [key: string]: any;
 };
 

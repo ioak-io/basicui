@@ -6,13 +6,13 @@ import './ModalFooter.css';
 export type ModalFooterProps = {
     children?: any;
     alignment?: AlignmentType;
-    noBorder?: boolean;
+    border?: boolean;
 }
 
 const ModalFooter = (props: ModalFooterProps) => {
 
     return (
-        <div className={`basicui-modal-footer ${props.noBorder ? "" : "basicui-modal-footer--show-border"} basicui-modal-footer--alignment-${props.alignment || ThemeType.default}`}>
+        <div className={`basicui-modal-footer ${props.border ? "basicui-modal-footer--show-border" : ""} basicui-modal-footer--alignment-${props.alignment || ThemeType.default}`}>
             {props.children}
         </div>
     );
