@@ -37,11 +37,11 @@
     --basicui-formelement-border-color: var(--theme-black-50);
     --basicui-formelement-color: var(--theme-black-100i);
     --basicui-formelement-border-color-hover: var(--theme-primary-transparent-300);
-    --basicui-formelement-background-color-hover: var(--theme-primary-transparent-200);
-    --basicui-formelement-color-hover: var(--theme-primary-transparent-200i);
+    --basicui-formelement-background-color-hover: var(--theme-primary-transparent-100);
+    --basicui-formelement-color-hover: var(--theme-primary-transparent-100i);
     --basicui-formelement-border-color-active: var(--theme-primary-transparent-400);
-    --basicui-formelement-background-color-active: var(--theme-primary-transparent-300);
-    --basicui-formelement-color-active: var(--theme-primary-transparent-300i);
+    --basicui-formelement-background-color-active: var(--theme-primary-transparent-200);
+    --basicui-formelement-color-active: var(--theme-primary-transparent-200i);
 
     --basicui-formelement-error-background-color: var(--basicui-formelement-background-color);
     --basicui-formelement-error-border-color: var(--theme-danger-800);

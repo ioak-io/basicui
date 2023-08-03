@@ -9,15 +9,16 @@ export interface LinkProps {
     children?: any;
     label?: string;
     href: string;
+    className?: string;
 };
 
 /**
  * Component to render drop down input form element. Supports multi select and auto complete features
  */
-const Link = ({href, children, label, noGlow, noUnderline, theme, ...restProps}: LinkProps) => {
+const Link = ({ href, children, label, noGlow, noUnderline, theme, className, ...restProps }: LinkProps) => {
     return (
         <a href={href} {...restProps}
-            className={`basicui-link basicui-link--theme-${theme || ThemeType.default} ${noUnderline ? "basicui-link--no-underline" : ""} ${noGlow ? "basicui-link--no-glow" : ""}`}>
+            className={`${className || ''} basicui-link basicui-link--theme-${theme || ThemeType.default} ${noUnderline ? "basicui-link--no-underline" : ""} ${noGlow ? "basicui-link--no-glow" : ""}`}>
             {children}
             <span>{label}</span>
         </a>

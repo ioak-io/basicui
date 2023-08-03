@@ -6,9 +6,11 @@ import flip from '@popperjs/core/lib/modifiers/flip.js';
 import "./style.css";
 import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
+import FormElementMessage from "../shared/FormElementMessage";
 
 export interface SelectProps {
     name?: string;
+    label?: string;
     options: OptionsObjectType[];
     value: (string | number)[];
     placeholder?: string;
@@ -103,7 +105,7 @@ const Select = (props: SelectProps) => {
         setIsVisible(!isVisible);
     }
 
-    const handleChange = (index: number, option: string) => {
+    const handleChange = (event: any, index: number, option: string) => {
         let _value = [...valueRef.current];
         if (!props.multiple && _value.includes(option)) {
             _value = [];
@@ -115,7 +117,11 @@ const Select = (props: SelectProps) => {
             _value = [..._value, option];
         }
 
+
+        console.log("---", event, {...event});
+
         const _event: any = {
+            preventDefault: event.preventDefault,
             currentTarget: {
                 values: _value,
                 value: _value,
@@ -145,6 +151,7 @@ const Select = (props: SelectProps) => {
                 " "
             )}
         >
+            {props.label && <FormElementMessage text={props.label} type="label" />}
             <button className="basicui-input basicui-select__button" type="button" ref={referenceElement} onClick={handleSelectClick}>
                 {valuesText.join(', ') || props.placeholder || "-"}
             </button>

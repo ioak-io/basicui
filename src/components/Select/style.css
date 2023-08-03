@@ -5,7 +5,7 @@
 .basicui-select__button {
     width: 100%;
     text-align: left;
-    height: auto;
+    /* height: auto; */
     min-height: var(--basicui-formelement-height);
     padding: var(--basicui-formelement-padding);
     padding-top: 6px;
