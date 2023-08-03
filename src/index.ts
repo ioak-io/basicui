@@ -22,6 +22,7 @@ import AlignmentType from "./components/types/AlignmentType";
 import ButtonVariantType from "./components/types/ButtonVariantType";
 import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
+import Label from './components/Label';
 
 export {
     Select, SelectPropsConverter,
@@ -39,5 +40,6 @@ export {
     AlignmentType,
     ButtonVariantType,
     ModalPlacement,
-    ModalSizeType
+    ModalSizeType,
+    Label
 };

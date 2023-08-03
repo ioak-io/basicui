@@ -35,6 +35,7 @@ MultiSelect.args = {
 
 export const Autocomplete = Template.bind({});
 Autocomplete.args = {
+  value: [],
   autocomplete: true,
   options: SelectPropsConverter.optionsFromObject({ 1: "Lorem ipsum", 2: "Dolor sit", 4: 56 }),
   placeholder: 'Autocomplete drop down'
@@ -42,7 +43,9 @@ Autocomplete.args = {
 
 export const AutocompleteMultiSelect = Template.bind({});
 AutocompleteMultiSelect.args = {
+  value: [],
   autocomplete: true,
+  allowNewValues: true,
   multiple: true,
   options: SelectPropsConverter.optionsFromObject({ 1: "Lorem ipsum", 2: "Dolor sit", 4: 56 }),
   placeholder: 'Autocomplete drop down'

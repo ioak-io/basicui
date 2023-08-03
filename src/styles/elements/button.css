@@ -33,7 +33,7 @@
 }
 
 .basicui-button svg {
-    height: calc(var(--basicui-button-height) - 12px);
+    height: var(--basicui-button-icon-height);
 }
 
 @keyframes animate_button_loading {

@@ -29,4 +29,5 @@
     margin-bottom: 4px;
     text-transform: capitalize;
     word-break: keep-all;
+    color: var(--basicui-formelement-label-color);
 }

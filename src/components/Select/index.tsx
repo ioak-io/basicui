@@ -16,6 +16,7 @@ export interface SelectProps {
     onInput?: any;
     multiple?: boolean;
     autocomplete?: boolean;
+    allowNewValues?: boolean;
 };
 
 /**
@@ -43,12 +44,19 @@ const Select = (props: SelectProps) => {
     }, [isVisible]);
 
     useEffect(() => {
-        if (isEmptyOrSpaces(searchText)) {
+        const _searchText = searchText.toLowerCase();
+        if (isEmptyOrSpaces(_searchText)) {
             setOptions(props.options);
         } else {
-            setOptions(props.options.filter(
-                item => (item.value + "").toLowerCase().includes(searchText)
-            ));
+            const _options = props.options.filter(
+                item => (item.value + "").toLowerCase().includes(_searchText)
+            );
+
+            if (props.allowNewValues && !_options.find(item => item.name === _searchText)) {
+                _options.unshift({ name: searchText, value: searchText });
+            }
+
+            setOptions(_options);
         }
     }, [searchText, props.options]);
 
@@ -56,7 +64,7 @@ const Select = (props: SelectProps) => {
         const _optionsAsMap: any = {};
         props.options.forEach(item => (_optionsAsMap[item.name] = item.value));
         const _valuesText: (string | number)[] = [];
-        props.value.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item]));
+        props.value.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item] || item));
         setValuesText(_valuesText);
     }, [props.value]);
 
@@ -128,7 +136,7 @@ const Select = (props: SelectProps) => {
     }
 
     const handleSearchTextChange = (_searchText: string) => {
-        setSearchText(_searchText.toLowerCase());
+        setSearchText(_searchText);
     }
 
     return (

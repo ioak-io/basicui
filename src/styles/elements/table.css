@@ -11,7 +11,7 @@
 }
 
 .basicui-table thead th {
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
     text-align: left;
 }
 
