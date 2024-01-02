@@ -1,5 +1,3 @@
-
-
 import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
 import Checkbox, { CheckboxProps } from ".";
@@ -12,7 +10,7 @@ const meta: Meta<typeof Checkbox> = {
 } as Meta;
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Checkbox>;
 
 
 const Template: Story = {
