@@ -14,7 +14,7 @@ export const parameters = {
     current: 'light',
     // Override the default dark theme
     dark: {
-      ...themes.dark, appBg: '#0c0c0c'
+      ...themes.dark, appBg: '#0c0c0c',
       // , brandImage: "https://oakui.ioak.io/68a913fc49c62842c6b8b78ff12730df.svg" 
     },
     // Override the default light theme

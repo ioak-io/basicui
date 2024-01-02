@@ -3,3 +3,11 @@
 html body *{
     font-family: 'Roboto', sans-serif;
 }
+
+.basicui-dark {
+    background-color: #0c0c0c;
+}
+
+.basicui-light {
+    background-color: #fcfcfc;
+}
