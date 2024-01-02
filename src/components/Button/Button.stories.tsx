@@ -23,10 +23,6 @@ const Template: Story = {
   },
 };
 
-// Create a master template for mapping args to render the Button component
-// const Template: Story = (args: ButtonProps) => <Button {...args} />;
-
-// Reuse that template for creating different stories
 export const Playground = {
   ...Template, args: {
     theme: ThemeType.primary,
