@@ -55,7 +55,6 @@ const SelectNative = ({
                 id={id}
                 className={`basicui-input basicui-selectnative ${multiple ? 'basicui-selectnative--multiple' : ''}`}
                 {...restProps}
-                placeholder={placeholder}
                 multiple={multiple}
                 size={multiple ? 5 : 1}
             >
