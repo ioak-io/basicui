@@ -1,25 +1,29 @@
+import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
-import { useAddonState } from '@storybook/api';
-import Table, { TableProps } from ".";
+import Table, { TableProps } from '.';
+import TableWrapper from './TableWrapper';
 
-export default {
+const meta: Meta<typeof Table> = {
   title: "Surfaces/Table",
   component: Table,
   argTypes: {
   },
-  parameters: {
-    previewTabs: {
-      'storybook/docs/panel': { hidden: true }
-    }
-  }
 } as Meta;
 
-// Create a master template for mapping args to render the Table component
-const Template: Story<TableProps> = (args: TableProps) => <Table {...args} />;
+export default meta;
+type Story = StoryObj<typeof Table>;
 
-// Reuse that template for creating different stories
-export const Overview = Template.bind({});
-Overview.args = {
+
+const Template: Story = {
+  render: (args: TableProps) => {
+    return (
+      <TableWrapper {...args} />
+    );
+  },
+};
+
+export const Playground = {
+  ...Template, args: {
+    inverseHeaders: true
+  }
 };

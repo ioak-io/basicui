@@ -1,29 +1,30 @@
+import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
-import { useAddonState } from '@storybook/api';
-import Tabs, { TabsProps } from ".";
-import ThemeType from "../types/ThemeType";
-import TabsWrapper, { TabsWrapperProps } from "./TabsWrapper";
+import Tabs, { TabsProps } from '.';
+import ThemeType from '../types/ThemeType';
+import TabsWrapper from './TabsWrapper';
 
-export default {
+const meta: Meta<typeof Tabs> = {
   title: "Surfaces/Tabs",
   component: Tabs,
   argTypes: {
-    initialValues: [],
-    options: []
   },
 } as Meta;
 
-// Create a master template for mapping args to render the Tabs component
-const Template: Story<TabsProps> = (args: TabsProps) => <TabsWrapper {...args} />;
+export default meta;
+type Story = StoryObj<typeof Tabs>;
 
-// Reuse that template for creating different stories
-export const Default = Template.bind({});
-Default.args = {
+
+const Template: Story = {
+  render: (args: TabsProps) => {
+    return (
+      <TabsWrapper {...args} />
+    );
+  },
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  theme: ThemeType.primary
+export const Playground = {
+  ...Template, args: {
+    theme: ThemeType.primary
+  }
 };

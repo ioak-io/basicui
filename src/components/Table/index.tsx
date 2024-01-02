@@ -5,6 +5,13 @@ import "./style.css";
 import TableWrapper from "./TableWrapper";
 
 export type TableProps = {
+    theme?: ThemeType;
+    inverse?: boolean;
+    inverseHeader?: boolean;
+    striped?: boolean;
+    hover?: boolean;
+    bordered?: boolean;
+    small?: boolean;
 };
 
 /**
