@@ -1,34 +1,33 @@
+import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
-import { useAddonState } from '@storybook/api';
-import SelectNative, { SelectNativeProps } from ".";
-import { SelectPropsConverter } from "../..";
+import SelectNative, { SelectNativeProps } from '.';
+import ThemeType from '../types/ThemeType';
+import { SelectPropsConverter } from '../..';
 
-export default {
+const meta: Meta<typeof SelectNative> = {
   title: "Form elements/SelectNative",
   component: SelectNative,
   argTypes: {
-    initialValues: [],
-    options: []
   },
 } as Meta;
 
-// Create a master template for mapping args to render the Button component
-const Template: Story<SelectNativeProps> = (args: SelectNativeProps) => <SelectNative {...args} />;
+export default meta;
+type Story = StoryObj<typeof SelectNative>;
 
-// Reuse that template for creating different stories
-export const SingleSelectNative = Template.bind({});
-SingleSelectNative.args = {
-  initialValues: ["Dolor sit"],
-  options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
-  placeholder: 'Default drop down'
+
+const Template: Story = {
+  render: (args: SelectNativeProps) => {
+    return (
+      <SelectNative {...args} />
+    );
+  },
 };
 
-export const MultiSelectNative = Template.bind({});
-MultiSelectNative.args = {
-  multiple: true,
-  initialValues: ["Lorem ipsum"],
-  options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
-  placeholder: 'Default drop down'
+export const Playground = {
+  ...Template, args: {
+    initialValues: ["Dolor sit"],
+    options: SelectPropsConverter.optionsFromSimpleList(["Lorem ipsum", "Dolor sit", "another long text another long text another long text another long text another long text "]),
+    placeholder: 'Default drop down',
+    label: "Lorem ipsum"
+  }
 };

@@ -1,8 +1,13 @@
 import { themes } from '@storybook/theming';
 import './style.css';
 import '../src/styles/index.css';
+import { addons } from '@storybook/preview-api';
+
+const channel = addons.getChannel();
 
 export const parameters = {
+  docs: {
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -14,7 +19,7 @@ export const parameters = {
     current: 'light',
     // Override the default dark theme
     dark: {
-      ...themes.dark, appBg: '#0c0c0c'
+      ...themes.dark, appBg: '#0c0c0c',
       // , brandImage: "https://oakui.ioak.io/68a913fc49c62842c6b8b78ff12730df.svg" 
     },
     // Override the default light theme

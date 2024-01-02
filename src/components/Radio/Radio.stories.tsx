@@ -1,34 +1,30 @@
+import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
-import { useAddonState } from '@storybook/api';
-import Radio, { RadioProps } from ".";
-import ThemeType from "../types/ThemeType";
+import Radio, { RadioProps } from '.';
+import ThemeType from '../types/ThemeType';
 
-export default {
+const meta: Meta<typeof Radio> = {
   title: "Form elements/Radio",
   component: Radio,
   argTypes: {
   },
 } as Meta;
 
-// Create a master template for mapping args to render the Button component
-const Template: Story<RadioProps> = (args: RadioProps) => <Radio {...args} />;
+export default meta;
+type Story = StoryObj<typeof Radio>;
 
-// Reuse that template for creating different stories
-export const BasicRadio = Template.bind({});
-BasicRadio.args = {
-  label: "Article description",
+
+const Template: Story = {
+  render: (args: RadioProps) => {
+    return (
+      <Radio {...args} />
+    );
+  },
 };
 
-export const RadioWithPrimary = Template.bind({});
-RadioWithPrimary.args = {
-  theme: ThemeType.primary,
-  label: "Primary theme",
-};
-
-export const RadioWithError = Template.bind({});
-RadioWithError.args = {
-  label: "Danger theme",
-  theme: ThemeType.danger
+export const Playground = {
+  ...Template, args: {
+    theme: ThemeType.primary,
+    label: "Lorem ipsum"
+  }
 };

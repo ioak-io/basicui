@@ -1,23 +1,23 @@
 import { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
-import Link, { LinkProps } from '.';
+import Switch, { SwitchProps } from '.';
 import ThemeType from '../types/ThemeType';
 
-const meta: Meta<typeof Link> = {
-  title: "Form elements/Link",
-  component: Link,
+const meta: Meta<typeof Switch> = {
+  title: "Form elements/Switch",
+  component: Switch,
   argTypes: {
   },
 } as Meta;
 
 export default meta;
-type Story = StoryObj<typeof Link>;
+type Story = StoryObj<typeof Switch>;
 
 
 const Template: Story = {
-  render: (args: LinkProps) => {
+  render: (args: SwitchProps) => {
     return (
-      <Link {...args} />
+      <Switch {...args} />
     );
   },
 };
