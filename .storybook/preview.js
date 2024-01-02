@@ -1,8 +1,19 @@
 import { themes } from '@storybook/theming';
 import './style.css';
 import '../src/styles/index.css';
+import React from "react";
+import { addons } from '@storybook/preview-api';
+import { DocsContainer } from '@storybook/addon-docs';
+import {
+  DARK_MODE_EVENT_NAME,
+  UPDATE_DARK_MODE_EVENT_NAME
+} from 'storybook-dark-mode';
+
+const channel = addons.getChannel();
 
 export const parameters = {
+  docs: {
+  },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {

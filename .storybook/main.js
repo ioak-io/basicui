@@ -1,6 +1,6 @@
 module.exports = {
   "stories": [
-    "../src/**/ColorScheme.stories.tsx"
+    "../src/**/*.stories.tsx"
   ],
 
   "addons": [

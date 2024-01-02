@@ -16,18 +16,7 @@ export default {
 const Template: Story<CheckboxProps> = (args: CheckboxProps) => <Checkbox {...args} />;
 
 // Reuse that template for creating different stories
-export const BasicCheckbox = Template.bind({});
-BasicCheckbox.args = {
-  label: "Article description",
-};
-
-export const CheckboxWithTooltip = Template.bind({});
-CheckboxWithTooltip.args = {
-  label: "Article description",
-};
-
-export const CheckboxWithError = Template.bind({});
-CheckboxWithError.args = {
-  label: "Danger theme",
-  theme: ThemeType.danger
+export const Playground = Template.bind({});
+Playground.args = {
+  label: "Lorem ipsum dolor sit",
 };
