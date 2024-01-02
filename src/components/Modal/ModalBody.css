@@ -1,6 +1,0 @@
-.basicui-modal-body {
-    padding: var(--basicui-modal-padding) var(--basicui-modal-padding);
-    height: 100%;
-    max-height: calc(100vh - var(--basicui-modal-header-height)*2 - var(--basicui-modal-margin-y)*2);
-    overflow-y: auto;
-}

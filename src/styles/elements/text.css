@@ -1,7 +1,0 @@
-.basicui-text-overflow {
-    white-space: nowrap;
-    text-overflow: clip;
-    display: inline-block;
-    margin-right: auto;
-    overflow: hidden;
-}

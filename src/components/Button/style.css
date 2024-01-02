@@ -1,7 +1,0 @@
-.basicui-button--loading svg {
-    display: none;
-}
-.basicui-button--loading .basicui-button__svg--loading {
-    display: block;
-    animation: animate_button_loading 2s linear infinite both;
-}
