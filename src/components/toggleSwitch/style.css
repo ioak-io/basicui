@@ -107,8 +107,8 @@
     border-radius: 25% / 50%;
     box-shadow: 0 0 0 0.125em var(--primaryT);
     padding: 0.25em;
-    width: 6em;
-    height: 3em;
+    /* width: 6em;
+    height: 3em; */
     -webkit-appearance: none;
     appearance: none;
     transition: background-color var(--transDur) ease-in-out,
@@ -120,8 +120,8 @@
     /* background-color:  #aeaaae; */
     border-radius: 50%;
     content: "";
-    width: 2.5em;
-    height: 2.5em;
+    /* width: 2.5em;
+    height: 2.5em; */
     transition: 0.3s;
   }
 
@@ -153,6 +153,49 @@
     box-shadow: 0 0 0 0.125em var(--primary);
     outline: transparent;
   }
+
+  .basicui-switch__input-small{
+    width:46px;
+    height:24px;
+  }
+
+  .basicui-switch__input-medium{
+    width: 3.7em;
+    height: 1.8em;
+  }
+
+  .basicui-switch__input-large{
+    width:6em;
+    height:3em;
+  }
+
+  
+  .basicui-switch__input-small:before{
+    width:18px;
+    height:18px;
+  }
+
+  .basicui-switch__input-medium:before{
+    height: 1.4em;
+    width: 1.4em;
+  }
+
+  .basicui-switch__input-large:before{
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .basicui-switch__input-small:checked:before{
+    transform: translateX(22px); 
+  }
+
+  .basicui-switch__input-medium:checked:before{
+    transform: translateX(24px); 
+  }
+
+  .basicui-switch__input-large:checked:before{
+    transform: translateX(3em); 
+  }
   
   /* Checked */
   .basicui-switch__input-default:checked {
@@ -179,7 +222,7 @@
     background-color: #EF5350;
   }
   
-  .basicui-switch__input:checked:before,
+  /* .basicui-switch__input:checked:before, */
   .basicui-switch__input:checked ~ .basicui-switch__theme__icon {
     transform: translateX(3em);
   }
@@ -244,3 +287,30 @@
       box-shadow: 0 0 0 0.125em var(--primary);
     }
   }
+
+  .basicui-icon-part img:nth-child(1){
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 15px;
+    z-index: 1;
+  }
+  .basicui-icon-part img:nth-child(2){
+    position: absolute;
+    top: 15px;
+    left: 57px;
+    height: 15px;
+    z-index: 1;
+    color: white;
+    opacity:0;
+}
+
+.basicui-switch__input:checked ~ .basicui-icon .basicui-icon-part
+  img:nth-child(1){
+    opacity: 0;
+}
+
+.basicui-switch__input:checked ~ .basicui-icon .basicui-icon-part
+  img:nth-child(2){
+    opacity: 1;
+}
