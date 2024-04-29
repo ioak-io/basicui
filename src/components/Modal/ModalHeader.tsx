@@ -1,5 +1,4 @@
 import React, { useState, Dispatch, SetStateAction, Children } from 'react';
-import './ModalHeader.css';
 
 export type ModalHeaderProps = {
     onClose: any;

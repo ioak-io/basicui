@@ -1,7 +1,6 @@
 import React, { useState, Dispatch, SetStateAction, Children } from 'react';
 import AlignmentType from '../types/AlignmentType';
 import ThemeType from '../types/ThemeType';
-import './ModalFooter.css';
 
 export type ModalFooterProps = {
     children?: any;

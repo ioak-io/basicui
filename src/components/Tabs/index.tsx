@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, ElementRef, ReactChild, ReactNode, ReactFragment } from "react";
 import TabShapeType from "../types/TabShapeType";
 import ThemeType from "../types/ThemeType";
-import "./style.css";
 
 export type TabsProps = {
     theme?: ThemeType;

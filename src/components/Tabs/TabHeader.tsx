@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import TabHeaderAlignmentType from "../types/TabHeaderAlignmentType";
-import ThemeType from "../types/ThemeType";
-import "./TabHeader.css";
 
 export interface TabHeaderProps {
     alignment?: TabHeaderAlignmentType;

@@ -3,7 +3,6 @@ import { createPopper } from '@popperjs/core';
 import preventOverflow from '@popperjs/core/lib/modifiers/preventOverflow.js';
 import flip from '@popperjs/core/lib/modifiers/flip.js';
 
-import "./style.css";
 import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";

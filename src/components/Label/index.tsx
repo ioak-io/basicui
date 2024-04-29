@@ -1,7 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-
-import "./style.css";
-import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";
 
 export type LabelProps = {

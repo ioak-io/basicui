@@ -1,3 +1,7 @@
+@import './modal-header.css';
+@import './modal-body.css';
+@import './modal-footer.css';
+
 .basicui-modal {
     position: fixed;
     top: 0;

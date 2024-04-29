@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import DemoSection from "../../demo/DemoSection";
 import ThemeType from "../types/ThemeType";
-import "./style.css";
 import TableWrapper from "./TableWrapper";
 
 export type TableProps = {

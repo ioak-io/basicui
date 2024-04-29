@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./style.css";
 
 export interface TabDetailProps {
     children: any;

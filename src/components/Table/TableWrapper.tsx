@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import ThemeType from "../types/ThemeType";
-import "./style.css";
 
 export type TableWrapperProps = {
     theme?: ThemeType;

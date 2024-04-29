@@ -1,5 +1,4 @@
 import React, { useState, Dispatch, SetStateAction, Children } from 'react';
-import './ModalBody.css';
 
 export type ModalBodyProps = {
     children?: any;

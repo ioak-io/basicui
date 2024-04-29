@@ -1,4 +1,5 @@
-@import './style-theme.css';
+@import './tabs-theme.css';
+@import './tab-header.css';
 
 .basicui-tabs__ul {
     list-style: none;

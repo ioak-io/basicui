@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import "./style.css";
 import ThemeType from "../types/ThemeType";
 
 export interface RadioProps {

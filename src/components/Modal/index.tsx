@@ -1,9 +1,7 @@
 import React, { useState, Dispatch, SetStateAction, Children } from 'react';
-import { Button, SelectPropsConverter, ThemeType } from '../..';
 import ModalPlacement from '../types/ModalPlacement';
 import ModalSizeType from '../types/ModalSizeType';
 import Portal from './Portal';
-import './style.css';
 
 export type ModalProps = {
     isOpen: boolean,

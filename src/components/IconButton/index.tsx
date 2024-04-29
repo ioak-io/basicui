@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import ButtonVariantType from "../types/ButtonVariantType";
 import ThemeType from "../types/ThemeType";
-import "./style.css";
 
 export interface IconButtonProps {
     theme?: ThemeType;

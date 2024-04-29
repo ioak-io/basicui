@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import DemoSection from "../DemoSection";
-import "./style.css";
 
 export type TypographyProps = {
 };
