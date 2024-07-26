@@ -11,6 +11,8 @@ import AppShellBody from "./AppShellBody";
 
 export type AppShellProps = {
   children: any;
+  onSignin: any;
+  onSignout: any;
   logoIconBlack: any;
   logoIconWhite: any;
   logoTextBlack: any;

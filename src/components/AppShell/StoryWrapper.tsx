@@ -19,6 +19,8 @@ const StoryWrapper = (props: AppShellProps) => {
       logoTextWhite={logoTextWhite}
       isDarkMode={isDarkMode}
       onDarkModeToggle={() => setIsDarkMode(!isDarkMode)}
+      onSignin={() => {}}
+      onSignout={() => {}}
     >
       <AppShell.Topbar>Topbar</AppShell.Topbar>
       <AppShell.Navbar>

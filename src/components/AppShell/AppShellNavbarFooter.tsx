@@ -3,8 +3,6 @@ import React, { useState, Dispatch, SetStateAction, Children } from "react";
 export type AppShellNavbarFooterProps = {
   children?: any;
   userName?: string;
-  onSignin: any;
-  onSignout: any;
   [key: string]: any;
 };
 
