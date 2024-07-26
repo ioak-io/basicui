@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 html body * {
-    font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .basicui-light {
-    background-color: #fcfcfc;
+  background-color: #fcfcfc;
 }
 
 .basicui-dark {
-    background-color: #0c0c0c;
+  background-color: #0c0c0c;
 }

@@ -1,8 +1,9 @@
-enum ModalSizeType {
+enum SwitchSizeType {
     default = "default",
     small = "small",
+    medium = "medium",
     large = "large",
     xlarge = "xlarge"
 }
 
-export default ModalSizeType;
+export default SwitchSizeType;

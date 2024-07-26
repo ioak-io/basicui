@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from "@storybook/react";
 import ColorScheme from ".";
 
 const meta: Meta<typeof ColorScheme> = {
   title: "Styleguide/Color Schemes",
-  component: ColorScheme
+  component: ColorScheme,
 };
 
 export default meta;
@@ -12,72 +12,67 @@ type Story = StoryObj<typeof ColorScheme>;
 
 export const ThemesOverview: Story = {
   args: {
-    discriminator: 'adaptive'
-  }
+    discriminator: "primary",
+  },
 };
 
 // Reuse that template for creating different stories
-export const Adaptive: Story = {
-  args:
-    { discriminator: "adaptive" }
-};
-
 export const Black: Story = {
   args: {
-    discriminator: "black"
-  }
+    discriminator: "black",
+  },
 };
 
 export const BlackExtended: Story = {
   args: {
-    discriminator: "black-extended"
-  }
+    discriminator: "black-extended",
+  },
 };
 
 export const White: Story = {
   args: {
-    discriminator: "white"
-  }
+    discriminator: "white",
+  },
 };
 
 export const WhiteExtended: Story = {
   args: {
-    discriminator: "white-extended"
-  }
+    discriminator: "white-extended",
+  },
 };
 
 export const Default: Story = {
   args: {
-    discriminator: "default"
-  }
+    discriminator: "default",
+  },
 };
 
 export const DefaultTransparent: Story = {
   args: {
-    discriminator: "default-transparent"
-  }
+    discriminator: "default-transparent",
+  },
 };
 
 export const Primary: Story = {
   args: {
-    discriminator: "primary"
-  }
+    discriminator: "primary",
+  },
 };
 
 export const PrimaryTransparent: Story = {
   args: {
-    discriminator: "primary-transparent"
-  }
+    discriminator: "primary-transparent",
+  },
 };
 
 export const Danger: Story = {
   args: {
-    discriminator: "danger"
-  }
+    discriminator: "danger",
+  },
 };
 
 export const DangerTransparent: Story = {
   args: {
-    discriminator: "danger-transparent"
-  }
+    discriminator: "danger-transparent",
+  },
 };

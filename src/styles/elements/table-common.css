@@ -1,6 +1,6 @@
 /* Common */
 .basicui-table thead th {
-    border-bottom: 2px solid var(--theme-white-200);
+    border-bottom: 2px solid var(--theme-white-400);
 }
 .basicui-dark .basicui-table thead th {
     border-bottom: 2px solid var(--theme-black-extended-700);
@@ -8,7 +8,7 @@
 
 .basicui-table th,
 .basicui-table td {
-    border-top: 1px solid var(--theme-white-200);
+    border-top: 1px solid var(--theme-white-400);
 }
 .basicui-dark .basicui-table th,
 .basicui-dark .basicui-table td {
@@ -31,7 +31,7 @@
 .basicui-table.table-bordered,
 .basicui-table.table-bordered th,
 .basicui-table.table-bordered td {
-    border: 1px solid var(--theme-white-200);
+    border: 1px solid var(--theme-white-400);
 }
 .basicui-dark .basicui-table.table-bordered,
 .basicui-dark .basicui-table.table-bordered th,
@@ -39,8 +39,16 @@
     border: 1px solid var(--theme-black-extended-700);
 }
 .basicui-table.table-bordered thead th {
-    border-bottom: 2px solid var(--theme-white-200);
+    border-bottom: 2px solid var(--theme-white-400);
 }
 .basicui-dark .basicui-table.table-bordered thead th {
     border-bottom: 2px solid var(--theme-black-extended-700);
+}
+
+.basicui-table.table-rounded thead th {
+    border-top: none;
+}
+
+.basicui-table.table-rounded {
+    border-radius: var(--basicui-modal-border-radius);
 }
