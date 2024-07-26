@@ -35,16 +35,12 @@
     grid-auto-flow: row;
     align-self: center;
     z-index: 102;
-    background-color: var(--theme-white-50);
+    background-color: var(--basicui-bg-card);
     border-radius: var(--basicui-modal-border-radius);
     width: 500px;
     max-width: 90vw;
     /* max-height: var(--basicui-modal-max-height); */
     /* height: 100%; */
-}
-
-.basicui-dark .basicui-modal__base {
-    background-color: var(--theme-black-50);
 }
 
 .basicui-modal__base--size-small {

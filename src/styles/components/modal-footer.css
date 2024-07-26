@@ -1,35 +1,31 @@
 .basicui-modal-footer {
-    padding: 0 var(--basicui-modal-padding);
-    display: flex;
-    justify-content: flex-end;
-    min-height: var(--basicui-modal-header-height);
-    align-items: center;
+  padding: 0 var(--basicui-modal-padding);
+  display: flex;
+  justify-content: flex-end;
+  min-height: var(--basicui-modal-header-height);
+  align-items: center;
 }
 
 .basicui-modal-footer--show-border {
-    border-top: 1px solid var(--theme-white-400);
-}
-
-.basicui-dark .basicui-modal-footer--show-border {
-    border-color: var(--theme-black-extended-400);
+  border-top: 1px solid var(--basicui-border-color);
 }
 
 .basicui-modal-footer * {
-    margin-right: var(--basicui-action-spacing);
+  margin-right: var(--basicui-action-spacing);
 }
 
 .basicui-modal-footer *:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .basicui-dark .basicui-modal-footer {
-    border-color: var(--theme-default-500);
+  border-color: var(--basicui-border-color);
 }
 
 .basicui-modal-footer--alignment-left {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .basicui-modal-footer--alignment-center {
-    justify-content: center;
+  justify-content: center;
 }

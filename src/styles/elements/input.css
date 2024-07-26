@@ -18,8 +18,8 @@
 
 .basicui-input {
     border-color: var(--basicui-formelement-border-color);
-    background-color: var(--basicui-formelement-background-color);
-    color: var(--basicui-formelement-color);
+    background-color: transparent;
+    color: var(--basicui-fg);
 }
 
 .basicui-input--error {
@@ -40,20 +40,16 @@
     color: var(--basicui-formelement-success-color);
 }
 
-.basicui-input:hover,
+/* .basicui-input:hover,
 .basicui-dark .basicui-input:hover {
     border-color: var(--basicui-formelement-border-color-hover);
-    background-color: var(--basicui-formelement-background-color-hover);
-    color: var(--basicui-formelement-color-hover);
-}
+} */
 
 .basicui-input:active,
 .basicui-input:focus,
 .basicui-dark .basicui-input:active,
 .basicui-dark .basicui-input:focus {
     border-color: var(--basicui-formelement-border-color-active);
-    background-color: var(--basicui-formelement-background-color-active);
-    color: var(--basicui-formelement-color-active);
 }
 
 .basicui-dark .basicui-input::placeholder {

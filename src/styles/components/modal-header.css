@@ -7,11 +7,7 @@
 }
 
 .basicui-modal-header--show-border {
-    border-bottom: 1px solid var(--theme-white-400);
-}
-
-.basicui-dark .basicui-modal-header {
-    border-color: var(--theme-black-extended-400);
+    border-bottom: 1px solid var(--basicui-border-color);
 }
 
 .basicui-modal-header__heading {
@@ -27,10 +23,5 @@
 
 .basicui-modal-header__close svg {
     height: 16px;
-    fill: var(--theme-white-100i);
-}
-
-.basicui-dark .basicui-modal-header__close svg {
-    height: 16px;
-    fill: var(--theme-black-100i);
+    fill: var(--basicui-fg);
 }
