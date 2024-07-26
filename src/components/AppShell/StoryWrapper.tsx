@@ -1,19 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
 import AppShell, { AppShellProps } from ".";
-import AppShellTopbar from "./AppShellTopbar";
-import AppShellNavbar from "./AppShellNavbar";
-import AppShellBody from "./AppShellBody";
+
+import logoIconWhite from "./logo/neuralweb_white_small.svg";
+import logoTextWhite from "./logo/neuralweb_white_text.svg";
+import logoIconBlack from "./logo/neuralweb_black_small.svg";
+import logoTextBlack from "./logo/neuralweb_black_text.svg";
 
 const StoryWrapper = (props: AppShellProps) => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   return (
     <AppShell
       isSidebarExpanded={isSidebarExpanded}
       onSidebarToggle={() => setIsSidebarExpanded(!isSidebarExpanded)}
+      logoIconWhite={logoIconWhite}
+      logoIconBlack={logoIconBlack}
+      logoTextBlack={logoTextBlack}
+      logoTextWhite={logoTextWhite}
+      isDarkMode={isDarkMode}
+      onDarkModeToggle={() => setIsDarkMode(!isDarkMode)}
     >
       <AppShell.Topbar>Topbar</AppShell.Topbar>
       <AppShell.Navbar>
-        <AppShell.Navbar.Header>Navbar header</AppShell.Navbar.Header>
+        <AppShell.Navbar.Header>COM</AppShell.Navbar.Header>
         <AppShell.Navbar.Body
           isSidebarExpanded={isSidebarExpanded}
           onSidebarToggle={() => setIsSidebarExpanded(!isSidebarExpanded)}

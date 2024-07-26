@@ -6,3 +6,23 @@
   justify-content: space-between;
   padding: 0 10px;
 }
+
+.basicui-appshell-navbar-header__logo {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.basicui-appshell-navbar-header__logo__icon,
+.basicui-appshell-navbar-header__logo__text {
+  display: flex;
+  align-items: center;
+}
+
+.basicui-appshell-navbar-header__logo__icon img {
+  height: 36px;
+  width: 60px;
+}
+
+.basicui-appshell-navbar-header__logo__text img {
+  height: 70%;
+}

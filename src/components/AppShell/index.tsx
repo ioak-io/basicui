@@ -11,21 +11,24 @@ import AppShellBody from "./AppShellBody";
 
 export type AppShellProps = {
   children: any;
-  onSidebarToggle: any;
+  logoIconBlack: any;
+  logoIconWhite: any;
+  logoTextBlack: any;
+  logoTextWhite: any;
   isSidebarExpanded: boolean;
+  onSidebarToggle: any;
+  isDarkMode: boolean;
+  onDarkModeToggle: any;
 };
 
-const AppShell = (props: AppShellProps) => {
+const AppShell = ({ children, ...props }: AppShellProps) => {
   const [appShellNavbar, setAppShellNavbar] = useState<any>();
   const [appShellTopbar, setAppShellTopbar] = useState<any>();
   const [appShellBody, setAppShellBody] = useState<any>();
 
   useEffect(() => {
-    props.children.forEach((item: any) => {
-      const clonedChild = React.cloneElement(item, {
-        onSidebarToggle: props.onSidebarToggle,
-        isSidebarExpanded: props.isSidebarExpanded,
-      });
+    children.forEach((item: any) => {
+      const clonedChild = React.cloneElement(item, { ...props });
       if (
         item.type.displayName === "AppShellNavbar" ||
         item.type.name === "AppShellNavbar"
@@ -45,7 +48,7 @@ const AppShell = (props: AppShellProps) => {
         setAppShellBody(clonedChild);
       }
     });
-  }, [props.children]);
+  }, [children]);
 
   return (
     <div

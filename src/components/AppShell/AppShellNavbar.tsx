@@ -21,10 +21,7 @@ const AppShellNavbar = ({ children, ...props }: AppShellNavbarProps) => {
 
   useEffect(() => {
     children.forEach((item: any) => {
-      const clonedChild = React.cloneElement(item, {
-        onSidebarToggle: props.onSidebarToggle,
-        isSidebarExpanded: props.isSidebarExpanded,
-      });
+      const clonedChild = React.cloneElement(item, {...props});
       if (
         item.type.displayName === "AppShellNavbarHeader" ||
         item.type.name === "AppShellNavbarHeader"

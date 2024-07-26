@@ -6,7 +6,7 @@
   align-content: flex-start;
 }
 
-.basicui-appshell-navbar-body .basicui-appshell-navbar-body__toggle {
+.basicui-appshell-navbar-body__toggle {
   background-color: transparent;
   border: none;
   color: inherit;
@@ -15,4 +15,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.basicui-appshell-navbar-body__toggle svg {
+  height: 1em;
 }
