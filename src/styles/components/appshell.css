@@ -1,0 +1,43 @@
+@import "./appshell-body.css";
+@import "./appshell-navbar.css";
+@import "./appshell-topbar.css";
+
+.basicui-appshell {
+}
+
+.basicui-appshell__left {
+  width: var(--basicui-appshell-navbar-width);
+  transition: width 250ms ease-in-out, background-color 250ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid var(--basicui-border-color);
+}
+
+.basicui-appshell--collapsed .basicui-appshell__left {
+  width: var(--basicui-appshell-navbar-width-collapsed);
+}
+
+.basicui-appshell__right {
+}
+
+@media (max-width: 767px) {
+  .basicui-appshell__left {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .basicui-appshell__right {
+    margin-left: var(--basicui-appshell-navbar-width);
+    transition: margin-left 250ms ease-in-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .basicui-appshell--collapsed .basicui-appshell__right {
+    margin-left: var(--basicui-appshell-navbar-width-collapsed);
+  }
+}

@@ -1,0 +1,8 @@
+.basicui-appshell-navbar-header {
+  height: var(--basicui-appshell-topbar-height);
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 0 10px;
+}
