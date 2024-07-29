@@ -1,3 +1,45 @@
 .basicui-appshell-topbar {
   height: var(--basicui-appshell-topbar-height);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--basicui-border-color);
+}
+
+@media (min-width: 768px) {
+  .basicui-appshell-topbar {
+    display: none;
+  }
+}
+
+.basicui-appshell-topbar .basicui-logo {
+  column-gap: 6px;
+}
+
+.basicui-appshell-topbar .basicui-logo__icon img {
+  height: 24px;
+  width: auto;
+}
+
+.basicui-appshell-topbar .basicui-logo__text img {
+  height: 60%;
+}
+
+
+
+.basicui-appshell-topbar__right__toggle {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  /* width: 60px;
+  height: 36px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicui-appshell-topbar__right__toggle svg {
+  height: 1em;
 }

@@ -8,6 +8,7 @@ import React, {
 import AppShellNavbar from "./AppShellNavbar";
 import AppShellTopbar from "./AppShellTopbar";
 import AppShellBody from "./AppShellBody";
+import AppShellMobileNavbarBody from "./AppShellMobileNavbarBody";
 
 export type AppShellProps = {
   children: any;
@@ -21,12 +22,15 @@ export type AppShellProps = {
   onSidebarToggle: any;
   isDarkMode: boolean;
   onDarkModeToggle: any;
+  hideNavbar?: boolean;
 };
 
 const AppShell = ({ children, ...props }: AppShellProps) => {
   const [appShellNavbar, setAppShellNavbar] = useState<any>();
   const [appShellTopbar, setAppShellTopbar] = useState<any>();
   const [appShellBody, setAppShellBody] = useState<any>();
+  const [appShellMobileNavbarBody, setAppShellMobileNavbarBody] =
+    useState<any>();
 
   useEffect(() => {
     children.forEach((item: any) => {
@@ -38,19 +42,34 @@ const AppShell = ({ children, ...props }: AppShellProps) => {
         setAppShellNavbar(clonedChild);
       }
       if (
-        item.type.displayName === "AppShellTopbar" ||
-        item.type.name === "AppShellTopbar"
-      ) {
-        setAppShellTopbar(clonedChild);
-      }
-      if (
         item.type.displayName === "AppShellBody" ||
         item.type.name === "AppShellBody"
       ) {
         setAppShellBody(clonedChild);
       }
+      if (
+        item.type.displayName === "AppShellMobileNavbarBody" ||
+        item.type.name === "AppShellMobileNavbarBody"
+      ) {
+        setAppShellMobileNavbarBody(clonedChild);
+      }
     });
   }, [children]);
+
+  useEffect(() => {
+    children.forEach((item: any) => {
+      const clonedChild = React.cloneElement(item, {
+        ...props,
+        children: appShellMobileNavbarBody,
+      });
+      if (
+        item.type.displayName === "AppShellTopbar" ||
+        item.type.name === "AppShellTopbar"
+      ) {
+        setAppShellTopbar(clonedChild);
+      }
+    });
+  }, [children, appShellMobileNavbarBody]);
 
   return (
     <div
@@ -60,11 +79,17 @@ const AppShell = ({ children, ...props }: AppShellProps) => {
           : "basicui-appshell--collapsed"
       }`}
     >
-      <div className={`basicui-appshell__left  desktop-only`}>
-        {appShellNavbar}
-      </div>
+      {!props.hideNavbar && (
+        <div className={`basicui-appshell__left  desktop-only`}>
+          {appShellNavbar}
+        </div>
+      )}
 
-      <div className="basicui-appshell__right">
+      <div
+        className={`basicui-appshell__right ${
+          props.hideNavbar ? "basicui-appshell__right--" + "hide-navbar" : ""
+        }`}
+      >
         {appShellTopbar}
         {appShellBody}
       </div>
@@ -76,3 +101,4 @@ export default AppShell;
 AppShell.Navbar = AppShellNavbar;
 AppShell.Topbar = AppShellTopbar;
 AppShell.Body = AppShellBody;
+AppShell.MobileNavbarBody = AppShellMobileNavbarBody;

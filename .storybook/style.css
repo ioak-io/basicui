@@ -13,3 +13,7 @@ html body {
   color: var(--basicui-fg);
   background-color: var(--basicui-bg-base);
 }
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}

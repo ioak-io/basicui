@@ -1,4 +1,5 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
+import Logo from "./Logo";
 
 export type AppShellNavbarHeaderProps = {
   children?: any;
@@ -8,22 +9,14 @@ export type AppShellNavbarHeaderProps = {
 const AppShellNavbarHeader = (props: AppShellNavbarHeaderProps) => {
   return (
     <div className="basicui-appshell-navbar-header">
-      <div className="basicui-appshell-navbar-header__logo">
-        <div className="basicui-appshell-navbar-header__logo__icon">
-          <img
-            src={props.isDarkMode ? props.logoIconWhite : props.logoIconBlack}
-            alt="Logo"
-          />
-        </div>
-        {props.isSidebarExpanded && (
-          <div className="basicui-appshell-navbar-header__logo__text">
-            <img
-              src={props.isDarkMode ? props.logoTextWhite : props.logoTextBlack}
-              alt="Logo"
-            />
-          </div>
-        )}
-      </div>
+      <Logo
+        isDarkMode={props.isDarkMode}
+        logoIconBlack={props.logoIconBlack}
+        logoIconWhite={props.logoIconWhite}
+        logoTextBlack={props.logoTextBlack}
+        logoTextWhite={props.logoTextWhite}
+        showText={props.isSidebarExpanded}
+      />
       {props.isSidebarExpanded && <div>{props.children}</div>}
     </div>
   );
