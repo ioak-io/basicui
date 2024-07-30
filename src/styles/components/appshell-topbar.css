@@ -6,6 +6,12 @@
   align-items: center;
   padding: 0 20px;
   border-bottom: 1px solid var(--basicui-border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: var(--basicui-bg-surface);
 }
 
 @media (min-width: 768px) {
@@ -26,8 +32,6 @@
 .basicui-appshell-topbar .basicui-logo__text img {
   height: 60%;
 }
-
-
 
 .basicui-appshell-topbar__right__toggle {
   background-color: transparent;

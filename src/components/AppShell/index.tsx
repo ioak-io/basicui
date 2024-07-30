@@ -8,7 +8,7 @@ import React, {
 import AppShellNavbar from "./AppShellNavbar";
 import AppShellTopbar from "./AppShellTopbar";
 import AppShellBody from "./AppShellBody";
-import AppShellMobileNavbarBody from "./AppShellMobileNavbarBody";
+import AppShellMobileNavbar from "./AppShellMobileNavbar";
 
 export type AppShellProps = {
   children: any;
@@ -29,7 +29,7 @@ const AppShell = ({ children, ...props }: AppShellProps) => {
   const [appShellNavbar, setAppShellNavbar] = useState<any>();
   const [appShellTopbar, setAppShellTopbar] = useState<any>();
   const [appShellBody, setAppShellBody] = useState<any>();
-  const [appShellMobileNavbarBody, setAppShellMobileNavbarBody] =
+  const [appShellMobileNavbarBody, setAppShellMobileNavbar] =
     useState<any>();
 
   useEffect(() => {
@@ -48,10 +48,10 @@ const AppShell = ({ children, ...props }: AppShellProps) => {
         setAppShellBody(clonedChild);
       }
       if (
-        item.type.displayName === "AppShellMobileNavbarBody" ||
-        item.type.name === "AppShellMobileNavbarBody"
+        item.type.displayName === "AppShellMobileNavbar" ||
+        item.type.name === "AppShellMobileNavbar"
       ) {
-        setAppShellMobileNavbarBody(clonedChild);
+        setAppShellMobileNavbar(clonedChild);
       }
     });
   }, [children]);
@@ -101,4 +101,5 @@ export default AppShell;
 AppShell.Navbar = AppShellNavbar;
 AppShell.Topbar = AppShellTopbar;
 AppShell.Body = AppShellBody;
-AppShell.MobileNavbarBody = AppShellMobileNavbarBody;
+AppShell.MobileNavbar = AppShellMobileNavbar;
+AppShell.displayName = "AppShell";

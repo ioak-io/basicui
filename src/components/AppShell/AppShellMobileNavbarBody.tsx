@@ -7,9 +7,9 @@ export type AppShellNavbarBodyProps = {
 
 const AppShellMobileNavbarBody = (props: AppShellNavbarBodyProps) => {
   return (
-    <div className="basicui-appshell-mobile-navbar-body">
-      {props.children}
-    </div>
+    <div className="basicui-appshell-mobile-navbar-body">{props.children}</div>
   );
 };
 export default AppShellMobileNavbarBody;
+
+AppShellMobileNavbarBody.displayName = "AppShellMobileNavbarBody";

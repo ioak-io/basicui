@@ -21,7 +21,7 @@ const AppShellNavbar = ({ children, ...props }: AppShellNavbarProps) => {
 
   useEffect(() => {
     children.forEach((item: any) => {
-      const clonedChild = React.cloneElement(item, {...props});
+      const clonedChild = React.cloneElement(item, { ...props });
       if (
         item.type.displayName === "AppShellNavbarHeader" ||
         item.type.name === "AppShellNavbarHeader"
@@ -56,3 +56,5 @@ export default AppShellNavbar;
 AppShellNavbar.Header = AppShellNavbarHeader;
 AppShellNavbar.Footer = AppShellNavbarFooter;
 AppShellNavbar.Body = AppShellNavbarBody;
+
+AppShellNavbar.displayName = "AppShellNavbar";

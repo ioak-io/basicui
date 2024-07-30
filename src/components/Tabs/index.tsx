@@ -23,7 +23,6 @@ const Tabs = (props: TabsProps) => {
         const _tabHeaders: { id: string, component: any }[] = [];
         props.children.forEach((tab: any) => {
             _tabMap[tab.props.id] = tab;
-            console.log(tab);
             tab.props.children?.forEach((item: any) => {
                 if (item.type.displayName === "TabHeader" || item.type.name === "TabHeader") {
                     _tabHeaders.push({ id: tab.props.id, component: item });
@@ -32,7 +31,6 @@ const Tabs = (props: TabsProps) => {
         })
         setTabMap(_tabMap);
         setTabHeaders(_tabHeaders);
-        console.log(props.children, _tabHeaders, _tabMap);
     }, [props.children]);
 
     const handleClick = (tabId: string) => {

@@ -72,7 +72,6 @@ const OptionsList = (props: OptionsListProps) => {
                 break;
             case 'Tab':
                 event.preventDefault();
-                console.log("_deactivate()");
                 break;
             case 'Escape':
                 event.preventDefault();

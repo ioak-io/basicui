@@ -52,3 +52,5 @@ const AppShellNavbarBody = (props: AppShellNavbarBodyProps) => {
   );
 };
 export default AppShellNavbarBody;
+
+AppShellNavbarBody.displayName = "AppShellNavbarBody";

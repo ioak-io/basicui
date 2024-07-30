@@ -28,7 +28,6 @@ const Accordion = (props: AccordionProps) => {
     }, [props.expanded]);
 
     const updateScrollHeight = () => {
-        console.log(bodyRef.current)
         if (!bodyRef.current) return;
         //   setTimeout(() => {
         if (props.expanded && bodyRef.current) {

@@ -50,3 +50,5 @@ const AppShellTopbar = (props: AppShellTopbarProps) => {
   );
 };
 export default AppShellTopbar;
+
+AppShellTopbar.displayName = "AppShellTopbar";

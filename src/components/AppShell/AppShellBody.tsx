@@ -9,3 +9,5 @@ const AppShellBody = (props: AppShellBodyProps) => {
   return <div className="basicui-appshell-body">{props.children}</div>;
 };
 export default AppShellBody;
+
+AppShellBody.displayName = "AppShellBody";

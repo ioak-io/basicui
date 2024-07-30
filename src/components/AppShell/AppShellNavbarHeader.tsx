@@ -22,3 +22,5 @@ const AppShellNavbarHeader = (props: AppShellNavbarHeaderProps) => {
   );
 };
 export default AppShellNavbarHeader;
+
+AppShellNavbarHeader.displayName = "AppShellNavbarHeader";

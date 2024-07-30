@@ -116,9 +116,6 @@ const Select = (props: SelectProps) => {
             _value = [..._value, option];
         }
 
-
-        console.log("---", event, {...event});
-
         const _event: any = {
             preventDefault: event.preventDefault,
             currentTarget: {
