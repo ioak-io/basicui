@@ -24,6 +24,7 @@ import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
 import Label from "./components/Label";
 import AppShell from "./components/AppShell";
+import FlexContainer from "./components/FlexContainer";
 
 export {
   Select,
@@ -51,4 +52,5 @@ export {
   ModalSizeType,
   Label,
   AppShell,
+  FlexContainer,
 };

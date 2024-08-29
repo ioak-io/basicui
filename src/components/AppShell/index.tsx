@@ -22,6 +22,7 @@ export type AppShellProps = {
   onSidebarToggle: any;
   isDarkMode: boolean;
   onDarkModeToggle: any;
+  location?: any;
   hideNavbar?: boolean;
 };
 

@@ -1,0 +1,61 @@
+.basicui-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.basicui-flex-container .basicui-flex-container__children {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.basicui-flex-container--orientation-column .basicui-flex-container__children {
+  flex-direction: column;
+}
+
+.basicui-flex-container--wrap .basicui-flex-container__children {
+  flex-wrap: wrap;
+}
+
+.basicui-flex-container--alignx-center .basicui-flex-container__children {
+  justify-content: center;
+  justify-items: center;
+}
+
+.basicui-flex-container--alignx-right .basicui-flex-container__children {
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+.basicui-flex-container--aligny-middle .basicui-flex-container__children {
+  align-content: center;
+  align-items: center;
+}
+
+.basicui-flex-container--aligny-bottom .basicui-flex-container__children {
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.basicui-flex-container--gap-default .basicui-flex-container__children > * {
+  margin-right: var(--basicui-grid-gap);
+  margin-bottom: var(--basicui-grid-gap);
+}
+
+.basicui-flex-container--gap-none .basicui-flex-container__children > * {
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.basicui-flex-container--gap-less .basicui-flex-container__children > * {
+  margin-right: var(--basicui-grid-gap-less);
+  margin-bottom: var(--basicui-grid-gap-less);
+}
+
+.basicui-flex-container--gap-more .basicui-flex-container__children > * {
+  margin-right: var(--basicui-grid-gap-more);
+  margin-bottom: var(--basicui-grid-gap-more);
+}

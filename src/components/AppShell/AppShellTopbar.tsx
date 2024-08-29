@@ -1,4 +1,10 @@
-import React, { useState, Dispatch, SetStateAction, Children } from "react";
+import React, {
+  useState,
+  Dispatch,
+  SetStateAction,
+  Children,
+  useEffect,
+} from "react";
 import Logo from "./Logo";
 
 export type AppShellTopbarProps = {
@@ -8,6 +14,15 @@ export type AppShellTopbarProps = {
 
 const AppShellTopbar = (props: AppShellTopbarProps) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    console.log(
+      props.location,
+      "****location changed",
+      props.location?.pathname
+    );
+    setIsMobileNavOpen(false);
+  }, [props.location]);
 
   return (
     <>
