@@ -43,6 +43,7 @@
     "@storybook/theming": "^7.6.7",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "@types/tinycolor2": "^1.4.6",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.8.1",
     "postcss": "^8.4.32",
@@ -63,5 +64,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "tinycolor2": "^1.6.0"
   }
 }

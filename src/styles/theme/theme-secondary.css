@@ -1,0 +1,23 @@
+* {
+    --theme-secondary-50: #f0f8ff;
+    --theme-secondary-100: #e1f0fd;
+    --theme-secondary-200: #bce1fb;
+    --theme-secondary-300: #81cbf8;
+    --theme-secondary-400: #f0c817;
+    --theme-secondary-500: #dbb714;
+    --theme-secondary-600: #0878c1;
+    --theme-secondary-700: #08609c;
+    --theme-secondary-800: #0b5181;
+    --theme-secondary-900: #0f446b;
+
+    --theme-secondary-50i: #000;
+    --theme-secondary-100i: #000;
+    --theme-secondary-200i: #000;
+    --theme-secondary-300i: #fff;
+    --theme-secondary-400i: #fff;
+    --theme-secondary-500i: #fff;
+    --theme-secondary-600i: #fff;
+    --theme-secondary-700i: #fff;
+    --theme-secondary-800i: #fff;
+    --theme-secondary-900i: #fff;
+}
