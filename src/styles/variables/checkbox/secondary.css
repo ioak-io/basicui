@@ -1,0 +1,31 @@
+* {
+  --basicui-checkbox-background-color: none;
+}
+
+.basicui-light .basicui-checkbox--theme-secondary,
+.basicui-light .basicui-radio--theme-secondary {
+  --basicui-checkbox-border-color: var(--theme-white-extended-500);
+  --basicui-checkbox-checkmark-color: var(--theme-black-500);
+  --basicui-checkbox-background-color-hover: var(
+    --basicui-bg-secondary-transparent
+  );
+  --basicui-checkbox-border-color-hover: var(--basicui-bg-secondary-light);
+  --basicui-checkbox-background-color-checked: var(
+    --basicui-bg-secondary-transparent-light
+  );
+  --basicui-checkbox-border-color-checked: var(--basicui-bg-secondary);
+}
+
+.basicui-dark .basicui-checkbox--theme-secondary,
+.basicui-dark .basicui-radio--theme-secondary {
+  --basicui-checkbox-border-color: var(--theme-white-extended-500);
+  --basicui-checkbox-checkmark-color: var(--theme-white-50);
+  --basicui-checkbox-background-color-hover: var(
+    --basicui-bg-secondary-transparent
+  );
+  --basicui-checkbox-border-color-hover: var(--basicui-bg-secondary-dark);
+  --basicui-checkbox-background-color-checked: var(
+    --basicui-bg-secondary-transparent-dark
+  );
+  --basicui-checkbox-border-color-checked: var(--basicui-bg-secondary);
+}

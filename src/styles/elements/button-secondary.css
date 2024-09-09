@@ -1,0 +1,144 @@
+.basicui-button--theme-secondary {
+  background-color: var(--basicui-bg-secondary);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-button--theme-secondary:hover,
+.basicui-button--theme-secondary:focus {
+  background-color: var(--basicui-bg-secondary-light);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary-light);
+}
+
+.basicui-dark .basicui-button--theme-secondary {
+  background-color: var(--basicui-bg-secondary);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-dark .basicui-button--theme-secondary:hover,
+.basicui-dark .basicui-button--theme-secondary:focus {
+  background-color: var(--basicui-bg-secondary-dark);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary-dark);
+}
+
+/* Variant = outline */
+.basicui-button--variant-outline.basicui-button--theme-secondary {
+  background-color: transparent;
+  border-color: var(--basicui-bg-secondary);
+  color: var(--theme-black-900);
+  fill: var(--theme-black-900);
+}
+
+.basicui-button--variant-outline.basicui-button--theme-secondary:hover,
+.basicui-button--variant-outline.basicui-button--theme-secondary:focus {
+  background-color: transparent;
+  border-color: var(--basicui-bg-secondary-light);
+  color: var(--theme-black-900);
+  fill: var(--theme-black-900);
+}
+
+.basicui-dark .basicui-button--variant-outline.basicui-button--theme-secondary {
+  color: var(--theme-white-50);
+  fill: var(--theme-white-50);
+}
+
+.basicui-dark
+  .basicui-button--variant-outline.basicui-button--theme-secondary:hover,
+.basicui-dark
+  .basicui-button--variant-outline.basicui-button--theme-secondary:focus {
+  border-color: var(--basicui-bg-secondary-dark);
+  color: var(--theme-white-50);
+  fill: var(--theme-white-50);
+}
+
+/* Variant = fill */
+.basicui-button--variant-fill.basicui-button--theme-secondary {
+  background-color: transparent;
+  border-color: var(--basicui-bg-secondary);
+  color: var(--theme-black-900);
+  fill: var(--theme-black-900);
+}
+
+.basicui-button--variant-fill.basicui-button--theme-secondary:hover,
+.basicui-button--variant-fill.basicui-button--theme-secondary:focus {
+  background-color: var(--basicui-bg-secondary);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-dark .basicui-button--variant-fill.basicui-button--theme-secondary {
+  color: var(--theme-white-50);
+  fill: var(--theme-white-50);
+}
+
+.basicui-dark
+  .basicui-button--variant-fill.basicui-button--theme-secondary:hover,
+.basicui-dark
+  .basicui-button--variant-fill.basicui-button--theme-secondary:focus {
+    color: var(--basicui-fg-secondary);
+    fill: var(--basicui-fg-secondary);
+}
+
+/* Variant = transparent */
+.basicui-button--variant-transparent.basicui-button--theme-secondary {
+  background-color: var(--basicui-bg-secondary-transparent);
+  color: #000;
+  fill: #000;
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-button--variant-transparent.basicui-button--theme-secondary:hover,
+.basicui-button--variant-transparent.basicui-button--theme-secondary:focus {
+  background-color: var(--basicui-bg-secondary-transparent-light);
+  color: #000;
+  fill: #000;
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-dark
+  .basicui-button--variant-transparent.basicui-button--theme-secondary {
+    color: #fff;
+    fill: #fff;
+}
+
+.basicui-dark
+  .basicui-button--variant-transparent.basicui-button--theme-secondary:hover,
+.basicui-dark
+  .basicui-button--variant-transparent.basicui-button--theme-secondary:focus {
+    background-color: var(--basicui-bg-secondary-transparent-dark);
+    color: #fff;
+    fill: #fff;
+}
+
+/* Variant = chroma */
+.basicui-button--variant-chroma.basicui-button--theme-secondary {
+  background-color: var(--basicui-bg-secondary);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
+  border-color: var(--basicui-bg-secondary);
+}
+
+.basicui-button--variant-chroma.basicui-button--theme-secondary:hover,
+.basicui-button--variant-chroma.basicui-button--theme-secondary:focus {
+  background-color: var(--basicui-bg-primary);
+  color: var(--basicui-fg-primary);
+  fill: var(--basicui-fg-primary);
+  border-color: var(--basicui-bg-primary);
+}
+
+.basicui-dark .basicui-button--variant-chroma.basicui-button--theme-secondary {
+}
+
+.basicui-dark
+  .basicui-button--variant-chroma.basicui-button--theme-secondary:hover,
+.basicui-dark
+  .basicui-button--variant-chroma.basicui-button--theme-secondary:focus {
+}

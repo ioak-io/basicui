@@ -4,23 +4,13 @@
 }
 
 .basicui-selectnative option {
-    background-color: var(--theme-default-50);
-    color: var(--theme-default-50i);
+    background-color: var(--basicui-bg-card);
+    color: var(--basicui-fg-default);
 }
 
 .basicui-selectnative option:checked {
-    background-color: var(--theme-default-200);
-    color: var(--theme-default-200i);
-}
-
-.basicui-dark .basicui-selectnative option {
-    background-color: var(--theme-default-900);
-    color: var(--theme-default-900i);
-}
-
-.basicui-dark .basicui-selectnative option:checked {
-    background-color: var(--theme-default-700);
-    color: var(--theme-default-700i);
+    background-color: var(--basicui-bg-accent);
+    color: var(--basicui-fg-default);
 }
 
 .basicui-selectnative--multiple {
@@ -32,7 +22,6 @@
     background-color: transparent;
 }
 
-.basicui-dark .basicui-selectnative--multiple option {
-    background-color: transparent;
-    color: var(--theme-white-50);
+.basicui-selectnative--multiple option:checked {
+    background-color: var(--basicui-bg-accent);
 }

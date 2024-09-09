@@ -5,7 +5,7 @@
   --basicui-formelement-font-weight: 400;
   --basicui-formelement-border-radius: 2px;
   --basicui-formelement-border-color: var(--basicui-border-color);
-  --basicui-formelement-border-color-active: var(--theme-primary-500);
+  --basicui-formelement-border-color-active: var(--basicui-bg-primary);
 }
 
 .basicui-light {
@@ -28,7 +28,7 @@
   --basicui-formelement-success-background-color: var(
     --basicui-formelement-background-color
   );
-  --basicui-formelement-success-border-color: var(--theme-success-500);
+  --basicui-formelement-success-border-color: var(--basicui-bg-success);
   --basicui-formelement-success-color: var(--basicui-formelement-color);
 }
 
@@ -43,7 +43,7 @@
   --basicui-formelement-warning-background-color: var(
     --basicui-formelement-background-color
   );
-  --basicui-formelement-warning-border-color: var(--theme-warning-600);
+  --basicui-formelement-warning-border-color: var(--basicui-bg-warning);
   --basicui-formelement-warning-color: var(--basicui-formelement-color);
   --basicui-formelement-success-background-color: var(
     --basicui-formelement-background-color

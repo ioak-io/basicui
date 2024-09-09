@@ -1,18 +1,18 @@
 .basicui-table {
-    --basicui-table-border-color: var(--theme-white-200);
+  --basicui-table-border-color: var(--theme-white-200);
 }
 
 .basicui-dark .basicui-table {
-    --basicui-table-border-color: var(--theme-black-extended-800);
+  --basicui-table-border-color: var(--theme-black-extended-800);
 }
 
 .basicui-table.basicui-table--theme-default {
-    --basicui-table-inverse-background-color: var(--theme-default-700);
-    --basicui-table-inverse-color: var(--theme-default-700i);
-    --basicui-table-inverse-border-color: var(--theme-white-extended-50);
+  --basicui-table-inverse-background-color: var(--basicui-bg-default);
+  --basicui-table-inverse-color: var(--basicui-fg-default);
+  --basicui-table-inverse-border-color: var(--theme-white-extended-50);
 }
 .basicui-table.basicui-table--theme-primary {
-    --basicui-table-inverse-background-color: var(--theme-primary-700);
-    --basicui-table-inverse-color: var(--theme-primary-700i);
-    --basicui-table-inverse-border-color: var(--theme-white-extended-900);
+  --basicui-table-inverse-background-color: var(--basicui-bg-primary);
+  --basicui-table-inverse-color: var(--basicui-fg-primary);
+  --basicui-table-inverse-border-color: var(--theme-white-extended-900);
 }

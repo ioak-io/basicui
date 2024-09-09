@@ -1,33 +1,35 @@
-.basicui-accordion.theme-default.basicui-accordion--active .basicui-accordion__header,
+.basicui-accordion.theme-default.basicui-accordion--active
+  .basicui-accordion__header,
 .basicui-accordion.theme-default .basicui-accordion__header:hover,
 .basicui-accordion.theme-default .basicui-accordion__header:focus {
-    background-color: var(--theme-default-200);
-    color: var(--theme-default-200i);
-    fill: var(--theme-default-200i);
-}
-
-.basicui-dark .basicui-accordion.theme-default.accordion-active .basicui-accordion__header,
-.basicui-dark .basicui-accordion.theme-default .basicui-accordion__header:hover,
-.basicui-dark .basicui-accordion.theme-default .basicui-accordion__header:focus {
-    background-color: var(--theme-default-400);
-    color: var(--theme-default-400i);
-    fill: var(--theme-default-400i);
+  background-color: var(--basicui-bg-default);
+  color: var(--basicui-fg-default);
+  fill: var(--basicui-fg-default);
 }
 
 /* primary */
 .basicui-accordion.theme-primary.accordion-active .basicui-accordion__header,
 .basicui-accordion.theme-primary .basicui-accordion__header:hover,
 .basicui-accordion.theme-primary .basicui-accordion__header:focus {
-    background-color: var(--theme-primary-400);
-    color: var(--theme-primary-400i);
-    fill: var(--theme-primary-400i);
+  background-color: var(--basicui-bg-primary);
+  color: var(--basicui-fg-primary);
+  fill: var(--basicui-fg-primary);
+}
+
+/* secondary */
+.basicui-accordion.theme-secondary.accordion-active .basicui-accordion__header,
+.basicui-accordion.theme-secondary .basicui-accordion__header:hover,
+.basicui-accordion.theme-secondary .basicui-accordion__header:focus {
+  background-color: var(--basicui-bg-secondary);
+  color: var(--basicui-fg-secondary);
+  fill: var(--basicui-fg-secondary);
 }
 
 /* danger */
 .basicui-accordion.theme-danger.accordion-active .basicui-accordion__header,
 .basicui-accordion.theme-danger .basicui-accordion__header:hover,
 .basicui-accordion.theme-danger .basicui-accordion__header:focus {
-    background-color: var(--theme-danger-400);
-    color: var(--theme-danger-400i);
-    fill: var(--theme-danger-400i);
+  background-color: var(--theme-danger-400);
+  color: var(--basicui-fg-danger);
+  fill: var(--basicui-fg-danger);
 }

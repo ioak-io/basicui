@@ -4,7 +4,7 @@
 }
 .basicuidemo-themes-overview__default {
     background-color: var(--theme-default-500);
-    color: var(--theme-default-500i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-themes-overview__black {
     background-color: var(--theme-black-500);
@@ -28,7 +28,7 @@
 }
 .basicuidemo-themes-overview__primary {
     background-color: var(--theme-primary-500);
-    color: var(--theme-primary-500i);
+    color: var(--basicui-fg-primary);
 }
 .basicuidemo-themes-overview__primary-transparent {
     background-color: var(--theme-primary-transparent-500);
@@ -36,7 +36,7 @@
 }
 .basicuidemo-themes-overview__warning {
     background-color: var(--theme-warning-500);
-    color: var(--theme-warning-500i);
+    color: var(--basicui-fg-warning);
 }
 .basicuidemo-themes-overview__warning-transparent {
     background-color: var(--theme-warning-transparent-500);
@@ -44,7 +44,7 @@
 }
 .basicuidemo-themes-overview__danger {
     background-color: var(--theme-danger-500);
-    color: var(--theme-danger-500i);
+    color: var(--basicui-fg-danger);
 }
 .basicuidemo-themes-overview__danger-transparent {
     background-color: var(--theme-danger-transparent-500);

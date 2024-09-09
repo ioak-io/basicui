@@ -1,23 +1,24 @@
 * {
-    --theme-danger-50: #fff1f2;
-    --theme-danger-100: #ffe0e3;
-    --theme-danger-200: #ffc6cc;
-    --theme-danger-300: #ff9ea8;
-    --theme-danger-400: #ff6776;
-    --theme-danger-500: #fc374b;
-    --theme-danger-600: #db1428;
-    --theme-danger-700: #c51022;
-    --theme-danger-800: #a31120;
-    --theme-danger-900: #861621;
-    
-    --theme-danger-50i: #000;
-    --theme-danger-100i: #000;
-    --theme-danger-200i: #000;
-    --theme-danger-300i: #000;
-    --theme-danger-400i: #fff;
-    --theme-danger-500i: #fff;
-    --theme-danger-600i: #fff;
-    --theme-danger-700i: #fff;
-    --theme-danger-800i: #fff;
-    --theme-danger-900i: #fff;
+  --basicui-bg-danger: #dc3545;
+  --basicui-bg-danger-light: #e04f5d;
+  --basicui-bg-danger-dark: #cf2434;
+  --basicui-bg-danger-muted: #df6571;
+  --basicui-bg-danger-text: #a71d2a;
+  --basicui-bg-danger-transparent: #dc354570;
+  --basicui-bg-danger-transparent-light: #e04f5d70;
+  --basicui-bg-danger-transparent-dark: #cf243470;
+  --basicui-bg-danger-transparent-muted: #df657170;
+  --basicui-fg-danger: #ffffff;
+}
+.basicui-dark {
+  --basicui-bg-danger: #d63b4a;
+  --basicui-bg-danger-light: #db5461;
+  --basicui-bg-danger-dark: #c82a39;
+  --basicui-bg-danger-muted: #da6a75;
+  --basicui-bg-danger-text: #e77681;
+  --basicui-bg-danger-transparent: #d63b4a70;
+  --basicui-bg-danger-transparent-light: #db546170;
+  --basicui-bg-danger-transparent-dark: #c82a3970;
+  --basicui-bg-danger-transparent-muted: #da6a7570;
+  --basicui-fg-danger: #ffffff;
 }

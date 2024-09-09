@@ -16,7 +16,7 @@
     height: var(--basicui-accordion-header-height);
     padding: 0 var(--basicui-accordion-padding-x);
     cursor: pointer;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
 .basicui-accordion .basicui-accordion__body {

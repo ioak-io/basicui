@@ -1,26 +1,30 @@
-@import './button-default.css';
-@import './button-primary.css';
-@import './button-danger.css';
+@import "./button-default.css";
+@import "./button-primary.css";
+@import "./button-secondary.css";
+@import "./button-success.css";
+@import "./button-warning.css";
+@import "./button-danger.css";
 
 .basicui-button {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 6px;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 6px;
+  justify-content: center;
+  align-items: center;
 
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    font-size: var(--basicui-button-font-size);
-    height: var(--basicui-button-height);
-    padding: var(--basicui-button-padding);
-    border-radius: var(--basicui-button-border-radius);
-    border-width: var(--basicui-button-border-thickness);
-    border-style: solid;
-    transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--basicui-button-font-size);
+  height: var(--basicui-button-height);
+  padding: var(--basicui-button-padding);
+  border-radius: var(--basicui-button-border-radius);
+  border-width: var(--basicui-button-border-thickness);
+  border-style: solid;
+  transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out,
+    250ms color ease-in-out;
 }
 
 /* .basicui-button:focus {
@@ -29,28 +33,28 @@
 } */
 
 .basicui-button:disabled {
-    opacity: var(--basicui-button-opacity-disabled);
+  opacity: var(--basicui-button-opacity-disabled);
 }
 
 .basicui-button svg {
-    height: var(--basicui-button-icon-height);
+  height: var(--basicui-button-icon-height);
 }
 
 .basicui-button--loading svg {
-    display: none;
+  display: none;
 }
 
 .basicui-button--loading .basicui-button__svg--loading {
-    display: block;
-    animation: animate_button_loading 2s linear infinite both;
+  display: block;
+  animation: animate_button_loading 2s linear infinite both;
 }
 
 @keyframes animate_button_loading {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }

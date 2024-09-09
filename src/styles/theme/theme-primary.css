@@ -1,23 +1,24 @@
 * {
-    --theme-primary-50: #f0f8ff;
-    --theme-primary-100: #e1f0fd;
-    --theme-primary-200: #bce1fb;
-    --theme-primary-300: #81cbf8;
-    --theme-primary-400: #3eb1f2;
-    --theme-primary-500: #1492db;
-    --theme-primary-600: #0878c1;
-    --theme-primary-700: #08609c;
-    --theme-primary-800: #0b5181;
-    --theme-primary-900: #0f446b;
-
-    --theme-primary-50i: #000;
-    --theme-primary-100i: #000;
-    --theme-primary-200i: #000;
-    --theme-primary-300i: #fff;
-    --theme-primary-400i: #fff;
-    --theme-primary-500i: #fff;
-    --theme-primary-600i: #fff;
-    --theme-primary-700i: #fff;
-    --theme-primary-800i: #fff;
-    --theme-primary-900i: #fff;
+  --basicui-bg-primary: #90aead;
+  --basicui-bg-primary-light: #a2bbba;
+  --basicui-bg-primary-dark: #7ea1a0;
+  --basicui-bg-primary-muted: #b1c0bf;
+  --basicui-bg-primary-text: #668c8a;
+  --basicui-bg-primary-transparent: #90aead70;
+  --basicui-bg-primary-transparent-light: #a2bbba70;
+  --basicui-bg-primary-transparent-dark: #7ea1a070;
+  --basicui-bg-primary-transparent-muted: #b1c0bf70;
+  --basicui-fg-primary: #000000;
+}
+.basicui-dark {
+  --basicui-bg-primary: #95a9a9;
+  --basicui-bg-primary-light: #a6b7b6;
+  --basicui-bg-primary-dark: #849c9b;
+  --basicui-bg-primary-muted: #b5bcbc;
+  --basicui-bg-primary-text: #bccece;
+  --basicui-bg-primary-transparent: #95a9a970;
+  --basicui-bg-primary-transparent-light: #a6b7b670;
+  --basicui-bg-primary-transparent-dark: #849c9b70;
+  --basicui-bg-primary-transparent-muted: #b5bcbc70;
+  --basicui-fg-primary: #000000;
 }

@@ -2,32 +2,28 @@
 .basicui-form-element-warning,
 .basicui-form-element-success,
 .basicui-form-element-info {
-    margin-top: 4px;
-    font-size: 10px;
-    color: var(--theme-danger-500);
+  margin-top: 4px;
+  font-size: 10px;
+  color: var(--basicui-bg-danger-text);
 }
 
 .basicui-form-element-warning {
-    color: var(--theme-warning-500);
+  color: var(--basicui-bg-warning);
 }
 
 .basicui-form-element-success {
-    color: var(--theme-success-500);
+  color: var(--basicui-bg-success);
 }
 
 .basicui-form-element-info {
-    color: var(--theme-default-500);
-}
-
-.basicui-dark .basicui-form-element-info {
-    color: var(--theme-default-300);
+  color: var(--basicui-bg-default);
 }
 
 .basicui-form-element-label {
-    display: block;
-    font-size: 12px;
-    margin-bottom: 4px;
-    text-transform: capitalize;
-    word-break: keep-all;
-    color: var(--basicui-formelement-label-color);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+  word-break: keep-all;
+  color: var(--basicui-formelement-label-color);
 }

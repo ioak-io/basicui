@@ -19,35 +19,39 @@ const generateColorSchemeForMode = (
     const shades: string[] = [];
 
     // Create slightly lighter, slightly darker, muted and text colors
+    const base = color
+      .clone()
+      .desaturate(darkMode ? 5 : 0)
+      .toHexString();
     const light = color
       .clone()
-      .lighten(darkMode ? 10 : 10)
-      .desaturate(darkMode ? 10 : 0)
+      .lighten(darkMode ? 6 : 6)
+      .desaturate(darkMode ? 5 : 0)
       .toHexString();
     const dark = color
       .clone()
-      .darken(darkMode ? 10 : 10)
-      .desaturate(darkMode ? 10 : 0)
+      .darken(darkMode ? 6 : 6)
+      .desaturate(darkMode ? 5 : 0)
       .toHexString();
     const muted = color
       .clone()
-      .lighten(darkMode ? 20 : 20)
-      .desaturate(darkMode ? 20 : 10)
+      .lighten(darkMode ? 10 : 10)
+      .desaturate(darkMode ? 10 : 5)
       .toHexString();
     const text = darkMode
-      ? color.clone().lighten(25).saturate(20).toHexString()
-      : color.clone().darken(25).toHexString();
+      ? color.clone().lighten(15).saturate(0).toHexString()
+      : color.clone().darken(15).toHexString();
 
     shades.push(
-      baseColor.toHexString(),
+      base,
       light,
       dark,
       muted,
       text,
-      `${baseColor.toHexString()}90`,
-      `${light}90`,
-      `${dark}90`,
-      `${muted}90`
+      `${base}70`,
+      `${light}70`,
+      `${dark}70`,
+      `${muted}70`
     );
 
     return shades;

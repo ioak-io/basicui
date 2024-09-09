@@ -1,52 +1,25 @@
 .basicui-link--theme-primary {
-    color: var(--theme-primary-500);
+  color: var(--basicui-bg-primary);
 }
 
 .basicui-link--theme-primary svg {
-    fill: var(--theme-primary-500);
-}
-
-.basicui-dark .basicui-link--theme-primary {
-    color: var(--theme-primary-500);
-}
-
-.basicui-dark .basicui-link--theme-primary svg {
-    fill: var(--theme-primary-500);
+  fill: var(--basicui-bg-primary);
 }
 
 .basicui-link--theme-primary.basicui-link--no-glow {
-    color: var(--theme-primary-700);
+  color: var(--basicui-bg-primary);
 }
 
 .basicui-link--theme-primary.basicui-link--no-glow svg {
-    fill: var(--theme-primary-700);
-}
-
-.basicui-dark .basicui-link--theme-primary.basicui-link--no-glow {
-    color: var(--theme-primary-400);
-}
-
-.basicui-dark .basicui-link--theme-primary.basicui-link--no-glow svg {
-    fill: var(--theme-primary-400);
+  fill: var(--basicui-bg-primary);
 }
 
 .basicui-link--theme-primary:hover,
-.basicui-link--theme-primary:focus
- {
-    color: var(--theme-primary-700);
+.basicui-link--theme-primary:focus {
+  color: var(--basicui-bg-primary-light);
 }
 
 .basicui-link--theme-primary:hover svg,
 .basicui-link--theme-primary:focus svg {
-    fill: var(--theme-primary-700);
-}
-
-.basicui-dark .basicui-link--theme-primary:hover,
-.basicui-dark .basicui-link--theme-primary:focus {
-    color: var(--theme-primary-400);
-}
-
-.basicui-dark .basicui-link--theme-primary:hover svg,
-.basicui-dark .basicui-link--theme-primary:focus svg {
-    fill: var(--theme-primary-400);
+  fill: var(--basicui-bg-primary-light);
 }

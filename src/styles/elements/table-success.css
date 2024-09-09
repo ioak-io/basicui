@@ -1,25 +1,25 @@
-.basicui-table.theme-primary.table-inverse {
-  background-color: var(--basicui-bg-primary);
-  color: var(--basicui-fg-primary);
+.basicui-table.theme-success.table-inverse {
+  background-color: var(--basicui-bg-success);
+  color: var(--basicui-fg-success);
 }
 
-.basicui-table.theme-primary.table-inverse th,
-.basicui-table.theme-primary.table-inverse td {
+.basicui-table.theme-success.table-inverse th,
+.basicui-table.theme-success.table-inverse td {
   border-top: 1px solid var(--theme-white-700);
 }
 
-.basicui-table.theme-primary.table-inverse th,
-.basicui-dark .basicui-table.theme-primary.table-inverse th {
+.basicui-table.theme-success.table-inverse th,
+.basicui-dark .basicui-table.theme-success.table-inverse th {
   border-bottom: 2px solid var(--theme-white-700);
   border-top: none;
 }
 
-.basicui-table.theme-primary thead.thead-inverse {
-  background-color: var(--basicui-bg-primary);
-  color: var(--basicui-fg-primary);
+.basicui-table.theme-success thead.thead-inverse {
+  background-color: var(--basicui-bg-success);
+  color: var(--basicui-fg-success);
 }
 
-.basicui-table.theme-primary thead.thead-inverse th {
+.basicui-table.theme-success thead.thead-inverse th {
   border-bottom: none;
   border-top: none;
 }

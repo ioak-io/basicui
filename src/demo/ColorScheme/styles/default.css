@@ -1,40 +1,40 @@
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__50 {
     background-color: var(--theme-default-50);
-    color: var(--theme-default-50i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__100 {
     background-color: var(--theme-default-100);
-    color: var(--theme-default-100i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__200 {
     background-color: var(--theme-default-200);
-    color: var(--theme-default-200i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__300 {
     background-color: var(--theme-default-300);
-    color: var(--theme-default-300i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__400 {
     background-color: var(--theme-default-400);
-    color: var(--theme-default-400i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__500 {
     background-color: var(--theme-default-500);
-    color: var(--theme-default-500i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__600 {
     background-color: var(--theme-default-600);
-    color: var(--theme-default-600i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__700 {
     background-color: var(--theme-default-700);
-    color: var(--theme-default-700i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__800 {
     background-color: var(--theme-default-800);
-    color: var(--theme-default-800i);
+    color: var(--basicui-fg-default);
 }
 .basicuidemo-color-scheme--default .basicuidemo-color-scheme__900 {
     background-color: var(--theme-default-900);
-    color: var(--theme-default-900i);
+    color: var(--basicui-fg-default);
 }

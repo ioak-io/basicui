@@ -2,10 +2,10 @@
   --basicui-radio-background-color: none;
 }
 
-.basicui-light .basicui-radio--theme-primary,
-.basicui-dark .basicui-radio--theme-primary {
+.basicui-light .basicui-radio--theme-warning,
+.basicui-dark .basicui-radio--theme-warning {
   --basicui-radio-border-color: var(--basicui-checkbox-border-color);
-  --basicui-radio-dotmark-color: var(--basicui-bg-primary);
+  --basicui-radio-dotmark-color: var(--basicui-bg-warning);
   --basicui-radio-background-color-hover: var(
     --basicui-checkbox-background-color-hover
   );
@@ -18,6 +18,6 @@
   );
 }
 
-.basicui-dark .basicui-radio--theme-primary {
-  --basicui-radio-dotmark-color: var(--basicui-bg-primary);
+.basicui-dark .basicui-radio--theme-warning {
+  --basicui-radio-dotmark-color: var(--basicui-bg-warning);
 }

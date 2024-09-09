@@ -1,5 +1,8 @@
 @import './default.css';
 @import './primary.css';
+@import './secondary.css';
+@import './success.css';
+@import './warning.css';
 @import './danger.css';
 
 * {

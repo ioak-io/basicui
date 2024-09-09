@@ -1,23 +1,24 @@
 * {
-    --theme-warning-50: #fdf9e9;
-    --theme-warning-100: #fbefc6;
-    --theme-warning-200: #f8de90;
-    --theme-warning-300: #f3c551;
-    --theme-warning-400: #eeac21;
-    --theme-warning-500: #db9214;
-    --theme-warning-600: #bf700f;
-    --theme-warning-700: #994f0f;
-    --theme-warning-800: #7f4014;
-    --theme-warning-900: #6c3517;
-
-    --theme-warning-50i: #000000;
-    --theme-warning-100i: #000000;
-    --theme-warning-200i: #000000;
-    --theme-warning-300i: #000000;
-    --theme-warning-400i: #000000;
-    --theme-warning-500i: #000000;
-    --theme-warning-600i: #ffffff;
-    --theme-warning-700i: #ffffff;
-    --theme-warning-800i: #ffffff;
-    --theme-warning-900i: #ffffff;
+  --basicui-bg-warning: #ffc107;
+  --basicui-bg-warning-light: #ffc926;
+  --basicui-bg-warning-dark: #e7ae00;
+  --basicui-bg-warning-muted: #facb3f;
+  --basicui-bg-warning-text: #b98b00;
+  --basicui-bg-warning-transparent: #ffc10770;
+  --basicui-bg-warning-transparent-light: #ffc92670;
+  --basicui-bg-warning-transparent-dark: #e7ae0070;
+  --basicui-bg-warning-transparent-muted: #facb3f70;
+  --basicui-fg-warning: #000000;
+}
+.basicui-dark {
+  --basicui-bg-warning: #f9be0d;
+  --basicui-bg-warning-light: #fac62b;
+  --basicui-bg-warning-dark: #e2ab06;
+  --basicui-bg-warning-muted: #f5c944;
+  --basicui-bg-warning-text: #ffd453;
+  --basicui-bg-warning-transparent: #f9be0d70;
+  --basicui-bg-warning-transparent-light: #fac62b70;
+  --basicui-bg-warning-transparent-dark: #e2ab0670;
+  --basicui-bg-warning-transparent-muted: #f5c94470;
+  --basicui-fg-warning: #000000;
 }

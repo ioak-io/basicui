@@ -1,11 +1,11 @@
 .basicui-table.theme-default.table-inverse {
-    background-color: var(--theme-default-600);
-    color: var(--theme-default-600i);
+    background-color: var(--basicui-bg-default);
+    color: var(--basicui-fg-default);
 }
 
 .basicui-dark .basicui-table.theme-default.table-inverse {
-    background-color: var(--theme-default-500);
-    color: var(--theme-default-500i);
+    background-color: var(--basicui-bg-default);
+    color: var(--basicui-fg-default);
 }
 
 .basicui-table.theme-default.table-inverse th,
@@ -22,12 +22,12 @@
 }
 
 .basicui-table.theme-default thead.thead-inverse {
-    background-color: var(--theme-default-600);
-    color: var(--theme-default-600i);
+    background-color: var(--basicui-bg-default);
+    color: var(--basicui-fg-default);
 }
 .basicui-dark .basicui-table.theme-default thead.thead-inverse {
-    background-color: var(--theme-default-500);
-    color: var(--theme-default-500i);
+    background-color: var(--basicui-bg-default);
+    color: var(--basicui-fg-default);
 }
 
 .basicui-table.theme-default thead.thead-inverse th {

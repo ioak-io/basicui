@@ -53,5 +53,5 @@
 }
 
 .basicui-dark .basicui-input::placeholder {
-    color: var(--theme-default-300);
+    color: var(--basicui-bg-default);
 }
