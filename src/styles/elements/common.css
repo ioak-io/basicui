@@ -1,3 +1,18 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--basicui-bg-secondary-muted);
+  color: black;
+}
+
+::-webkit-selection {
+  background-color: var(--basicui-bg-secondary-muted);
+  color: black;
+}
+
+::-moz-selection {
+  background-color: var(--basicui-bg-secondary-muted);
+  color: black;
 }
