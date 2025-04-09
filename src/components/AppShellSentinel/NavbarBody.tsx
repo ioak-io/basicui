@@ -1,11 +1,11 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 
-export type AppShellSentinelNavbarBodyProps = {
+export type NavbarBodyProps = {
   children: any;
   [key: string]: any;
 };
 
-const AppShellSentinelNavbarBody = (props: AppShellSentinelNavbarBodyProps) => {
+const NavbarBody = (props: NavbarBodyProps) => {
   return (
     <div className="basicui-appshellsentinel-navbar-body">
       <button
@@ -51,6 +51,6 @@ const AppShellSentinelNavbarBody = (props: AppShellSentinelNavbarBodyProps) => {
     </div>
   );
 };
-export default AppShellSentinelNavbarBody;
+export default NavbarBody;
 
-AppShellSentinelNavbarBody.displayName = "AppShellSentinelNavbarBody";
+NavbarBody.displayName = "NavbarBody";

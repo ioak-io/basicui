@@ -1,21 +1,13 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 
-export type AppShellSentinelNavbarFooterProps = {
-  children?: any;
-  userName?: string;
+export type NavbarBodyFooterProps = {
   [key: string]: any;
 };
 
-const AppShellSentinelNavbarFooter = (props: AppShellSentinelNavbarFooterProps) => {
+const MobileNavbarFooter = (props: NavbarBodyFooterProps) => {
   return (
-    <div
-      className={`basicui-appshellsentinel-navbar-footer ${
-        props.isSidebarExpanded
-          ? "basicui-appshellsentinel-navbar-footer--expanded"
-          : "basicui-appshellsentinel-navbar-footer--collapsed"
-      }`}
-    >
-      <div className="basicui-appshellsentinel-navbar-footer__left">
+    <div className={`basicui-appshellsentinel-mobile-navbar-footer`}>
+      <div className="basicui-appshellsentinel-mobile-navbar-footer__left">
         {props.userName && (
           <button className="button" onClick={props.onSignout}>
             SO
@@ -29,7 +21,10 @@ const AppShellSentinelNavbarFooter = (props: AppShellSentinelNavbarFooterProps) 
         {props.isSidebarExpanded && <div>{props.userName}</div>}
       </div>
       {props.isSidebarExpanded && (
-        <div className="basicui-appshellsentinel-navbar-footer__right" onClick={props.onDarkModeToggle}>
+        <div
+          className="basicui-appshellsentinel-mobile-navbar-footer__right"
+          onClick={props.onDarkModeToggle}
+        >
           <svg
             aria-hidden="true"
             focusable="false"
@@ -51,6 +46,6 @@ const AppShellSentinelNavbarFooter = (props: AppShellSentinelNavbarFooterProps) 
     </div>
   );
 };
-export default AppShellSentinelNavbarFooter;
+export default MobileNavbarFooter;
 
-AppShellSentinelNavbarFooter.displayName = "AppShellSentinelNavbarFooter";
+MobileNavbarFooter.displayName = "MobileNavbarFooter";

@@ -5,10 +5,10 @@ import React, {
   Children,
   useEffect,
 } from "react";
-import AppShellSentinelNavbar from "./AppShellSentinelNavbar";
-import AppShellSentinelTopbar from "./AppShellSentinelTopbar";
-import AppShellSentinelBody from "./AppShellSentinelBody";
-import AppShellSentinelMobileNavbar from "./AppShellSentinelMobileNavbar";
+import Navbar from "./Navbar";
+import Topbar from "./Topbar";
+import Body from "./Body";
+import MobileNavbar from "./MobileNavbar";
 
 export type AppShellSentinelProps = {
   children: any;
@@ -27,32 +27,32 @@ export type AppShellSentinelProps = {
 };
 
 const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
-  const [appShellNavbar, setAppShellSentinelNavbar] = useState<any>();
-  const [appShellTopbar, setAppShellSentinelTopbar] = useState<any>();
-  const [appShellBody, setAppShellSentinelBody] = useState<any>();
-  const [appShellMobileNavbarBody, setAppShellSentinelMobileNavbar] =
+  const [appShellNavbar, setNavbar] = useState<any>();
+  const [appShellTopbar, setTopbar] = useState<any>();
+  const [appShellBody, setBody] = useState<any>();
+  const [appShellMobileNavbarBody, setMobileNavbar] =
     useState<any>();
 
   useEffect(() => {
     children.forEach((item: any) => {
       const clonedChild = React.cloneElement(item, { ...props });
       if (
-        item.type.displayName === "AppShellSentinelNavbar" ||
-        item.type.name === "AppShellSentinelNavbar"
+        item.type.displayName === "Navbar" ||
+        item.type.name === "Navbar"
       ) {
-        setAppShellSentinelNavbar(clonedChild);
+        setNavbar(clonedChild);
       }
       if (
-        item.type.displayName === "AppShellSentinelBody" ||
-        item.type.name === "AppShellSentinelBody"
+        item.type.displayName === "Body" ||
+        item.type.name === "Body"
       ) {
-        setAppShellSentinelBody(clonedChild);
+        setBody(clonedChild);
       }
       if (
-        item.type.displayName === "AppShellSentinelMobileNavbar" ||
-        item.type.name === "AppShellSentinelMobileNavbar"
+        item.type.displayName === "MobileNavbar" ||
+        item.type.name === "MobileNavbar"
       ) {
-        setAppShellSentinelMobileNavbar(clonedChild);
+        setMobileNavbar(clonedChild);
       }
     });
   }, [children]);
@@ -64,10 +64,10 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
         children: appShellMobileNavbarBody,
       });
       if (
-        item.type.displayName === "AppShellSentinelTopbar" ||
-        item.type.name === "AppShellSentinelTopbar"
+        item.type.displayName === "Topbar" ||
+        item.type.name === "Topbar"
       ) {
-        setAppShellSentinelTopbar(clonedChild);
+        setTopbar(clonedChild);
       }
     });
   }, [children, appShellMobileNavbarBody]);
@@ -99,8 +99,8 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
 };
 export default AppShellSentinel;
 
-AppShellSentinel.Navbar = AppShellSentinelNavbar;
-AppShellSentinel.Topbar = AppShellSentinelTopbar;
-AppShellSentinel.Body = AppShellSentinelBody;
-AppShellSentinel.MobileNavbar = AppShellSentinelMobileNavbar;
+AppShellSentinel.Navbar = Navbar;
+AppShellSentinel.Topbar = Topbar;
+AppShellSentinel.Body = Body;
+AppShellSentinel.MobileNavbar = MobileNavbar;
 AppShellSentinel.displayName = "AppShellSentinel";

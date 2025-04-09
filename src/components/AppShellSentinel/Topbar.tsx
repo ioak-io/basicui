@@ -7,12 +7,12 @@ import React, {
 } from "react";
 import Logo from "./Logo";
 
-export type AppShellSentinelTopbarProps = {
+export type TopbarProps = {
   children?: any;
   [key: string]: any;
 };
 
-const AppShellSentinelTopbar = (props: AppShellSentinelTopbarProps) => {
+const Topbar = (props: TopbarProps) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -64,6 +64,6 @@ const AppShellSentinelTopbar = (props: AppShellSentinelTopbarProps) => {
     </>
   );
 };
-export default AppShellSentinelTopbar;
+export default Topbar;
 
-AppShellSentinelTopbar.displayName = "AppShellSentinelTopbar";
+Topbar.displayName = "Topbar";
