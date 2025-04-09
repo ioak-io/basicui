@@ -1,7 +1,7 @@
-@import "./appshellsentinel-body.css";
-@import "./appshellsentinel-navbar.css";
-@import "./appshellsentinel-topbar.css";
-@import "./appshellsentinel-mobile-navbar.css";
+@import "./body.css";
+@import "./navbar.css";
+@import "./topbar.css";
+@import "./mobile-navbar.css";
 
 .basicui-appshellsentinel {
 }

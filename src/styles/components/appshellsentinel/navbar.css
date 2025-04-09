@@ -1,6 +1,6 @@
-@import "./appshellsentinel-navbar-header.css";
-@import "./appshellsentinel-navbar-body.css";
-@import "./appshellsentinel-navbar-footer.css";
+@import "./navbar-header.css";
+@import "./navbar-body.css";
+@import "./navbar-footer.css";
 
 .basicui-appshellsentinel-navbar {
   display: grid;
