@@ -27,10 +27,11 @@ export type AppShellSentinelProps = {
 };
 
 const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
-  const [appShellNavbar, setNavbar] = useState<any>();
-  const [appShellTopbar, setTopbar] = useState<any>();
-  const [appShellBody, setBody] = useState<any>();
-  const [appShellMobileNavbarBody, setMobileNavbar] =
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [navbar, setNavbar] = useState<any>();
+  const [topbar, setTopbar] = useState<any>();
+  const [body, setBody] = useState<any>();
+  const [mobileNavbarBody, setMobileNavbar] =
     useState<any>();
 
   useEffect(() => {
@@ -61,7 +62,7 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
     children.forEach((item: any) => {
       const clonedChild = React.cloneElement(item, {
         ...props,
-        children: appShellMobileNavbarBody,
+        children: mobileNavbarBody,
       });
       if (
         item.type.displayName === "Topbar" ||
@@ -70,7 +71,7 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
         setTopbar(clonedChild);
       }
     });
-  }, [children, appShellMobileNavbarBody]);
+  }, [children, mobileNavbarBody]);
 
   return (
     <div
@@ -82,7 +83,7 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
     >
       {!props.hideNavbar && (
         <div className={`basicui-appshellsentinel__left  desktop-only`}>
-          {appShellNavbar}
+          {navbar}
         </div>
       )}
 
@@ -91,8 +92,8 @@ const AppShellSentinel = ({ children, ...props }: AppShellSentinelProps) => {
           props.hideNavbar ? "basicui-appshellsentinel__right--" + "hide-navbar" : ""
         }`}
       >
-        {appShellTopbar}
-        {appShellBody}
+        {topbar}
+        {body}
       </div>
     </div>
   );
