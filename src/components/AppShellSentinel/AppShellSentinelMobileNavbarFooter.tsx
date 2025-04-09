@@ -1,13 +1,13 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 
-export type AppShellNavbarBodyFooterProps = {
+export type AppShellSentinelNavbarBodyFooterProps = {
   [key: string]: any;
 };
 
-const AppShellMobileNavbarFooter = (props: AppShellNavbarBodyFooterProps) => {
+const AppShellSentinelMobileNavbarFooter = (props: AppShellSentinelNavbarBodyFooterProps) => {
   return (
-    <div className={`basicui-appshell-mobile-navbar-footer`}>
-      <div className="basicui-appshell-mobile-navbar-footer__left">
+    <div className={`basicui-appshellsentinel-mobile-navbar-footer`}>
+      <div className="basicui-appshellsentinel-mobile-navbar-footer__left">
         {props.userName && (
           <button className="button" onClick={props.onSignout}>
             SO
@@ -22,7 +22,7 @@ const AppShellMobileNavbarFooter = (props: AppShellNavbarBodyFooterProps) => {
       </div>
       {props.isSidebarExpanded && (
         <div
-          className="basicui-appshell-mobile-navbar-footer__right"
+          className="basicui-appshellsentinel-mobile-navbar-footer__right"
           onClick={props.onDarkModeToggle}
         >
           <svg
@@ -46,6 +46,6 @@ const AppShellMobileNavbarFooter = (props: AppShellNavbarBodyFooterProps) => {
     </div>
   );
 };
-export default AppShellMobileNavbarFooter;
+export default AppShellSentinelMobileNavbarFooter;
 
-AppShellMobileNavbarFooter.displayName = "AppShellMobileNavbarFooter";
+AppShellSentinelMobileNavbarFooter.displayName = "AppShellSentinelMobileNavbarFooter";

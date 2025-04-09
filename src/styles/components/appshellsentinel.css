@@ -1,0 +1,47 @@
+@import "./appshellsentinel-body.css";
+@import "./appshellsentinel-navbar.css";
+@import "./appshellsentinel-topbar.css";
+@import "./appshellsentinel-mobile-navbar.css";
+
+.basicui-appshellsentinel {
+}
+
+.basicui-appshellsentinel__left {
+  width: var(--basicui-appshellsentinel-navbar-width);
+  transition: width 250ms ease-in-out, background-color 250ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid var(--basicui-border-color);
+}
+
+.basicui-appshellsentinel--collapsed .basicui-appshellsentinel__left {
+  width: var(--basicui-appshellsentinel-navbar-width-collapsed);
+}
+
+@media (max-width: 767px) {
+  .basicui-appshellsentinel__left {
+    display: none;
+  }
+
+  .basicui-appshellsentinel__right {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .basicui-appshellsentinel__right {
+    margin-left: var(--basicui-appshellsentinel-navbar-width);
+    transition: margin-left 250ms ease-in-out;
+  }
+  .basicui-appshellsentinel__right--hide-navbar {
+    margin-left: 0;
+    transition: margin-left 0ms ease-in-out;
+  }
+  .basicui-appshellsentinel--collapsed .basicui-appshellsentinel__right {
+    margin-left: var(--basicui-appshellsentinel-navbar-width-collapsed);
+  }
+}

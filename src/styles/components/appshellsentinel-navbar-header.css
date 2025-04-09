@@ -1,5 +1,5 @@
-.basicui-appshell-navbar-header {
-  height: var(--basicui-appshell-topbar-height);
+.basicui-appshellsentinel-navbar-header {
+  height: var(--basicui-appshellsentinel-topbar-height);
   display: grid;
   align-items: center;
   grid-auto-flow: column;

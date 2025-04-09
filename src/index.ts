@@ -23,7 +23,7 @@ import ButtonVariantType from "./components/types/ButtonVariantType";
 import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
 import Label from "./components/Label";
-import AppShell from "./components/AppShell";
+import AppShellSentinel from "./components/AppShellSentinel";
 import FlexContainer from "./components/FlexContainer";
 import LoadingBlocks from "./components/LoadingBlocks";
 
@@ -52,7 +52,7 @@ export {
   ModalPlacement,
   ModalSizeType,
   Label,
-  AppShell,
+  AppShellSentinel,
   FlexContainer,
   LoadingBlocks,
 };

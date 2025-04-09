@@ -1,14 +1,14 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 import Logo from "./Logo";
 
-export type AppShellNavbarHeaderProps = {
+export type AppShellSentinelNavbarHeaderProps = {
   children?: any;
   [key: string]: any;
 };
 
-const AppShellNavbarHeader = (props: AppShellNavbarHeaderProps) => {
+const AppShellSentinelNavbarHeader = (props: AppShellSentinelNavbarHeaderProps) => {
   return (
-    <div className="basicui-appshell-navbar-header">
+    <div className="basicui-appshellsentinel-navbar-header">
       <Logo
         isDarkMode={props.isDarkMode}
         logoIconBlack={props.logoIconBlack}
@@ -21,6 +21,6 @@ const AppShellNavbarHeader = (props: AppShellNavbarHeaderProps) => {
     </div>
   );
 };
-export default AppShellNavbarHeader;
+export default AppShellSentinelNavbarHeader;
 
-AppShellNavbarHeader.displayName = "AppShellNavbarHeader";
+AppShellSentinelNavbarHeader.displayName = "AppShellSentinelNavbarHeader";

@@ -1,21 +1,21 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 
-export type AppShellNavbarFooterProps = {
+export type AppShellSentinelNavbarFooterProps = {
   children?: any;
   userName?: string;
   [key: string]: any;
 };
 
-const AppShellNavbarFooter = (props: AppShellNavbarFooterProps) => {
+const AppShellSentinelNavbarFooter = (props: AppShellSentinelNavbarFooterProps) => {
   return (
     <div
-      className={`basicui-appshell-navbar-footer ${
+      className={`basicui-appshellsentinel-navbar-footer ${
         props.isSidebarExpanded
-          ? "basicui-appshell-navbar-footer--expanded"
-          : "basicui-appshell-navbar-footer--collapsed"
+          ? "basicui-appshellsentinel-navbar-footer--expanded"
+          : "basicui-appshellsentinel-navbar-footer--collapsed"
       }`}
     >
-      <div className="basicui-appshell-navbar-footer__left">
+      <div className="basicui-appshellsentinel-navbar-footer__left">
         {props.userName && (
           <button className="button" onClick={props.onSignout}>
             SO
@@ -29,7 +29,7 @@ const AppShellNavbarFooter = (props: AppShellNavbarFooterProps) => {
         {props.isSidebarExpanded && <div>{props.userName}</div>}
       </div>
       {props.isSidebarExpanded && (
-        <div className="basicui-appshell-navbar-footer__right" onClick={props.onDarkModeToggle}>
+        <div className="basicui-appshellsentinel-navbar-footer__right" onClick={props.onDarkModeToggle}>
           <svg
             aria-hidden="true"
             focusable="false"
@@ -51,6 +51,6 @@ const AppShellNavbarFooter = (props: AppShellNavbarFooterProps) => {
     </div>
   );
 };
-export default AppShellNavbarFooter;
+export default AppShellSentinelNavbarFooter;
 
-AppShellNavbarFooter.displayName = "AppShellNavbarFooter";
+AppShellSentinelNavbarFooter.displayName = "AppShellSentinelNavbarFooter";

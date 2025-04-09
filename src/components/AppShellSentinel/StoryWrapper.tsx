@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
-import AppShell, { AppShellProps } from ".";
+import AppShellSentinel, { AppShellSentinelProps } from ".";
 
 import logoIconWhite from "./logo/neuralweb_white_small.svg";
 import logoTextWhite from "./logo/neuralweb_white_text.svg";
 import logoIconBlack from "./logo/neuralweb_black_small.svg";
 import logoTextBlack from "./logo/neuralweb_black_text.svg";
 
-const StoryWrapper = (props: AppShellProps) => {
+const StoryWrapper = (props: AppShellSentinelProps) => {
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(true);
   return (
-    <AppShell
+    <AppShellSentinel
       isSidebarExpanded={isSidebarExpanded}
       onSidebarToggle={() => setIsSidebarExpanded(!isSidebarExpanded)}
       logoIconWhite={logoIconWhite}
@@ -22,10 +22,10 @@ const StoryWrapper = (props: AppShellProps) => {
       onSignin={() => {}}
       onSignout={() => {}}
     >
-      <AppShell.Topbar />
-      <AppShell.Navbar>
-        <AppShell.Navbar.Header>COM</AppShell.Navbar.Header>
-        <AppShell.Navbar.Body>
+      <AppShellSentinel.Topbar />
+      <AppShellSentinel.Navbar>
+        <AppShellSentinel.Navbar.Header>COM</AppShellSentinel.Navbar.Header>
+        <AppShellSentinel.Navbar.Body>
           Consectetur magni exercitationem nostrum tempora architecto quisquam
           eos qui perspiciatis ipsum non sed dicta. Ratione ipsum et minima
           quisquam quis labore ipsum aliquam ipsum commodi sed aspernatur. Ipsum
@@ -143,12 +143,12 @@ const StoryWrapper = (props: AppShellProps) => {
           quam ab tempora consequuntur totam velit dolores natus. Aliquid quis
           corporis quisquam ullam pariatur consequatur modi aspernatur voluptate
           veniam.
-        </AppShell.Navbar.Body>
-        <AppShell.Navbar.Footer>Navbar footer</AppShell.Navbar.Footer>
-      </AppShell.Navbar>
-      <AppShell.Body>Body</AppShell.Body>
-      <AppShell.MobileNavbar>
-        <AppShell.MobileNavbar.Body>
+        </AppShellSentinel.Navbar.Body>
+        <AppShellSentinel.Navbar.Footer>Navbar footer</AppShellSentinel.Navbar.Footer>
+      </AppShellSentinel.Navbar>
+      <AppShellSentinel.Body>Body</AppShellSentinel.Body>
+      <AppShellSentinel.MobileNavbar>
+        <AppShellSentinel.MobileNavbar.Body>
           Consectetur magni exercitationem nostrum tempora architecto quisquam
           eos qui perspiciatis ipsum non sed dicta. Ratione ipsum et minima
           quisquam quis labore ipsum aliquam ipsum commodi sed aspernatur. Ipsum
@@ -266,10 +266,10 @@ const StoryWrapper = (props: AppShellProps) => {
           quam ab tempora consequuntur totam velit dolores natus. Aliquid quis
           corporis quisquam ullam pariatur consequatur modi aspernatur voluptate
           veniam.
-        </AppShell.MobileNavbar.Body>
-        <AppShell.MobileNavbar.Footer />
-      </AppShell.MobileNavbar>
-    </AppShell>
+        </AppShellSentinel.MobileNavbar.Body>
+        <AppShellSentinel.MobileNavbar.Footer />
+      </AppShellSentinel.MobileNavbar>
+    </AppShellSentinel>
   );
 };
 

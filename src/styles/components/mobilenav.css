@@ -1,7 +1,7 @@
 .basicui-mobile-nav {
   position: fixed;
   left: 0;
-  top: var(--basicui-appshell-topbar-height);
+  top: var(--basicui-appshellsentinel-topbar-height);
   bottom: 0;
   right: 0;
   background-color: var(--basicui-bg-surface);

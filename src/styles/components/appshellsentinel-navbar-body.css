@@ -1,4 +1,4 @@
-.basicui-appshell-navbar-body {
+.basicui-appshellsentinel-navbar-body {
   padding: 10px 10px;
   display: grid;
   grid-auto-flow: row;
@@ -6,7 +6,7 @@
   align-content: flex-start;
 }
 
-.basicui-appshell-navbar-body__toggle {
+.basicui-appshellsentinel-navbar-body__toggle {
   background-color: transparent;
   border: none;
   color: inherit;
@@ -17,6 +17,6 @@
   align-items: center;
 }
 
-.basicui-appshell-navbar-body__toggle svg {
+.basicui-appshellsentinel-navbar-body__toggle svg {
   height: 1em;
 }

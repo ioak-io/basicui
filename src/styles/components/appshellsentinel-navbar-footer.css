@@ -1,4 +1,4 @@
-.basicui-appshell-navbar-footer {
+.basicui-appshellsentinel-navbar-footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -8,21 +8,21 @@
   align-content: center;
   align-items: center;
   background-color: var(--basicui-bg-surface);
-  height: var(--basicui-appshell-topbar-height);
+  height: var(--basicui-appshellsentinel-topbar-height);
   padding: 0 10px;
   border-right: 1px solid var(--basicui-border-color);
   transition: width 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
-.basicui-appshell-navbar-footer--expanded {
-  width: var(--basicui-appshell-navbar-width);
+.basicui-appshellsentinel-navbar-footer--expanded {
+  width: var(--basicui-appshellsentinel-navbar-width);
 }
 
-.basicui-appshell-navbar-footer--collapsed {
-  width: var(--basicui-appshell-navbar-width-collapsed);
+.basicui-appshellsentinel-navbar-footer--collapsed {
+  width: var(--basicui-appshellsentinel-navbar-width-collapsed);
 }
 
-.basicui-appshell-navbar-footer__left {
+.basicui-appshellsentinel-navbar-footer__left {
   display: grid;
   grid-auto-flow: column;
   justify-content: flex-start;
@@ -31,7 +31,7 @@
   width: 100%;
 }
 
-.basicui-appshell-navbar-footer__left button {
+.basicui-appshellsentinel-navbar-footer__left button {
   font-size: inherit;
   box-shadow: none;
   border: none;
@@ -43,12 +43,12 @@
   justify-content: center;
 }
 
-.basicui-appshell-navbar-footer__right {
+.basicui-appshellsentinel-navbar-footer__right {
   width: 60px;
   display: flex;
   justify-content: center;
 }
 
-.basicui-appshell-navbar-footer svg {
+.basicui-appshellsentinel-navbar-footer svg {
   height: 1em;
 }

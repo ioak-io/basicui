@@ -7,12 +7,12 @@ import React, {
 } from "react";
 import Logo from "./Logo";
 
-export type AppShellTopbarProps = {
+export type AppShellSentinelTopbarProps = {
   children?: any;
   [key: string]: any;
 };
 
-const AppShellTopbar = (props: AppShellTopbarProps) => {
+const AppShellSentinelTopbar = (props: AppShellSentinelTopbarProps) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   useEffect(() => {
@@ -26,8 +26,8 @@ const AppShellTopbar = (props: AppShellTopbarProps) => {
 
   return (
     <>
-      <div className="basicui-appshell-topbar">
-        <div className="basicui-appshell-topbar__left">
+      <div className="basicui-appshellsentinel-topbar">
+        <div className="basicui-appshellsentinel-topbar__left">
           <Logo
             isDarkMode={props.isDarkMode}
             logoIconBlack={props.logoIconBlack}
@@ -37,9 +37,9 @@ const AppShellTopbar = (props: AppShellTopbarProps) => {
             showText
           />
         </div>
-        <div className="basicui-appshell-topbar__right">
+        <div className="basicui-appshellsentinel-topbar__right">
           <button
-            className="basicui-appshell-topbar__right__toggle"
+            className="basicui-appshellsentinel-topbar__right__toggle"
             onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
           >
             <svg
@@ -64,6 +64,6 @@ const AppShellTopbar = (props: AppShellTopbarProps) => {
     </>
   );
 };
-export default AppShellTopbar;
+export default AppShellSentinelTopbar;
 
-AppShellTopbar.displayName = "AppShellTopbar";
+AppShellSentinelTopbar.displayName = "AppShellSentinelTopbar";

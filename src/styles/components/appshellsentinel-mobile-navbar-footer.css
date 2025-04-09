@@ -1,15 +1,15 @@
-.basicui-appshell-mobile-navbar-footer {
+.basicui-appshellsentinel-mobile-navbar-footer {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   align-content: center;
   align-items: center;
   /* background-color: var(--basicui-bg-surface); */
-  height: var(--basicui-appshell-topbar-height);
+  height: var(--basicui-appshellsentinel-topbar-height);
   padding: 10px 20px;
 }
 
-.basicui-appshell-mobile-navbar-footer__left {
+.basicui-appshellsentinel-mobile-navbar-footer__left {
   display: grid;
   grid-auto-flow: column;
   justify-content: flex-start;
@@ -18,7 +18,7 @@
   width: 100%;
 }
 
-.basicui-appshell-mobile-navbar-footer__left button {
+.basicui-appshellsentinel-mobile-navbar-footer__left button {
   font-size: inherit;
   box-shadow: none;
   border: none;
@@ -30,12 +30,12 @@
   justify-content: center;
 }
 
-.basicui-appshell-mobile-navbar-footer__right {
+.basicui-appshellsentinel-mobile-navbar-footer__right {
   width: 60px;
   display: flex;
   justify-content: center;
 }
 
-.basicui-appshell-mobile-navbar-footer svg {
+.basicui-appshellsentinel-mobile-navbar-footer svg {
   height: 1em;
 }

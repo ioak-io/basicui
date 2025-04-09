@@ -1,15 +1,15 @@
 import React, { useState, Dispatch, SetStateAction, Children } from "react";
 
-export type AppShellNavbarBodyProps = {
+export type AppShellSentinelNavbarBodyProps = {
   children: any;
   [key: string]: any;
 };
 
-const AppShellNavbarBody = (props: AppShellNavbarBodyProps) => {
+const AppShellSentinelNavbarBody = (props: AppShellSentinelNavbarBodyProps) => {
   return (
-    <div className="basicui-appshell-navbar-body">
+    <div className="basicui-appshellsentinel-navbar-body">
       <button
-        className="basicui-appshell-navbar-body__toggle"
+        className="basicui-appshellsentinel-navbar-body__toggle"
         onClick={props.onSidebarToggle}
       >
         {props.isSidebarExpanded && (
@@ -51,6 +51,6 @@ const AppShellNavbarBody = (props: AppShellNavbarBodyProps) => {
     </div>
   );
 };
-export default AppShellNavbarBody;
+export default AppShellSentinelNavbarBody;
 
-AppShellNavbarBody.displayName = "AppShellNavbarBody";
+AppShellSentinelNavbarBody.displayName = "AppShellSentinelNavbarBody";
