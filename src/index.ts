@@ -24,6 +24,7 @@ import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
 import Label from "./components/Label";
 import AppShellSentinel from "./components/AppShellSentinel";
+import AppShellReveal from "./components/AppShellReveal";
 import FlexContainer from "./components/FlexContainer";
 import LoadingBlocks from "./components/LoadingBlocks";
 
@@ -53,6 +54,7 @@ export {
   ModalSizeType,
   Label,
   AppShellSentinel,
+  AppShellReveal,
   FlexContainer,
   LoadingBlocks,
 };

@@ -1,0 +1,14 @@
+@import "./mobile-navbar-footer.css";
+@import "./mobile-navbar-body.css";
+
+.basicui-appshellreveal-mobile-navbar {
+  position: fixed;
+  left: 0;
+  top: var(--basicui-appshellreveal-topbar-height);
+  bottom: 0;
+  right: 0;
+  background-color: var(--basicui-bg-surface);
+  z-index: 9;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}

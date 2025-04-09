@@ -1,0 +1,49 @@
+.basicui-appshellreveal-topbar {
+  height: var(--basicui-appshellreveal-topbar-height);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--basicui-border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: var(--basicui-bg-surface);
+}
+
+@media (min-width: 768px) {
+  .basicui-appshellreveal-topbar {
+    display: none;
+  }
+}
+
+.basicui-appshellreveal-topbar .basicui-logo {
+  column-gap: 6px;
+}
+
+.basicui-appshellreveal-topbar .basicui-logo__icon img {
+  height: 24px;
+  width: auto;
+}
+
+.basicui-appshellreveal-topbar .basicui-logo__text img {
+  height: 60%;
+}
+
+.basicui-appshellreveal-topbar__right__toggle {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  /* width: 60px;
+  height: 36px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basicui-appshellreveal-topbar__right__toggle svg {
+  height: 1em;
+}

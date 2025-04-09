@@ -1,0 +1,47 @@
+@import "./body.css";
+@import "./navbar.css";
+@import "./topbar.css";
+@import "./mobile-navbar.css";
+
+.basicui-appshellreveal {
+}
+
+.basicui-appshellreveal__left {
+  width: var(--basicui-appshellreveal-navbar-width);
+  transition: width 250ms ease-in-out, background-color 250ms ease-in-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid var(--basicui-border-color);
+}
+
+.basicui-appshellreveal--collapsed .basicui-appshellreveal__left {
+  width: var(--basicui-appshellreveal-navbar-width-collapsed);
+}
+
+@media (max-width: 767px) {
+  .basicui-appshellreveal__left {
+    display: none;
+  }
+
+  .basicui-appshellreveal__right {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .basicui-appshellreveal__right {
+    margin-left: var(--basicui-appshellreveal-navbar-width);
+    transition: margin-left 250ms ease-in-out;
+  }
+  .basicui-appshellreveal__right--hide-navbar {
+    margin-left: 0;
+    transition: margin-left 0ms ease-in-out;
+  }
+  .basicui-appshellreveal--collapsed .basicui-appshellreveal__right {
+    margin-left: var(--basicui-appshellreveal-navbar-width-collapsed);
+  }
+}
