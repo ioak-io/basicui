@@ -5,8 +5,6 @@ import React, {
   Children,
   useEffect,
 } from "react";
-import MobileNavbarBody from "./MobileNavbarBody";
-import MobileNavbarFooter from "./MobileNavbarFooter";
 
 export type NavbarProps = {
   children: any;
@@ -14,39 +12,13 @@ export type NavbarProps = {
 };
 
 const MobileNavbar = ({ children, ...props }: NavbarProps) => {
-  const [appShellMobileNavbarBody, setMobileNavbarBody] =
-    useState<any>();
-  const [appShellMobileNavbarFooter, setMobileNavbarFooter] =
-    useState<any>();
-
-  useEffect(() => {
-    children.forEach((item: any) => {
-      const clonedChild = React.cloneElement(item, { ...props });
-      if (
-        item.type.displayName === "MobileNavbarBody" ||
-        item.type.name === "MobileNavbarBody"
-      ) {
-        setMobileNavbarBody(clonedChild);
-      }
-      if (
-        item.type.displayName === "MobileNavbarFooter" ||
-        item.type.name === "MobileNavbarFooter"
-      ) {
-        setMobileNavbarFooter(clonedChild);
-      }
-    });
-  }, [children]);
 
   return (
     <div className="basicui-appshellreveal-mobile-navbar">
-      {appShellMobileNavbarBody}
-      {appShellMobileNavbarFooter}
+      {children}
     </div>
   );
 };
 export default MobileNavbar;
-
-MobileNavbar.Body = MobileNavbarBody;
-MobileNavbar.Footer = MobileNavbarFooter;
 
 MobileNavbar.displayName = "MobileNavbar";

@@ -14,6 +14,7 @@ export type InputProps = {
     successMessage?: string;
     onChange?: any;
     onInput?: any;
+    className?: string;
     [key: string]: any;
 };
 
@@ -29,14 +30,13 @@ const Input = ({ id,
     errorMessage,
     warningMessage,
     successMessage,
+    className,
     ...restProps
 }: InputProps) => {
 
     return (
         <div
-            className={["basicui-input-el"].join(
-                " "
-            )}
+            className={`basicui-input-el ${className || ""}`}
         >
             {label && <FormElementMessage text={label} type="label" />}
             <input

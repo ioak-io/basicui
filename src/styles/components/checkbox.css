@@ -22,6 +22,10 @@
     transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out, 250ms color ease-in-out;
 }
 
+.basicui-checkbox__input {
+    border-radius: var(--basicui-checkbox-height);
+}
+
 .basicui-checkbox__input:checked {
     background-color: var(--basicui-checkbox-background-color-checked);
     border-color: var(--basicui-checkbox-border-color-checked);

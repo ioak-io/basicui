@@ -6,6 +6,7 @@ export interface CheckboxProps {
     id?: string;
     label?: string;
     theme?: ThemeType;
+    circle?: boolean;
     checked?: boolean;
     defaultChecked?: boolean;
     [key: string]: any;
@@ -19,11 +20,12 @@ const Checkbox = ({
     label,
     theme,
     checked,
+    circle,
     ...restProps
 }: CheckboxProps) => {
     return (
         <label className={`basicui-checkbox ${checked ? "basicui-checkbox--checked" : ""} basicui-checkbox--theme-${theme || ThemeType.default}`} htmlFor={id}>
-            <input className="basicui-checkbox__input" id={id} checked={checked} type="checkbox" {...restProps} />
+            <input className={`basicui-checkbox__input${circle ? " basicui-checkbox__input--circle" : ""}`} id={id} checked={checked} type="checkbox" {...restProps} />
             {label && <span className="basicui-checkbox__span">{label}</span>}
         </label>
     );

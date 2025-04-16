@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import ThemeType from "../types/ThemeType";
+import SvgIcon from "../SvgIcon";
 
 export interface AccordionProps {
     theme?: ThemeType;
@@ -8,6 +9,7 @@ export interface AccordionProps {
     heading: string;
     bordered?: boolean;
     children: any;
+    className?: string;
 };
 
 /**
@@ -36,8 +38,10 @@ const Accordion = (props: AccordionProps) => {
             bodyRef.current.style.visibility = 'visible';
             isAnimationCompletedRef.current = false;
             setTimeout(() => {
-                bodyRef.current.style.overflowY = 'visible';
-                bodyRef.current.style.height = 'auto';
+                if (bodyRef.current) {
+                    bodyRef.current.style.overflowY = 'visible';
+                    bodyRef.current.style.height = 'auto';
+                }
                 isAnimationCompletedRef.current = true;
             }, 300);
         } else if (bodyRef.current) {
@@ -48,7 +52,7 @@ const Accordion = (props: AccordionProps) => {
             }, 0);
             bodyRef.current.style.overflowY = 'hidden';
             setTimeout(() => {
-                bodyRef.current.style.visibility = 'hidden';
+                if (bodyRef.current) { bodyRef.current.style.visibility = 'hidden'; }
                 isAnimationCompletedRef.current = true;
             }, 300);
         }
@@ -56,10 +60,10 @@ const Accordion = (props: AccordionProps) => {
     }
 
     return (
-        <div className={`basicui-accordion  ${props.expanded ? "accordion-active" : ""} ${props.bordered ? "accordion-bordered" : ""} theme-${props.theme || ThemeType.default}`}>
+        <div className={`basicui-accordion  ${props.expanded ? "accordion-active" : ""} ${props.bordered ? "accordion-bordered" : ""} theme-${props.theme || ThemeType.default} ${props.className || ""}`}>
             <button className="basicui-accordion__header" onClick={handleChange}>
                 <div>{props.heading}</div>
-                v
+                <SvgIcon className="basicui-accordion__header__arrow" src="/icons/fontawesome/down.svg" height="12px" width="12px" />
             </button>
             <div className="basicui-accordion__body" ref={bodyRef}>
                 <div className="basicui-accordion__body__content">

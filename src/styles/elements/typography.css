@@ -80,3 +80,7 @@ mark,
 .mark {
     background-color: #fae5c2;
 }
+
+.no-margin {
+    margin: 0;
+}

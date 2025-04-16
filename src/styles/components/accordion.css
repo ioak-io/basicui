@@ -55,3 +55,12 @@
     border-radius: 0 0 var(--basicui-accordion-border-radius) var(--basicui-accordion-border-radius);
     border-bottom: var(--basicui-accordion-border-width) solid var(--basicui-accordion-border-color);
 }
+
+.basicui-accordion__header__arrow {
+    transition: transform 250ms ease-in-out;
+}
+
+.basicui-accordion.accordion-active .basicui-accordion__header__arrow {
+    transform: rotate(180deg);
+}
+
