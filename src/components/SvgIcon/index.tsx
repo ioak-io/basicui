@@ -22,7 +22,7 @@ export default function SvgIcon({ children, src, className, width, height, fill 
     useEffect(() => {
         const fetchSVG = async () => {
             try {
-                const response = await fetch(src);
+                const response = await fetch(src || "");
                 const text = await response.text();
                 setSvgContent(text);
                 setUpdatedSvgContent(text.replace(
