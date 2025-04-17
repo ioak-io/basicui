@@ -31,12 +31,12 @@ const isListItem = (element: ReactNode): element is ReactElement => {
 const List = (props: ListProps) => {
 
     const handleItemSelect = (event: any) => {
+        console.log(event);
         props.onSelect(event);
     }
 
-    const handleItemClick = (event: any) => {
-        console.log("clicked from native render ", event);
-
+    const handleItemClick = (id: string) => {
+        props.onClick(id);
     };
 
     const renderChildrenWithEvents = () => {
@@ -81,7 +81,7 @@ const List = (props: ListProps) => {
                             key={item.id}
                             selectedItems={props.selectedItems}
                             data={item}
-                            onClick={() => handleItemClick(item.title)}
+                            onClick={() => handleItemClick(item.id)}
                             onSelect={handleItemSelect}
                             showSelectOnRight={props.showSelectOnRight}
                         />

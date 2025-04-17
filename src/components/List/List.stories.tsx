@@ -4,7 +4,7 @@ import List, { ListProps } from '.';
 import ListWrapper from './ListWrapper';
 
 const meta: Meta<typeof List> = {
-  title: "Form elements/List",
+  title: "Composite/List",
   component: List,
   argTypes: {
   },
@@ -25,6 +25,6 @@ const Template: Story = {
 
 export const Playground = {
   ...Template, args: {
-    renderFromChildren: true
+    renderFromChildren: false
   }
 };

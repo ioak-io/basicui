@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SearchBar, { SearchBarProps } from '.';
 
 const meta: Meta<typeof SearchBar> = {
-  title: "Form elements/SearchBar",
+  title: "Composite/SearchBar",
   component: SearchBar,
   argTypes: {
   },
@@ -18,7 +18,6 @@ const Template: Story = {
     return (
       <div>
       <SearchBar {...args} />
-      lorem ipsum
       </div>
     );
   },
