@@ -4,7 +4,7 @@ import "./style.css";
 
 export interface OptionsObjectType {
     name: string | number;
-    value: string | number;
+    value: string;
 }
 
 export interface OptionsListProps {

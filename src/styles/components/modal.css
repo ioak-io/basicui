@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-items: center;
     z-index: 100;
@@ -28,19 +28,19 @@
     align-items: center;
     padding-top: var(--basicui-modal-margin-y);
     padding-bottom: var(--basicui-modal-margin-y);
+    animation: fadeIn 250ms ease-in-out backwards;
 }
 
 .basicui-modal__base {
-    display: grid;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     z-index: 102;
     background-color: var(--basicui-bg-card);
     border-radius: var(--basicui-modal-border-radius);
-    width: 500px;
+    width: 420px;
     max-width: 90vw;
-    /* max-height: var(--basicui-modal-max-height); */
-    /* height: 100%; */
+    animation: fadeIn 250ms ease-in-out forwards;
 }
 
 .basicui-modal__base--size-small {
@@ -58,6 +58,76 @@
 .basicui-modal__base--placement-top {
     align-self: flex-start;
 }
+
 .basicui-modal__base--placement-bottom {
     align-self: flex-end;
+}
+
+.basicui-modal__base--placement-side {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 500px;
+    max-width: unset;
+    border-radius: 0;
+    transform: translateX(100%);
+    animation: slideIn 250ms ease-in-out forwards;
+    align-self: stretch;
+}
+
+.basicui-modal--close .basicui-modal__base {
+    animation: fadeOut 250ms ease-in-out backwards;
+}
+
+.basicui-modal--close .basicui-modal__base--placement-side {
+    animation: slideOut 250ms ease-in-out backwards;
+}
+
+.basicui-modal--close .basicui-modal__overlay {
+    animation: fadeOut 250ms ease-in-out backwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }

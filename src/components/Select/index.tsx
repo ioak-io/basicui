@@ -6,10 +6,12 @@ import flip from '@popperjs/core/lib/modifiers/flip.js';
 import OptionsList, { OptionsObjectType } from "../shared/OptionsList";
 import { isEmptyOrSpaces } from "../../utils/TextUtils";
 import FormElementMessage from "../shared/FormElementMessage";
+import Label from "../Label";
 
 export interface SelectProps {
     name?: string;
     label?: string;
+    labelDesc?: string;
     options: OptionsObjectType[];
     value: (string | number)[];
     placeholder?: string;
@@ -147,7 +149,7 @@ const Select = (props: SelectProps) => {
                 " "
             )}
         >
-            {props.label && <FormElementMessage text={props.label} type="label" />}
+            {props.label && <Label labelDesc={props.labelDesc}>{props.label}</Label>}
             <button className="basicui-input basicui-select__button" type="button" ref={referenceElement} onClick={handleSelectClick}>
                 {valuesText.join(', ') || props.placeholder || "-"}
             </button>

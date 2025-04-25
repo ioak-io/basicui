@@ -1,7 +1,8 @@
 enum ModalPlacement {
     default = "default",
     top = "top",
-    bottom = "bottom"
+    bottom = "bottom",
+    side = "side" 
 }
 
 export default ModalPlacement;

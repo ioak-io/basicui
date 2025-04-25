@@ -5,7 +5,7 @@ import ThemeType from "../types/ThemeType";
 export interface RadioProps {
     name?: string;
     id?: string;
-    label?: string;
+    label?: string | number;
     theme?: ThemeType;
     checked?: boolean;
     value?: any;

@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import FormElementMessage from "../shared/FormElementMessage";
+import Label from "../Label";
 
 export type InputProps = {
     id?: string;
     type?: string;
     label?: string;
+    labelDesc?: string;
     value?: string | number;
     placeholder?: string;
     tooltip?: string;
@@ -24,6 +26,7 @@ export type InputProps = {
 const Input = ({ id,
     type,
     label,
+    labelDesc,
     value,
     placeholder,
     tooltip,
@@ -31,17 +34,18 @@ const Input = ({ id,
     warningMessage,
     successMessage,
     className,
+    wrapperClassName,
     ...restProps
 }: InputProps) => {
 
     return (
         <div
-            className={`basicui-input-el ${className || ""}`}
+            className={`basicui-input-el ${wrapperClassName || ""}`}
         >
-            {label && <FormElementMessage text={label} type="label" />}
+            {label && <Label labelDesc={labelDesc}>{label}</Label>}
             <input
                 id={id}
-                className={`basicui-input ${errorMessage ? "basicui-input--error" : ""} ${warningMessage ? "basicui-input--warning" : ""} ${successMessage ? "basicui-input--success" : ""}`}
+                className={`basicui-input ${className || ""} ${errorMessage ? "basicui-input--error" : ""} ${warningMessage ? "basicui-input--warning" : ""} ${successMessage ? "basicui-input--success" : ""}`}
                 value={value}
                 type={type}
                 placeholder={placeholder}

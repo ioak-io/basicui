@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import FormElementMessage from "../shared/FormElementMessage";
+import Label from "../Label";
 
 export interface TextareaProps {
     label?: string;
+    labelDesc?: string;
     value?: string | number;
     tooltip?: string;
     errorMessage?: string;
@@ -15,7 +17,7 @@ export interface TextareaProps {
 /**
  * Component to render input form element. For using it with standard html input, add css class basicui-input
  */
-const Textarea = ({value, label, tooltip, errorMessage, successMessage, warningMessage, ...restProps}: TextareaProps) => {
+const Textarea = ({ value, label, labelDesc, tooltip, errorMessage, successMessage, warningMessage, ...restProps }: TextareaProps) => {
 
     return (
         <div
@@ -23,7 +25,7 @@ const Textarea = ({value, label, tooltip, errorMessage, successMessage, warningM
                 " "
             )}
         >
-            {label && <FormElementMessage text={label} type="label" />}
+            {label && <Label labelDesc={labelDesc}>{label}</Label>}
             <textarea
                 className="basicui-input"
                 value={value}

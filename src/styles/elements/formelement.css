@@ -19,11 +19,16 @@
   color: var(--basicui-bg-default);
 }
 
-.basicui-form-element-label {
+.basicui-form-element-label, .basicui-form-element-labeldesc {
   display: block;
   font-size: 12px;
   margin-bottom: 4px;
   text-transform: capitalize;
   word-break: keep-all;
   color: var(--basicui-formelement-label-color);
+}
+
+.basicui-form-element-labeldesc {
+  margin-top: -2px;
+  opacity: 0.50;
 }

@@ -27,6 +27,29 @@
     250ms color ease-in-out;
 }
 
+.basicui-clean-button {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+  background: none;
+  color: var(--basicui-fg);
+  height: auto;
+  padding: 0;
+
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  transition: 250ms border-color ease-in-out, 250ms background-color ease-in-out,
+    250ms color ease-in-out, 250ms fill ease-in-out;
+
+}
+
 /* .basicui-button:focus {
     outline-offset: -2px;
     outline: rgb(25, 148, 210) auto 2px;

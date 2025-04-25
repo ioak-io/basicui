@@ -3,4 +3,10 @@
     height: 100%;
     max-height: calc(100vh - var(--basicui-modal-header-height)*2 - var(--basicui-modal-margin-y)*2);
     overflow-y: auto;
+    flex: 1;
+}
+
+.basicui-modal__base--placement-side .basicui-modal-body {
+    max-height: none;
+    flex: 1;
 }

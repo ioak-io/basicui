@@ -2,12 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 
 import FormElementMessage from "../shared/FormElementMessage";
 import { OptionsObjectType } from "../shared/OptionsList";
+import Label from "../Label";
 
 export interface SelectNativeProps {
     initialValues?: (string | number)[];
     options: OptionsObjectType[];
     id?: string;
     label?: string;
+    labelDesc?: string;
     placeholder?: string;
     tooltip?: string;
     errorMessage?: string;
@@ -24,6 +26,7 @@ export interface SelectNativeProps {
 const SelectNative = ({
     id,
     label,
+    labelDesc,
     placeholder,
     initialValues,
     options,
@@ -48,7 +51,7 @@ const SelectNative = ({
                 " "
             )}
         >
-            {label && <FormElementMessage text={label} type="label" />}
+            {label && <Label labelDesc={labelDesc}>{label}</Label>}
             <select
                 id={id}
                 className={`basicui-input basicui-selectnative ${multiple ? 'basicui-selectnative--multiple' : ''}`}

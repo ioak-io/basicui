@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import FormElementMessage from "../shared/FormElementMessage";
+import { isEmptyOrSpaces } from "../../utils/TextUtils";
 
 export type LabelProps = {
     children: any;
+    labelDesc?: string;
 };
 
 /**
@@ -11,7 +13,10 @@ export type LabelProps = {
 const Label = (props: LabelProps) => {
 
     return (
-        <FormElementMessage text={props.children} type="label" />
+        <>
+            {props.children && !isEmptyOrSpaces(props.children) && <FormElementMessage text={props.children} type="label" />}
+            {props.labelDesc && !isEmptyOrSpaces(props.labelDesc) && <FormElementMessage text={props.labelDesc} type="labeldesc" />}
+        </>
     );
 };
 
