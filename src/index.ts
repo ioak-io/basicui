@@ -23,7 +23,6 @@ import AlignmentType from "./components/types/AlignmentType";
 import ButtonVariantType from "./components/types/ButtonVariantType";
 import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
-import { SearchBarFilterType } from "./components/types/SearchBarFilterType";
 import {OptionsObjectType} from './components/shared/OptionsList'
 import Label from "./components/Label";
 import AppShellSentinel from "./components/AppShellSentinel";
@@ -31,9 +30,6 @@ import AppShellReveal from "./components/AppShellReveal";
 import FlexContainer from "./components/FlexContainer";
 import LoadingBlocks from "./components/LoadingBlocks";
 import SvgIcon from './components/SvgIcon';
-import SearchBar from './components/SearchBar';
-import List from './components/List';
-import ListItem from './components/List/ListItem';
 
 export {
   Select,
@@ -61,14 +57,10 @@ export {
   ModalPlacement,
   ModalSizeType,
   type OptionsObjectType,
-  type SearchBarFilterType,
   Label,
   AppShellSentinel,
   AppShellReveal,
   FlexContainer,
   LoadingBlocks,
-  SvgIcon,
-  SearchBar,
-  List,
-  ListItem
+  SvgIcon
 };
