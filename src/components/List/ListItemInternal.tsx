@@ -16,6 +16,12 @@ export interface ListItemInternalProps {
     showSelectOnRight?: boolean
 }
 
+const stripHtml = (html: string): string => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    return tempDiv.textContent || tempDiv.innerText || "";
+};
+
 const ListItemInternal = (props: ListItemInternalProps) => {
     const handleClick = () => {
         if (props.onClick) {
@@ -23,16 +29,14 @@ const ListItemInternal = (props: ListItemInternalProps) => {
         }
     }
 
-
     return (
-        <div className="basicui-list-item"
-        >
+        <div className="basicui-list-item">
             {props.onSelect && !props.showSelectOnRight && <div className="basicui-list-item__left">
                 <Checkbox name={props.data?.id} circle theme={ThemeType.primary} checked={props.selectedItems?.includes(props.data.id)} onChange={props.onSelect} />
             </div>}
             <div className="basicui-list-item__main"
-                role="button"
-                tabIndex={0}
+                role={props.onClick ? "button" : undefined}
+                tabIndex={props.onClick ? 0 : undefined}
                 onClick={handleClick}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -41,12 +45,12 @@ const ListItemInternal = (props: ListItemInternalProps) => {
                 }}>
                 {props.children || props.data && (
                     <div className="basicui-list-item__main__content">
-                        <p className="no-margin">
+                        {props.data.title && <p className="no-margin">
                             {props.data.title}
-                        </p>
-                        <p className="basicui-list-item__main__content__summary no-margin small">
-                            {props.data.summary}
-                        </p>
+                        </p>}
+                        {props.data.summary && <p className="basicui-list-item__main__content__summary no-margin small">
+                            {stripHtml(props.data.summary)}
+                        </p>}
                         <div className="basicui-list-item__main__content__date-and-labels small">
                             {props.data.createdAt && <div className="basicui-list-item__main__content__date">
                                 <SvgIcon height="9px" width="9px">

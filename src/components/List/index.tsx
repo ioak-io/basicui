@@ -5,11 +5,17 @@ import ThemeType from "../types/ThemeType";
 
 export interface ListProps {
     data: ListItemType[];
-    onClick: (id: string) => void;
+    onClick?: (id: string) => void;
     children?: ReactNode;
     selectedItems?: string[];
-    onSelect: (event: any) => void;
+    onSelect?: (event: any) => void;
     showSelectOnRight?: boolean;
+    actions?: {
+        singleSelect?: ReactNode[],
+        multiSelect?: ReactNode[],
+        noneSelect?: ReactNode[],
+        always?: ReactNode[],
+    }
 }
 
 export interface ListItemType {
@@ -30,13 +36,8 @@ const isListItem = (element: ReactNode): element is ReactElement => {
 
 const List = (props: ListProps) => {
 
-    const handleItemSelect = (event: any) => {
-        console.log(event);
-        props.onSelect(event);
-    }
-
     const handleItemClick = (id: string) => {
-        props.onClick(id);
+        if (props.onClick) props.onClick(id);
     };
 
     const renderChildrenWithEvents = () => {
@@ -53,8 +54,8 @@ const List = (props: ListProps) => {
                     key={props.data[index]?.id ?? index}
                     data={props.data[index]}
                     selectedItems={props.selectedItems}
-                    onClick={() => handleItemClick(props.data[index].id)}
-                    onSelect={handleItemSelect}
+                    onClick={props.onClick ? () => handleItemClick(props.data[index].id) : undefined}
+                    onSelect={props.onSelect}
                     showSelectOnRight={props.showSelectOnRight}
                 >
                     {child}
@@ -63,14 +64,30 @@ const List = (props: ListProps) => {
         });
     };
 
+    const renderActions = () => {
+        const selectedCount = props.selectedItems?.length || 0;
+
+        let dynamicActions: ReactNode[] = [];
+
+        if (selectedCount === 0) {
+            dynamicActions = props.actions?.noneSelect ?? [];
+        } else if (selectedCount === 1) {
+            dynamicActions = props.actions?.singleSelect ?? [];
+        } else if (selectedCount > 1) {
+            dynamicActions = props.actions?.multiSelect ?? [];
+        }
+
+        dynamicActions = [...(props.actions?.always ?? []), ...dynamicActions];
+
+        return <>{dynamicActions.map((action, index) => <span key={index}>{action}</span>)}</>;
+    };
 
     return (
         <div className="basicui-list">
             {props.data.length > 20 && <div className="basicui-list__header">
                 <div>Page 1 of 10</div>
                 <div className="basicui-list__header__right">
-                    {props.selectedItems && props.selectedItems?.length === 1 && <Button theme={ThemeType.primary}>Edit</Button>}
-                    {props.selectedItems && props.selectedItems?.length > 0 && <Button theme={ThemeType.danger}>Delete</Button>}
+                    {renderActions()}
                 </div>
             </div>}
             <div>
@@ -82,7 +99,7 @@ const List = (props: ListProps) => {
                             selectedItems={props.selectedItems}
                             data={item}
                             onClick={() => handleItemClick(item.id)}
-                            onSelect={handleItemSelect}
+                            onSelect={props.onSelect}
                             showSelectOnRight={props.showSelectOnRight}
                         />
                     ))}
@@ -90,8 +107,7 @@ const List = (props: ListProps) => {
             <div className="basicui-list__footer">
                 <div>Page 1 of 10</div>
                 <div className="basicui-list__footer__right">
-                    {props.selectedItems && props.selectedItems?.length === 1 && <Button theme={ThemeType.primary}>Edit</Button>}
-                    {props.selectedItems && props.selectedItems?.length > 0 && <Button theme={ThemeType.danger}>Delete</Button>}
+                    {renderActions()}
                 </div>
             </div>
         </div>
