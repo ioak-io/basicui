@@ -60,8 +60,8 @@ const SelectNative = ({
                 size={multiple ? 5 : 1}
             >
                 {options.map(option =>
-                    <option selected={values.includes(option.name)} className="basicui-selectnative__option">
-                        {option.value}
+                    <option selected={values.includes(option.value)} className="basicui-selectnative__option">
+                        {option.label}
                     </option>)}
             </select>
             {tooltip && <FormElementMessage text={tooltip} type="info" />}

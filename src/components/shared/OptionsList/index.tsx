@@ -68,7 +68,7 @@ const OptionsList = (props: OptionsListProps) => {
                 break;
             case 'Enter':
                 event.preventDefault();
-                props.handleChange(event, currentIndexRef.current, optionsRef.current[currentIndexRef.current].name);
+                props.handleChange(event, currentIndexRef.current, optionsRef.current[currentIndexRef.current].value);
                 break;
             case 'Tab':
                 event.preventDefault();
@@ -118,9 +118,9 @@ const OptionsList = (props: OptionsListProps) => {
             {
                 props.options?.map((option, index) => (
                     <li key={index} role="option" className="basicui-select__ul__li">
-                        <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={(event) => handleClick(event, index, option.name)}>
+                        <button className={`basicui-select__ul__li__link ${currentIndex === index ? 'basicui-select__ul__li__link--active' : ''}`} onClick={(event) => handleClick(event, index, option.value)}>
                             <div className="basicui-select__ul__li__indicator">
-                                {props.value.includes(option.name + "") && <div><svg
+                                {props.value.includes(option.value + "") && <div><svg
                                     height="16"
                                     viewBox="0 0 16 16"
                                     version="1.1"
@@ -134,7 +134,7 @@ const OptionsList = (props: OptionsListProps) => {
                                 </svg></div>}
                             </div>
                             <div className="basicui-select__ul__li__text">
-                                {option.value}
+                                {option.label}
                             </div>
                         </button>
                     </li>
