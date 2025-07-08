@@ -6,6 +6,7 @@
   --basicui-dark-bg-accent: #4a4a4a;
   --basicui-dark-border-color: #555;
   --basicui-dark-fg: #fff;
+  --basicui-dark-fg-disabled: #c0c0c0;
 
   --basicui-light-bg-base: #f8f9fa;
   --basicui-light-bg-surface: #f1f3f5;
@@ -14,6 +15,7 @@
   --basicui-light-bg-accent: #e9ecef;
   --basicui-light-border-color: #dee2e6;
   --basicui-light-fg: #000;
+  --basicui-light-fg-disabled: #a5a5a5;
 }
 
 .basicui-light {
@@ -24,6 +26,7 @@
   --basicui-bg-subtle: var(--basicui-light-bg-subtle);
   --basicui-border-color: var(--basicui-light-border-color);
   --basicui-fg: var(--basicui-light-fg);
+  --basicui-fg-disabled: var(--basicui-dark-fg-disabled);
 }
 
 .basicui-dark {
@@ -34,6 +37,7 @@
   --basicui-bg-subtle: var(--basicui-dark-bg-subtle);
   --basicui-border-color: var(--basicui-dark-border-color);
   --basicui-fg: var(--basicui-dark-fg);
+  --basicui-fg-disabled: var(--basicui-dark-fg-disabled);
 }
 
 * {

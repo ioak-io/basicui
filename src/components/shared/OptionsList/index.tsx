@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./style.css";
 
 export interface OptionsObjectType {
-    name: string | number;
+    label: string | number;
     value: string | number;
 }
 
