@@ -55,8 +55,8 @@ const Select = (props: SelectProps) => {
                 item => (item.value + "").toLowerCase().includes(_searchText)
             );
 
-            if (props.allowNewValues && !_options.find(item => item.name === _searchText)) {
-                _options.unshift({ name: searchText, value: searchText });
+            if (props.allowNewValues && !_options.find(item => item.value === _searchText)) {
+                _options.unshift({ value: searchText, label: searchText });
             }
 
             setOptions(_options);
@@ -65,7 +65,7 @@ const Select = (props: SelectProps) => {
 
     useEffect(() => {
         const _optionsAsMap: any = {};
-        props.options.forEach(item => (_optionsAsMap[item.name] = item.value));
+        props.options.forEach(item => (_optionsAsMap[item.value] = item.label));
         const _valuesText: (string | number)[] = [];
         props.value.forEach((item: (string | number)) => _valuesText.push(_optionsAsMap[item] || item));
         setValuesText(_valuesText);
