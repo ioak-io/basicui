@@ -16,6 +16,7 @@ import ModalHeader from "./components/Modal/ModalHeader";
 import ModalFooter from "./components/Modal/ModalFooter";
 import ModalBody from "./components/Modal/ModalBody";
 import Accordion from "./components/Accordion";
+import Popover from "./components/Popover";
 
 import * as SelectPropsConverter from "./converters/Select";
 import ThemeType from "./components/types/ThemeType";
@@ -23,7 +24,7 @@ import AlignmentType from "./components/types/AlignmentType";
 import ButtonVariantType from "./components/types/ButtonVariantType";
 import ModalPlacement from "./components/types/ModalPlacement";
 import ModalSizeType from "./components/types/ModalSizeType";
-import {OptionsObjectType} from './components/shared/OptionsList'
+import { OptionsObjectType } from './components/shared/OptionsList'
 import Label from "./components/Label";
 import AppShellSentinel from "./components/AppShellSentinel";
 import AppShellReveal from "./components/AppShellReveal";
@@ -51,6 +52,7 @@ export {
   ModalFooter,
   ModalBody,
   Accordion,
+  Popover,
   ThemeType,
   AlignmentType,
   ButtonVariantType,
