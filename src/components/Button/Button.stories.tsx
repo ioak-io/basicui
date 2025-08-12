@@ -1,32 +1,51 @@
-import { Meta, StoryObj } from '@storybook/react';
-import React, { useState } from "react";
-import Button, { ButtonProps } from ".";
-import ThemeType from "../types/ThemeType";
+import type { Meta, StoryObj } from "@storybook/react";
+import Button from "./Button";
 import ButtonVariantType from "../types/ButtonVariantType";
+import ThemeType from "../types/ThemeType";
 
 const meta: Meta<typeof Button> = {
-  title: "Form elements/Button",
+  title: "Components/Button",
   component: Button,
-  argTypes: {
+  parameters: {
+    layout: "centered"
   },
-} as Meta;
+  argTypes: {
+    onClick: { action: "clicked" }
+  }
+};
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-
-const Template: Story = {
-  render: (args: ButtonProps) => {
-    return (
-      <Button {...args} />
-    );
-  },
-};
-
-export const Playground = {
-  ...Template, args: {
+export const Primary: Story = {
+  args: {
+    children: "Primary Button",
     theme: ThemeType.primary,
-    variant: ButtonVariantType.default,
-    children: <div>Lorem ipsum</div>
+    variant: ButtonVariantType.default
   }
 };
+
+export const Secondary: Story = {
+  args: {
+    children: "Default Theme",
+    theme: ThemeType.default,
+    variant: ButtonVariantType.default
+  }
+};
+
+export const Sizes: Story = {
+  render: (args) => (
+    <div className="flex gap-4">
+      <Button {...args}>Medium</Button>
+    </div>
+  )
+};
+
+export const Loading: Story = {
+  args: {
+    children: "Submitting",
+    loading: true
+  }
+};
+
+

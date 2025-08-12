@@ -1,4 +1,22 @@
-@import './variables/index.css';
-@import './theme/index.css';
-@import './elements/index.css';
-@import './components/index.css';
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+
+  --radius-xl: 1rem;
+}
+
+.dark {
+}
+
+.light {
+}

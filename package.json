@@ -1,73 +1,86 @@
 {
-  "name": "basicui",
-  "version": "1.0.4",
-  "description": "",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "rollup -c --bundleConfigAsCjs && npm run copy-css",
-    "prepublishOnly": "npm build",
-    "copy-css": "shx cp -r src/styles lib/"
-  },
+  "name": "@ioak/basicui",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A versatile UI component library with built-in support for both dark and light modes. Users can easily customize components globally or locally, following a lightweight CSS framework aligned with HTML standards. It also provides multiple themes and a user-friendly color scheme generator.",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ioak-io/basicui.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ioak-io/basicui/issues"
+    "url": "https://basicui.ioak.io"
   },
-  "homepage": "https://github.com/ioak-io/basicui#readme",
-  "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@babel/preset-env": "^7.23.7",
-    "@babel/preset-typescript": "^7.23.3",
-    "@popperjs/core": "^2.11.8",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-url": "^8.0.2",
-    "@storybook/addon-actions": "^7.6.7",
-    "@storybook/addon-essentials": "^7.6.7",
-    "@storybook/addon-interactions": "^7.6.7",
-    "@storybook/addon-links": "^7.6.7",
-    "@storybook/addons": "^7.6.7",
-    "@storybook/react": "^7.6.7",
-    "@storybook/react-webpack5": "^7.6.7",
-    "@storybook/testing-library": "^0.2.2",
-    "@storybook/theming": "^7.6.7",
-    "@types/react": "^18.2.46",
-    "@types/react-dom": "^18.2.18",
-    "@types/tinycolor2": "^1.4.6",
-    "babel-loader": "^9.1.0",
-    "css-loader": "^6.8.1",
-    "postcss": "^8.4.32",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^4.9.2",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "sass": "^1.69.6",
-    "sass-loader": "^13.3.3",
-    "shx": "^0.4.0",
-    "storybook": "^7.6.7",
-    "storybook-dark-mode": "^3.0.3",
-    "style-loader": "^3.3.3",
-    "typescript": "^5.3.3",
-    "webpack": "^5.89.0"
+  "homepage": "https://basicui.ioak.io",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/styles.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build:lib": "tsup",
+    "build:css": "tailwindcss -i ./src/styles/index.css -o ./dist/styles.css --minify",
+    "build:storybook": "storybook build",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run build:lib && npm run build:css",
+    "lint": "echo 'add eslint config if desired'",
+    "test": "echo 'add tests (vitest/jest) if desired'",
+    "package": "npm run build && npm pack"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
   },
-  "dependencies": {
-    "date-fns": "^4.1.0",
-    "tinycolor2": "^1.6.0"
+  "devDependencies": {
+    "storybook": "^8.6.14",
+    "@storybook/addon-a11y": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/testing-library": "^0.2.2",
+    "@tailwindcss/cli": "^4.1.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^4.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vite": "^6.0.0"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "minify": true,
+    "external": [
+      "react",
+      "react-dom"
+    ]
   }
 }

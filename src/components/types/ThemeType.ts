@@ -1,10 +1,8 @@
 enum ThemeType {
-    default = "default",
-    primary = "primary",
-    secondary = "secondary",
-    success = "success",
-    warning = "warning",
-    danger = "danger"
+  default = "default",
+  primary = "primary",
 }
 
 export default ThemeType;
+
+
